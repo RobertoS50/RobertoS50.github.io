@@ -1,0 +1,108 @@
+$max-width: 1100px;
+$border-radius: 12px;
+$font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
+  "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
+  "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
+// General variables
+$foreground-rgb: rgb(0, 0, 0);
+$background: rgb(246, 246, 246);
+//$text-rgb: rgb(255, 255, 255);
+$text-rgb: rgb(0, 0, 0);
+
+$primary-glow: conic-gradient(
+  from 180deg at 50% 50%,
+  #16abff33 0deg,
+  #0885ff33 55deg,
+  #54d6ff33 120deg,
+  #0071ff33 160deg
+);
+
+$secondary-glow: radial-gradient(
+  rgba(255, 255, 255, 1),
+  rgba(255, 255, 255, 0)
+);
+
+$tile-start-rgb: rgb(239, 245, 249);
+$tile-end-rgb: rgb(228, 232, 233);
+$tile-border: conic-gradient(
+  #00000080,
+  #00000040,
+  #00000030,
+  #00000020,
+  #00000010,
+  #00000010,
+  #00000080
+);
+$callout-rgb: rgb(238, 240, 241);
+$callout-border-rgb: rgb(172, 175, 176);
+// Variables for floating squares
+$card-rgb: rgb(180, 185, 188);
+$card-border-rgb: rgb(131, 134, 135);
+$card-shadow-left: -4.4px 3.4px 5.1px rgba(2, 12, 57, 0.165),
+  -9.7px 7.5px 10.6px rgba(2, 12, 57, 0.234),
+  -17px 13px 17.4px rgba(2, 12, 57, 0.288),
+  -28.1px 21.5px 27.2px rgba(2, 12, 57, 0.342),
+  -47.9px 36.7px 44.7px rgba(2, 12, 57, 0.411),
+  -102px 78px 96px rgba(2, 12, 57, 0.57);
+$project-card-rgb: rgb(67, 72, 78);
+$project-default-inset-shadow: 10px 10px 10px black inset;
+
+@mixin beforeHover {
+  background: rgba($card-rgb, 0);
+  border: 1px solid rgba($card-border-rgb, 0);
+  border-radius: $border-radius;
+  box-shadow: 0px 0px 0px 0px rgba(0, 0, 255, 0);
+  transition: transform 500ms, border 200ms;
+}
+
+@mixin hoverRight {
+  &:hover {
+    background: rgba($card-rgb, 0.2);
+    border: 1px solid rgba($card-border-rgb, 0.15);
+    transform: translateX(4px);
+    box-shadow: $card-shadow-left;
+    span {
+      transform: translateX(8px);
+    }
+  }
+}
+
+@mixin hoverLeft {
+  &:hover {
+    background: rgba($card-rgb, 0.2);
+    border: 2px solid rgba($card-border-rgb, 0.3);
+    transform: translateX(-4px);
+    box-shadow: $card-shadow-right;
+    span {
+      transform: translateX(-8px);
+    }
+  }
+}
+
+@mixin credits {
+  font-size: 75%;
+  font-style: italic;
+}
+
+// New CSS for rob
+
+/* 
+Enable hover only on non-touch devices 
+@media (hover: hover) and (pointer: fine) {
+  a.primary:hover {
+    background: var(--button-primary-hover);
+    border-color: transparent;
+  }
+
+  a.secondary:hover {
+    background: var(--button-secondary-hover);
+    border-color: transparent;
+  }
+
+  .footer a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+}
+
+*/

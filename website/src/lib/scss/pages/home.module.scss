@@ -1,0 +1,155 @@
+@use "@/scss/globals.scss";
+
+$background-color_1: rgba(globals.$callout-rgb, 0.5);
+
+.page {
+  min-height: 100vh;
+  /* 
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  padding: 1px;
+  */
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    img {
+      border-radius: 50%;
+    }
+  }
+  .main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    grid-row-start: 2;
+    article {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      header {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        text-align: center;
+      }
+    }
+
+    .description {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: 0;
+      padding: 1rem;
+      gap: 1rem;
+      font-size: 0.85rem;
+      max-width: globals.$max-width;
+      width: 100%;
+      z-index: 2;
+      font-family: globals.$font-mono;
+      background-color: $background-color_1;
+      border: 1px solid rgba(globals.$callout-border-rgb, 0.3);
+      border-radius: globals.$border-radius;
+      .contactGrid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(50%, auto));
+        width: 100%;
+        text-align: center;
+        margin: auto;
+      }
+    }
+    .projectGrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, auto));
+      max-width: 100%;
+    }
+    .jobList {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 1rem;
+      background-color: rgb(210, 206, 203);
+      border-radius: 10px;
+      width: 100%;
+      color: black;
+    }
+  }
+
+  .footer {
+    display: flex;
+    color: globals.$text-rgb;
+    align-content: center;
+  }
+}
+/* Mobile */
+@media (max-width: 700px) {
+  .content {
+    padding: 4rem;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    margin-bottom: 120px;
+    max-width: 320px;
+    text-align: center;
+  }
+  .card {
+    padding: 1rem 2.5rem;
+    h2 {
+      margin-bottom: 0.5rem;
+    }
+  }
+  .description {
+    font-size: 0.8rem;
+    article {
+      padding: 1rem;
+    }
+    p {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      width: 100%;
+      align-items: center;
+      inset: 0 0 auto;
+      padding: 2rem 1rem 1.4rem;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid rgba(globals.$callout-border-rgb, 0.25);
+      background: linear-gradient(
+        to bottom,
+        rgba(globals.$background, 1),
+        rgba(globals.$callout-rgb, 0.5)
+      );
+      background-clip: padding-box;
+    }
+    div {
+      display: flex;
+      justify-content: center;
+      position: fixed;
+      width: 100%;
+      align-items: flex-end;
+      pointer-events: none;
+      inset: auto 0 0;
+      padding: 2rem;
+      height: 200px;
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        globals.$background 40%
+      );
+      z-index: 1;
+    }
+  }
+}
+
+/* Tablet and Smaller Desktop */
+@media (min-width: 701px) and (max-width: 1120px) {
+  .grid {
+    grid-template-columns: repeat(2, 50%);
+  }
+}
