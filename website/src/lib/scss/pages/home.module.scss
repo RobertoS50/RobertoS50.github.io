@@ -1,18 +1,18 @@
 @use "@/scss/globals.scss";
-
+// TODO 7/7: Try image fade away again since overflow hidden might've caused problems
+// TODO 8/8: Look for more intuitive way to make space between content overlay and top of page without margin
 .page {
   position: relative;
   min-height: 100svh;
-  overflow-x: hidden;
 
   .parallaxContainer {
+    z-index: -1;
     position: fixed;
     top: 0;
     left: 0;
     height: 100svh;
     width: 100svw;
     background: globals.$backgroundColor;
-    z-index: -1;
 
     // iPad viewports
     @media (min-width: 810px) and (max-width: 1024px) {
@@ -29,21 +29,28 @@
   }
 
   .contentOverlay {
+    z-index: 1;
+    position: relative;
+    min-height: 100svh;
     height: 100%;
     width: 100%;
+    margin-top: 60svh;
     background-color: globals.$contentBackgroundColor;
 
+    // iPad viewport content positioning
+    @media (min-width: 810px) and (max-width: 1024px) {
+      margin-top: 70vh;
+    }
+
     .header {
+      z-index: 100;
+      position: sticky;
+      top: 0;
+      background-color: globals.$contentBackgroundColor;
       text-align: center;
       width: 100%;
-      margin-top: 60svh;
       padding-top: 1rem;
       padding-bottom: 1rem;
-
-      // iPad viewport content positioning
-      @media (min-width: 810px) and (max-width: 1024px) {
-        margin-top: 70vh;
-      }
     }
 
     .main {
