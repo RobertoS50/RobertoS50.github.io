@@ -1,25 +1,21 @@
 import Image from "next/image";
 import ProfilePic from "@/public/RobertoS-4.jpg";
 import styles from "@/scss/pages/home.module.scss";
-// TODO #2: Implement paralax scrolling
-// TODO #3: Have picture be behind main content of website
-// TODO #4: Add easy navigation like a button to get to certain parts of website
+// TODO #4/6: Add easy navigation like a button to get to certain parts of website
 
 export default function Home() {
   return (
     <div className={styles.page}>
-      <section className={styles.parallaxSection}>
-        <div className={styles.parallaxContainer}>
-          <Image
-            src={ProfilePic}
-            alt="A picture of myself - Roberto Soto"
-            className={styles.parallaxImage}
-            sizes="100svw"
-            fill
-            priority
-          />
-        </div>
-      </section>
+      <div className={styles.parallaxContainer}>
+        <Image
+          src={ProfilePic}
+          alt="A picture of myself - Roberto Soto"
+          className={styles.parallaxImage}
+          sizes="100svw"
+          fill
+          priority
+        />
+      </div>
       <div className={styles.contentOverlay}>
         <header className={styles.header}>
           <h1>Roberto Soto</h1>

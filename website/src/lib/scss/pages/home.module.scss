@@ -1,73 +1,48 @@
 @use "@/scss/globals.scss";
 
-$background-color_1: rgba(globals.$callout-rgb, 0.5);
-
 .page {
   position: relative;
   min-height: 100svh;
   overflow-x: hidden;
-  /* 
-  display: grid;
-  align-items: center;
-  justify-items: center;
-  padding: 1px;
-  */
 
-  .parallaxSection {
+  .parallaxContainer {
     position: fixed;
     top: 0;
     left: 0;
     height: 100svh;
     width: 100svw;
-    overflow: hidden;
-    background: linear-gradient(to bottom, #111, #333);
+    background: globals.$backgroundColor;
     z-index: -1;
-    border: 1px solid green;
+
     // iPad viewports
     @media (min-width: 810px) and (max-width: 1024px) {
       height: 120vh; // Extra image height
     }
 
-    .parallaxContainer {
+    .parallaxImage {
       position: absolute;
       height: 100%;
       width: 100%;
-      border: 1px solid red;
-
-      .parallaxImage {
-        position: absolute;
-        border: 1px solid blue;
-        height: 100%;
-        width: 100%;
-        object-fit: contain;
-        object-position: top center;
-      }
+      object-fit: contain;
+      object-position: top center;
     }
   }
 
   .contentOverlay {
-    min-height: 100svh;
     height: 100%;
     width: 100%;
-    border: 1px solid yellow;
+    background-color: globals.$contentBackgroundColor;
 
     .header {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
+      text-align: center;
       width: 100%;
       margin-top: 60svh;
       padding-top: 1rem;
       padding-bottom: 1rem;
-      background-color: globals.$background;
+
       // iPad viewport content positioning
       @media (min-width: 810px) and (max-width: 1024px) {
         margin-top: 70vh;
-      }
-
-      img {
-        border-radius: 50%;
       }
     }
 
@@ -78,25 +53,11 @@ $background-color_1: rgba(globals.$callout-rgb, 0.5);
       align-items: center;
       padding: 0.5rem;
       grid-row-start: 2;
-      background-color: globals.$background;
-
-      article {
-        margin-top: 1rem;
-        margin-bottom: 1rem;
-
-        header {
-          padding-top: 1rem;
-          padding-bottom: 1rem;
-          text-align: center;
-        }
-      }
     }
 
     .footer {
-      display: flex;
       color: globals.$text-rgb;
-      align-content: center;
-      background-color: globals.$background;
+      text-align: center;
     }
   }
 }

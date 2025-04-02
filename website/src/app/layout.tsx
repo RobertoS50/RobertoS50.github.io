@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "@/scss/layout/root.scss";
-// TODO #1: Check which font to use
+// TODO #1/6: Check which font to use
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
