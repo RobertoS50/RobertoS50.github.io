@@ -3,6 +3,7 @@ import ProfilePic from "@/public/RobertoS-4.jpg";
 import styles from "@/scss/pages/home.module.scss";
 
 // TODO #4/8: Add easy navigation like a button to get to certain parts of website
+// TODO #9/9: Design components they can be hidden and loaded in seamlessly. (This website can grow a lot if it stays one page)
 
 export default function Home() {
   return (
