@@ -1,6 +1,18 @@
 @use "@/scss/globals.scss";
 // TODO 7/7: Try image fade away again since overflow hidden might've caused problems
 // TODO 8/8: Look for more intuitive way to make space between content overlay and top of page without margin
+
+/**
+ * Home page styles
+ *
+ *  This SCSS contains the following features:
+ *  - Parallax effect for the home page
+ *  - Header sticks to top of the page
+ *  - Styling for one page website with a focus on a grid like layout
+ *  - Mobile first design
+ * 
+*/
+
 .page {
   position: relative;
   min-height: 100svh;
