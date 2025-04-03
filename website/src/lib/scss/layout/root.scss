@@ -1,5 +1,7 @@
 @use "@/scss/globals.scss";
 
+// Mobile first design
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -8,17 +10,49 @@
 
 html {
   overflow-x: hidden;
+
   body {
-    max-width: 100vw;
-    min-height: 100vh;
-    color: globals.$text-rgb;
+    max-width: 100svw;
+    min-height: 100svh;
     background-color: globals.$backgroundColor;
-    font-size: 1rem;
+    color: globals.$text-rgb;
+    font-family: var(--font-open-sans);
+    font-size: 75%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+
+    // iPad and desktop viewports
+    @media (min-width: 809px) {
+      font-size: 100%;
+    }
+
+    h1 {
+      font-family: var(--font-montserrat);
+      font-size: 2em;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-montserrat);
+      font-size: 1.8em;
+    }
   }
+
   a {
     color: inherit;
     text-decoration: none;
+  }
+
+  // Enable hover only on non-touch devices
+
+  @media (hover: hover) and (pointer: fine) {
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: bold;
+    }
   }
 }

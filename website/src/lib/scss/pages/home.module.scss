@@ -1,6 +1,4 @@
 @use "@/scss/globals.scss";
-// TODO 7/7: Try image fade away again since overflow hidden might've caused problems
-// TODO 8/8: Look for more intuitive way to make space between content overlay and top of page without margin
 
 /**
  * Home page styles
@@ -9,7 +7,6 @@
  *  - Parallax effect for the home page
  *  - Header sticks to top of the page
  *  - Styling for one page website with a focus on a grid like layout
- *  - Mobile first design
  * 
 */
 
@@ -47,6 +44,8 @@
     height: 100%;
     width: 100%;
     margin-top: 60svh;
+    display: flex;
+    flex-direction: column;
     background-color: globals.$contentBackgroundColor;
 
     // iPad viewport content positioning
@@ -58,11 +57,11 @@
       z-index: 100;
       position: sticky;
       top: 0;
-      background-color: globals.$contentBackgroundColor;
-      text-align: center;
       width: 100%;
       padding-top: 1rem;
       padding-bottom: 1rem;
+      background-color: globals.$contentBackgroundColor;
+      text-align: center;
     }
 
     .main {
@@ -75,6 +74,7 @@
     }
 
     .footer {
+      margin-top: auto;
       color: globals.$text-rgb;
       text-align: center;
     }

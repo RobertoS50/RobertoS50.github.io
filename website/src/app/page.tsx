@@ -1,7 +1,8 @@
 import Image from "next/image";
 import ProfilePic from "@/public/RobertoS-4.jpg";
 import styles from "@/scss/pages/home.module.scss";
-// TODO #4/6: Add easy navigation like a button to get to certain parts of website
+
+// TODO #4/8: Add easy navigation like a button to get to certain parts of website
 
 export default function Home() {
   return (
@@ -53,7 +54,8 @@ export default function Home() {
           </section>
         </main>
         <footer className={styles.footer}>
-          Website coded by Alexander Rojas
+          Website coded by{" "}
+          <a href="https://www.github.com/alexrojas431">Alexander Rojas</a>
         </footer>
       </div>
     </div>

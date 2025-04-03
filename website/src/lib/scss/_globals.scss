@@ -1,7 +1,4 @@
 // General variables
-$font-mono: ui-monospace, Menlo, Monaco, "Cascadia Mono", "Segoe UI Mono",
-  "Roboto Mono", "Oxygen Mono", "Ubuntu Monospace", "Source Code Pro",
-  "Fira Mono", "Droid Sans Mono", "Courier New", monospace;
 $backgroundColor: linear-gradient(to bottom, #111, #333);
 $contentBackgroundColor: rgb(246, 246, 246);
 $text-rgb: rgb(0, 0, 0);
@@ -12,26 +9,3 @@ $border-radius: 12px;
   font-size: 75%;
   font-style: italic;
 }
-
-// New CSS for rob
-
-/* 
-Enable hover only on non-touch devices 
-@media (hover: hover) and (pointer: fine) {
-  a.primary:hover {
-    background: var(--button-primary-hover);
-    border-color: transparent;
-  }
-
-  a.secondary:hover {
-    background: var(--button-secondary-hover);
-    border-color: transparent;
-  }
-
-  .footer a:hover {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-  }
-}
-
-*/
