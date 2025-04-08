@@ -1,0 +1,82 @@
+@use "@/scss/globals.scss";
+
+/**
+ * Home page styles
+ *
+ *  This SCSS contains the following features:
+ *  - Parallax effect for the home page
+ *  - Header sticks to top of the page
+ *  - Styling for one page website with a focus on a grid like layout
+ * 
+*/
+
+.page {
+  position: relative;
+  min-height: 100svh;
+
+  .parallaxContainer {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100svh;
+    width: 100svw;
+    background: globals.$backgroundColor;
+
+    // iPad viewports
+    @media (min-width: 810px) and (max-width: 1024px) {
+      height: 120vh; // Extra image height
+    }
+
+    .parallaxImage {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: top center;
+    }
+  }
+
+  .contentOverlay {
+    z-index: 1;
+    position: relative;
+    min-height: 100svh;
+    height: 100%;
+    width: 100%;
+    margin-top: 60svh;
+    display: flex;
+    flex-direction: column;
+    background-color: globals.$contentBackgroundColor;
+
+    // iPad viewport content positioning
+    @media (min-width: 810px) and (max-width: 1024px) {
+      margin-top: 70vh;
+    }
+
+    .header {
+      z-index: 100;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      background-color: globals.$contentBackgroundColor;
+      text-align: center;
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem;
+      grid-row-start: 2;
+    }
+
+    .footer {
+      margin-top: auto;
+      color: globals.$text-rgb;
+      text-align: center;
+    }
+  }
+}

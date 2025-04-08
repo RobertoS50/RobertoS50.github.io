@@ -1,0 +1,58 @@
+@use "@/scss/globals.scss";
+
+// Mobile first design
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+
+  body {
+    max-width: 100svw;
+    min-height: 100svh;
+    background-color: globals.$backgroundColor;
+    color: globals.$text-rgb;
+    font-family: var(--font-open-sans);
+    font-size: 75%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    // iPad and desktop viewports
+    @media (min-width: 809px) {
+      font-size: 100%;
+    }
+
+    h1 {
+      font-family: var(--font-montserrat);
+      font-size: 2rem;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: var(--font-montserrat);
+      font-size: 1.8rem;
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  // Enable hover only on non-touch devices
+
+  @media (hover: hover) and (pointer: fine) {
+    a:hover {
+      text-decoration: underline;
+      text-underline-offset: 4px;
+      font-weight: bold;
+    }
+  }
+}
