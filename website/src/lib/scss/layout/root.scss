@@ -1,6 +1,6 @@
 @use "@/scss/globals.scss";
 
-// Mobile first design
+// Mobile first design: Size up items for desktop viewports
 
 * {
   box-sizing: border-box;
@@ -22,7 +22,7 @@ html {
     -moz-osx-font-smoothing: grayscale;
 
     // iPad and desktop viewports
-    @media (min-width: 809px) {
+    @media (min-width: globals.$ipad-start-width) {
       font-size: 100%;
     }
 
