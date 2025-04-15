@@ -58,8 +58,8 @@
       position: sticky;
       top: 0;
       width: 100%;
-      padding-top: 1rem;
-      padding-bottom: 1rem;
+      padding-top: 1%;
+      padding-bottom: 1%;
       background-color: globals.$contentBackgroundColor;
       text-align: center;
     }
@@ -69,11 +69,11 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      padding: 0.5rem;
+      padding: 0.5%;
       grid-row-start: 2;
 
       section {
-        padding: 0.5rem;
+        padding: 0.5%;
       }
     }
 
