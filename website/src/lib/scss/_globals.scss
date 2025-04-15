@@ -1,0 +1,11 @@
+// General variables
+$backgroundColor: linear-gradient(to bottom, #111, #333);
+$contentBackgroundColor: rgb(246, 246, 246);
+$text-rgb: rgb(0, 0, 0);
+
+$border-radius: 12px;
+
+@mixin credits {
+  font-size: 75%;
+  font-style: italic;
+}
