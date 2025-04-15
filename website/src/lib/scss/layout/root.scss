@@ -17,13 +17,13 @@ html {
     background-color: globals.$backgroundColor;
     color: globals.$text-rgb;
     font-family: var(--font-open-sans);
-    font-size: 75%;
+    font-size: 80%;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
     // iPad and desktop viewports
     @media (min-width: globals.$ipad-start-width) {
-      font-size: 100%;
+      font-size: 110%;
     }
 
     h1 {
@@ -42,17 +42,21 @@ html {
   }
 
   a {
-    color: inherit;
-    text-decoration: none;
+    color: globals.$link-fill-rgb;
+    text-decoration: underline;
+    font-weight: bold;
   }
 
   // Enable hover only on non-touch devices
 
   @media (hover: hover) and (pointer: fine) {
-    a:hover {
-      text-decoration: underline;
-      text-underline-offset: 4px;
-      font-weight: bold;
+    a {
+      font-weight: inherit;
+
+      &:hover {
+        text-underline-offset: 4px;
+        font-weight: bold;
+      }
     }
   }
 }

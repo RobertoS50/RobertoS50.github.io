@@ -1,7 +1,5 @@
 @use "@/scss/globals.scss";
 
-// TODO 10/10: Make clickable elements obvious in mobile views, differentiate between links and buttons
-
 /**
  * Intro section styles
  *
@@ -25,6 +23,17 @@
 
   .contactInfo {
     order: 2;
+
+    a {
+      margin-bottom: 0.5rem;
+      @include globals.button;
+    }
+
+    @media (hover: hover) and (pointer: fine) {
+      a {
+        @include globals.buttonHover;
+      }
+    }
   }
 }
 

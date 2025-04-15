@@ -79,8 +79,9 @@
 
     .footer {
       margin-top: auto;
-      color: globals.$text-rgb;
+      padding-bottom: 2px;
       text-align: center;
+      color: globals.$text-rgb;
     }
   }
 }
