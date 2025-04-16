@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ProfilePic from "@/public/RobertoS-4.jpg";
+import Intro from "@/components/sections/Intro";
 import styles from "@/scss/pages/home.module.scss";
 
 // TODO #4/8: Add easy navigation like a button to get to certain parts of website
@@ -20,24 +21,14 @@ export default function Home() {
       </div>
       <div className={styles.contentOverlay}>
         <header className={styles.header}>
-          <h1>Roberto Soto</h1>
+          <hgroup>
+            <h1>Roberto Soto</h1>
+            Portfolio
+          </hgroup>
         </header>
         <main className={styles.main}>
-          <section>
-            <article>
-              <h2>Bio</h2>
-              <p>
-                Hi My name is Roberto Soto I am currently a rising senior at
-                Aurora University. My passion is in Marketing and I have done
-                Brand Ambassador work since 2019. Working for brands such as
-                Gatorade, Coke, Insta Kart, and, most recently for 2024,
-                LollaPalooza and American Apparel. I&apos;ve also managed a
-                local company&apos;s social media handles as well. Besides
-                focusing on my career I like to go to concerts in my free time
-                as well as acting as a hobby.
-              </p>
-            </article>
-          </section>
+          <h2>Bio</h2>
+          <Intro />
           <section>
             <article>
               <h3>Background</h3>
