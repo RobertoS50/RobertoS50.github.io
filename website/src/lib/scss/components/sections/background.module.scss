@@ -1,0 +1,65 @@
+@use "@/scss/globals.scss";
+
+// TODO 12/12: Add global variables for main headings font sizes
+// TODO 13/13: Have special set of css (font size) for headings within sections with main headings
+
+/**
+ * Background section styles
+ *
+ *  Smaller than desktop viewports have a column layout
+ *  Desktop viewports have a row layout
+ * 
+*/
+
+.backgroundSection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+  justify-content: space-between;
+
+  .skills {
+    order: 1;
+
+    ul {
+      padding: 0;
+      margin: 0;
+      list-style-type: none;
+      text-align: center;
+    }
+  }
+
+  .education {
+    order: 2;
+    text-align: center;
+
+    h2 {
+      text-align: left;
+      //font-size: inherit;
+    }
+  }
+}
+
+@media (min-width: globals.$desktop-start-width) {
+  .backgroundSection {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    column-gap: 2rem;
+
+    .skills {
+      flex-shrink: 3;
+
+      h2 {
+        text-align: center;
+      }
+    }
+
+    .education {
+      flex-basis: 35%;
+
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}
