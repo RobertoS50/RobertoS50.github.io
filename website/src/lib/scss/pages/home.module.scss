@@ -74,8 +74,15 @@
       padding: 0.5%;
       grid-row-start: 2;
 
-      section {
+      div {
         padding: 0.5%;
+
+        article {
+          h2 {
+            font-size: globals.$sub-h2-font-size;
+            color: globals.$sub-h2-rgb;
+          }
+        }
       }
     }
 

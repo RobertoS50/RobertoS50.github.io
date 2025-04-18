@@ -2,8 +2,9 @@ import styles from "@/scss/components/sections/intro.module.scss";
 
 export default function Intro() {
   return (
-    <section className={styles.introSection}>
+    <div className={styles.introSection}>
       <article className={styles.bio}>
+        <h2>Bio</h2>
         <p>
           Hi, my name is Roberto Soto I am currently a rising senior at Aurora
           University. My passion is in Marketing and I have done Brand
@@ -20,13 +21,13 @@ export default function Intro() {
         </p>
       </article>
       <article className={styles.contactInfo}>
-        Contact me through my:
+        <h2>Contact</h2>
         <address>
           <a href="https://www.linkedin.com/in/roberto-soto12/">LinkedIn</a>
           <br />
           <a href="mailto:sotor2588@gmail.com">Email - sotor2588@gmail.com</a>
         </address>
       </article>
-    </section>
+    </div>
   );
 }

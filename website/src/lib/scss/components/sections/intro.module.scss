@@ -16,6 +16,10 @@
   justify-content: space-between;
   text-align: center;
 
+  h2 {
+    text-align: left;
+  }
+
   .bio {
     order: 1;
   }
@@ -41,15 +45,19 @@
     flex-direction: row;
     flex-wrap: nowrap;
     column-gap: 2rem;
-  }
 
-  .bio {
-    text-align: left;
-    flex-shrink: 3;
-  }
+    h2 {
+      text-align: center;
+    }
 
-  .contactInfo {
-    text-align: center;
-    flex-basis: 25%;
+    .bio {
+      text-align: left;
+      flex-shrink: 3;
+    }
+
+    .contactInfo {
+      text-align: center;
+      flex-basis: 25%;
+    }
   }
 }

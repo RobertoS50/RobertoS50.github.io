@@ -1,7 +1,5 @@
 import styles from "@/scss/components/sections/background.module.scss";
 
-// TODO 14/14: Look through previous components and change section/article to div if can't add heading
-
 export default function Background() {
   return (
     <div className={styles.backgroundSection}>

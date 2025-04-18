@@ -24,11 +24,11 @@ export default function Home() {
         <header className={styles.header}>
           <hgroup>
             <h1>Roberto Soto</h1>
-            Portfolio
+            <p>Portfolio</p>
           </hgroup>
         </header>
         <main className={styles.main}>
-          <h2>Bio</h2>
+          <h2>About me</h2>
           <Intro />
           <h3>Background</h3>
           <Background />

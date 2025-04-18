@@ -1,21 +1,28 @@
-// General variables
+// Viewport sizes
 $mobile-end-width: 809px;
 $ipad-start-width: 810px;
 $ipad-end-width: 1023px;
 $desktop-start-width: 1024px;
 
+// Colors
 $backgroundColor: linear-gradient(to bottom, #111, #333);
 $contentBackgroundColor: rgb(246, 246, 246);
 $text-rgb: rgb(0, 0, 0);
+$sub-h2-rgb: rgb(71, 70, 70);
 
+// Font sizes
+$phone-font-size: 80%;
+$non-phone-font-size: 110%;
+
+// Header font sizes
+$main-h1-font-size: 200%;
+$main-h2-font-size: 150%;
+$sub-h2-font-size: 130%;
+
+// Button styles
 $link-button-border-rgb: rgb(0, 95, 162);
 $link-fill-rgb: rgb(0, 64, 110);
 $button-radius: 15px;
-
-@mixin link {
-  font-size: 75%;
-  font-style: italic;
-}
 
 /*
  * Button styles
@@ -52,6 +59,13 @@ $button-radius: 15px;
     color: white;
     transition: ease-in-out 100ms;
   }
+}
+
+@mixin noListPoint {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
 }
 
 @mixin credits {

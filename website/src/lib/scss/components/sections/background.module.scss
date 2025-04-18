@@ -1,8 +1,5 @@
 @use "@/scss/globals.scss";
 
-// TODO 12/12: Add global variables for main headings font sizes
-// TODO 13/13: Have special set of css (font size) for headings within sections with main headings
-
 /**
  * Background section styles
  *
@@ -18,25 +15,21 @@
   row-gap: 0.5rem;
   justify-content: space-between;
 
+  h2 {
+    text-align: left;
+  }
+
   .skills {
     order: 1;
 
     ul {
-      padding: 0;
-      margin: 0;
-      list-style-type: none;
-      text-align: center;
+      @include globals.noListPoint;
     }
   }
 
   .education {
     order: 2;
     text-align: center;
-
-    h2 {
-      text-align: left;
-      //font-size: inherit;
-    }
   }
 }
 
@@ -46,20 +39,16 @@
     flex-wrap: nowrap;
     column-gap: 2rem;
 
+    h2 {
+      text-align: center;
+    }
+
     .skills {
       flex-shrink: 3;
-
-      h2 {
-        text-align: center;
-      }
     }
 
     .education {
       flex-basis: 35%;
-
-      h2 {
-        text-align: center;
-      }
     }
   }
 }
