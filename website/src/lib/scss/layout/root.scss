@@ -17,18 +17,18 @@ html {
     background-color: globals.$backgroundColor;
     color: globals.$text-rgb;
     font-family: var(--font-open-sans);
-    font-size: 80%;
+    font-size: globals.$phone-font-size;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
     // iPad and desktop viewports
     @media (min-width: globals.$ipad-start-width) {
-      font-size: 110%;
+      font-size: globals.$non-phone-font-size;
     }
 
     h1 {
       font-family: var(--font-montserrat);
-      font-size: 200%;
+      font-size: globals.$main-h1-font-size;
     }
 
     h2,
@@ -37,7 +37,7 @@ html {
     h5,
     h6 {
       font-family: var(--font-montserrat);
-      font-size: 150%;
+      font-size: globals.$main-h2-font-size;
     }
   }
 

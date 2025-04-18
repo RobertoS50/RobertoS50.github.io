@@ -1,5 +1,7 @@
 @use "@/scss/globals.scss";
 
+// TODO 11/11: Add shadow to header so it's obviously cutting off the content underneath it
+
 /**
  * Home page styles
  *
@@ -61,6 +63,7 @@
       padding-top: 1%;
       padding-bottom: 1%;
       background-color: globals.$contentBackgroundColor;
+      box-shadow: globals.$shadow-straight-bottom;
       text-align: center;
     }
 
@@ -70,10 +73,16 @@
       justify-content: space-between;
       align-items: center;
       padding: 0.5%;
-      grid-row-start: 2;
 
-      section {
+      div {
         padding: 0.5%;
+
+        article {
+          h2 {
+            font-size: globals.$sub-h2-font-size;
+            color: globals.$sub-h2-rgb;
+          }
+        }
       }
     }
 

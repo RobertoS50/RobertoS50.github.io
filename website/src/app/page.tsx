@@ -1,6 +1,7 @@
 import Image from "next/image";
 import ProfilePic from "@/public/RobertoS-4.jpg";
 import Intro from "@/components/sections/Intro";
+import Background from "@/components/sections/Background";
 import styles from "@/scss/pages/home.module.scss";
 
 // TODO #4/8: Add easy navigation like a button to get to certain parts of website
@@ -23,17 +24,14 @@ export default function Home() {
         <header className={styles.header}>
           <hgroup>
             <h1>Roberto Soto</h1>
-            Portfolio
+            <p>Portfolio</p>
           </hgroup>
         </header>
         <main className={styles.main}>
-          <h2>Bio</h2>
+          <h2>About me</h2>
           <Intro />
-          <section>
-            <article>
-              <h3>Background</h3>
-            </article>
-          </section>
+          <h3>Background</h3>
+          <Background />
           <section>
             <article>
               <h4>Work experience</h4>
