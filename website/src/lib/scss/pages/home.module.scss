@@ -65,6 +65,10 @@
       background-color: globals.$contentBackgroundColor;
       box-shadow: globals.$shadow-straight-bottom;
       text-align: center;
+
+      @media screen and (min-width: globals.$ipad-start-width) {
+        box-shadow: globals.$shadow-non-phone-straight-bottom;
+      }
     }
 
     .main {
