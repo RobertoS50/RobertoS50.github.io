@@ -1,5 +1,7 @@
 "use client";
 import { useState } from "react";
+import { salesJobs } from "@/data/jobListData/salesJobsData";
+import JobList from "@/components/JobList";
 import styles from "@/scss/components/sections/workExperience.module.scss";
 
 export default function WorkExperience() {
@@ -18,7 +20,7 @@ export default function WorkExperience() {
       <button className={styles.salesButton} onClick={handleSalesClick}>
         Sales<span>{salesActive === true ? "▼" : "▶"}</span>
       </button>
-      {salesActive === true && <span>hello</span>}
+      {salesActive === true && <JobList jobListData={salesJobs} />}
       <button className={styles.retailButton}>
         Retail<span>▶</span>
       </button>

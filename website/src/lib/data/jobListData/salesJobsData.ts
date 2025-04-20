@@ -2,7 +2,7 @@ import { JobInterface } from "@/interface/jobInterface";
 
 export const salesJobs: JobInterface[] = [
   {
-    id: "sales-3",
+    id: "salesJob-3",
     company: "Coach",
     position: "Sales Associate",
     location: "Schaumburg, IL",
@@ -22,7 +22,7 @@ export const salesJobs: JobInterface[] = [
     ],
   },
   {
-    id: "sales-2",
+    id: "salesJob-2",
     company: "Coach",
     position: "Sales Support Associate",
     location: "Schaumburg, IL",
@@ -36,7 +36,7 @@ export const salesJobs: JobInterface[] = [
     ],
   },
   {
-    id: "sales-1",
+    id: "salesJob-1",
     company: "EXPRESS",
     position: "Sales Associate",
     location: "Bloomingdale, IL",
