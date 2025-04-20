@@ -2,6 +2,7 @@ import Image from "next/image";
 import ProfilePic from "@/public/RobertoS-4.jpg";
 import Intro from "@/components/sections/Intro";
 import Background from "@/components/sections/Background";
+import WorkExperience from "@/components/sections/WorkExperience";
 import styles from "@/scss/pages/home.module.scss";
 
 // TODO #4/8: Add easy navigation like a button to get to certain parts of website
@@ -32,11 +33,8 @@ export default function Home() {
           <Intro />
           <h3>Background</h3>
           <Background />
-          <section>
-            <article>
-              <h4>Work experience</h4>
-            </article>
-          </section>
+          <h4>Work experience</h4>
+          <WorkExperience />
           <section>
             <article>
               <h5>More room</h5>

@@ -1,0 +1,98 @@
+@use "@/scss/globals.scss";
+
+/**
+ * JobList component styles
+ *
+ *  This SCSS contains the following features:
+ *  - Parallax effect for the home page
+ *  - Header sticks to top of the page
+ *  - Styling for one page website with a focus on a grid like layout
+ * 
+*/
+
+.page {
+  position: relative;
+  min-height: 100svh;
+
+  .parallaxContainer {
+    z-index: -1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100svh;
+    width: 100svw;
+    background: globals.$backgroundColor;
+
+    // iPad viewports
+    @media (min-width: globals.$ipad-start-width) and (max-width: globals.$ipad-end-width) {
+      height: 120vh; // Extra image height
+    }
+
+    .parallaxImage {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+      object-position: top center;
+    }
+  }
+
+  .contentOverlay {
+    z-index: 1;
+    position: relative;
+    min-height: 100svh;
+    height: 100%;
+    width: 100%;
+    margin-top: 60svh;
+    display: flex;
+    flex-direction: column;
+    background-color: globals.$contentBackgroundColor;
+
+    // iPad viewport content positioning
+    @media (min-width: globals.$ipad-start-width) and (max-width: globals.$ipad-end-width) {
+      margin-top: 70vh;
+    }
+
+    .header {
+      z-index: 100;
+      position: sticky;
+      top: 0;
+      width: 100%;
+      padding-top: 1%;
+      padding-bottom: 1%;
+      background-color: globals.$contentBackgroundColor;
+      box-shadow: globals.$shadow-straight-bottom;
+      text-align: center;
+
+      @media screen and (min-width: globals.$ipad-start-width) {
+        box-shadow: globals.$shadow-non-phone-straight-bottom;
+      }
+    }
+
+    .main {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5%;
+
+      div {
+        padding: 0.5%;
+
+        article {
+          h2 {
+            font-size: globals.$sub-h2-font-size;
+            color: globals.$sub-h2-rgb;
+          }
+        }
+      }
+    }
+
+    .footer {
+      margin-top: auto;
+      padding-bottom: 2px;
+      text-align: center;
+      color: globals.$text-rgb;
+    }
+  }
+}

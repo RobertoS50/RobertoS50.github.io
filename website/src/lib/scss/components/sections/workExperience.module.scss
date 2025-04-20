@@ -1,0 +1,39 @@
+@use "@/scss/globals.scss";
+
+/**
+ * Work Experience section styles
+ *
+ *  Have drop down menus for work history that pertains to a specific industry.
+ *  Once expanded it lists relevant work experience.
+ *  To see those styles or components check out:
+ *
+ *  @components/JobList.tsx
+ *  @jobList.module.scss
+ * 
+*/
+
+.workExpSection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  row-gap: 0.5rem;
+  justify-content: space-between;
+
+  button {
+    width: 90svw;
+    padding: 0.5%;
+    font-family: globals.$heading-font;
+    font-size: globals.$sub-h2-font-size;
+    font-weight: bold;
+    text-align: left;
+
+    h2 {
+      text-align: left;
+      font-size: globals.$sub-h2-font-size;
+    }
+
+    span {
+      float: right;
+    }
+  }
+}

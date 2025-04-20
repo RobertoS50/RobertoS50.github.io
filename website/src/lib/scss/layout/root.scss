@@ -16,7 +16,7 @@ html {
     min-height: 100svh;
     background-color: globals.$backgroundColor;
     color: globals.$text-rgb;
-    font-family: var(--font-open-sans);
+    font-family: globals.$text-font;
     font-size: globals.$phone-font-size;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -27,7 +27,7 @@ html {
     }
 
     h1 {
-      font-family: var(--font-montserrat);
+      font-family: globals.$heading-font;
       font-size: globals.$main-h1-font-size;
     }
 
@@ -36,7 +36,7 @@ html {
     h4,
     h5,
     h6 {
-      font-family: var(--font-montserrat);
+      font-family: globals.$heading-font;
       font-size: globals.$main-h2-font-size;
     }
   }
