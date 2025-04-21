@@ -22,18 +22,28 @@
   button {
     width: 90svw;
     padding: 0.5%;
+    align-self: center;
+    border: 1px solid black;
     font-family: globals.$heading-font;
     font-size: globals.$sub-h2-font-size;
     font-weight: bold;
     text-align: left;
-
-    h2 {
-      text-align: left;
-      font-size: globals.$sub-h2-font-size;
-    }
+    color: white;
 
     span {
       float: right;
     }
+  }
+
+  .marketingButton {
+    background-color: rgb(19, 81, 151);
+  }
+
+  .salesButton {
+    background-color: rgb(63, 162, 63);
+  }
+
+  .retailButton {
+    background-color: rgb(77, 51, 181);
   }
 }

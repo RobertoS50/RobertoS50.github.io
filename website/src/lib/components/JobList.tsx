@@ -25,20 +25,26 @@ export default function JobList(p: Props) {
     <div className={styles.jobList}>
       {p.jobListData.map((job: JobInterface) => (
         <div key={job.id} className={styles.job}>
-          <h3>{job.company}</h3>
-          <h4>{job.position}</h4>
-          <p>{job.location}</p>
-          <p>
-            {job.startDate} - {job.endDate}
-          </p>
+          <h2>{job.company}</h2>
+          <h3>{job.position}</h3>
+          <div className={styles.jobSubHeading}>
+            <span>
+              {job.startDate} - {job.endDate}
+            </span>
+            <span>{job.location}</span>
+          </div>
           <p>{job.description}</p>
-          Skills:
+          <br />
+          <span>Skills:</span>
+          <br />
           <ul>
             {job.skills.map((skill: string, index: number) => (
               <li key={"skill-" + index}>{skill}</li>
             ))}
           </ul>
-          Achievements:
+          <br />
+          <span>Achievements:</span>
+          <br />
           <ul>
             {job.achievements.map((achievement: string, index: number) => (
               <li key={"achievement-" + index}>{achievement}</li>

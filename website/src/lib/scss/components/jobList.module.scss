@@ -3,96 +3,37 @@
 /**
  * JobList component styles
  *
- *  This SCSS contains the following features:
- *  - Parallax effect for the home page
- *  - Header sticks to top of the page
- *  - Styling for one page website with a focus on a grid like layout
- * 
+ *  One container holding a list of jobs.
+ *
 */
 
-.page {
-  position: relative;
-  min-height: 100svh;
+.jobList {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid red;
 
-  .parallaxContainer {
-    z-index: -1;
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100svh;
-    width: 100svw;
-    background: globals.$backgroundColor;
-
-    // iPad viewports
-    @media (min-width: globals.$ipad-start-width) and (max-width: globals.$ipad-end-width) {
-      height: 120vh; // Extra image height
+  .job {
+    h2 {
+      font-size: globals.$sub-h3-font-size;
     }
 
-    .parallaxImage {
-      position: absolute;
-      height: 100%;
-      width: 100%;
-      object-fit: contain;
-      object-position: top center;
-    }
-  }
-
-  .contentOverlay {
-    z-index: 1;
-    position: relative;
-    min-height: 100svh;
-    height: 100%;
-    width: 100%;
-    margin-top: 60svh;
-    display: flex;
-    flex-direction: column;
-    background-color: globals.$contentBackgroundColor;
-
-    // iPad viewport content positioning
-    @media (min-width: globals.$ipad-start-width) and (max-width: globals.$ipad-end-width) {
-      margin-top: 70vh;
+    h3 {
+      font-size: globals.$sub-h4-font-size;
     }
 
-    .header {
-      z-index: 100;
-      position: sticky;
-      top: 0;
-      width: 100%;
-      padding-top: 1%;
-      padding-bottom: 1%;
-      background-color: globals.$contentBackgroundColor;
-      box-shadow: globals.$shadow-straight-bottom;
-      text-align: center;
-
-      @media screen and (min-width: globals.$ipad-start-width) {
-        box-shadow: globals.$shadow-non-phone-straight-bottom;
-      }
+    ul {
+      margin-left: 1rem;
     }
 
-    .main {
+    .jobSubHeading {
       display: flex;
-      flex-direction: column;
       justify-content: space-between;
-      align-items: center;
-      padding: 0.5%;
-
-      div {
-        padding: 0.5%;
-
-        article {
-          h2 {
-            font-size: globals.$sub-h2-font-size;
-            color: globals.$sub-h2-rgb;
-          }
-        }
-      }
-    }
-
-    .footer {
-      margin-top: auto;
-      padding-bottom: 2px;
-      text-align: center;
-      color: globals.$text-rgb;
+      font-family: globals.$heading-font;
+      font-size: globals.$sub-h5-font-size;
+      font-weight: bold;
     }
   }
 }
