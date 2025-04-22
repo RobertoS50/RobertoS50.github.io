@@ -44,6 +44,7 @@ $shadow-non-phone-straight-bottom: 0px 1px 15px 0px rgba(66, 68, 90, 0.63);
  * - Sets background color, text color, and font weight back to their defaults so hover will work correctly
  *
 */
+
 @mixin button {
   display: inline-block;
   padding: 0.5rem;
