@@ -3,12 +3,15 @@ $mobile-end-width: 809px;
 $ipad-start-width: 810px;
 $ipad-end-width: 1023px;
 $desktop-start-width: 1024px;
+$desktop-end-width: 2159px;
+$large-desktop-start-width: 2160px;
 
 // Colors
 $backgroundColor: linear-gradient(to bottom, #111, #333);
 $contentBackgroundColor: rgb(246, 246, 246);
 $text-rgb: rgb(0, 0, 0);
-$sub-h2-rgb: rgb(71, 70, 70);
+$sub-h2-rgb: rgb(54, 53, 53);
+$sub-h3-rgb: rgb(94, 93, 93);
 
 // Font
 $heading-font: var(--font-montserrat);

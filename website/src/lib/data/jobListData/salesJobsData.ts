@@ -8,8 +8,10 @@ export const salesJobs: JobInterface[] = [
     location: "Schaumburg, IL",
     startDate: "2024-01-01",
     endDate: "Present",
-    description:
+    description: [
       "Assisted customers with their purchases and provided exceptional customer service.",
+      "front of house",
+    ].join(" "),
     skills: [
       "Customer Service",
       "Sales",
@@ -18,9 +20,10 @@ export const salesJobs: JobInterface[] = [
       "Communication",
     ],
     achievements: [
-      "EXAMPLE:Exceeded sales targets by 20% in the first quarter:EXAMPLE",
+      "100% customer satisfaction, all reviews left by customers have been very positive.",
     ],
   },
+
   {
     id: "salesJob-2",
     company: "Coach",
@@ -28,13 +31,23 @@ export const salesJobs: JobInterface[] = [
     location: "Schaumburg, IL",
     startDate: "2023-11-01",
     endDate: "2024-01-01",
-    description:
-      "Assisted customers with their purchases and provided exceptional customer service.",
-    skills: ["Customer Service"],
+    description: [
+      "Ensured smooth operations and exceptional service delivery by managing the stockroom, fulfilling both OMS and online orders.",
+    ].join(" "),
+    skills: [
+      "Customer Service",
+      "OMS (Order Management System)",
+      "Product Knowledge",
+      "Teamwork",
+      "Communication",
+      "Attention to Detail",
+      "Worked in tight deadlines",
+    ],
     achievements: [
-      "EXAMPLE:Exceeded sales targets by 20% in the first quarter:EXAMPLE",
+      "Got top UPT (Units Per Transaction) and ADT (Average Dollar per Transaction) on a consistent basis ",
     ],
   },
+
   {
     id: "salesJob-1",
     company: "EXPRESS",
@@ -42,17 +55,19 @@ export const salesJobs: JobInterface[] = [
     location: "Bloomingdale, IL",
     startDate: "2019-01-01",
     endDate: "2019-08-01",
-    description:
+    description: [
       "Assisted customers with their purchases and provided exceptional customer service.",
+      "\n\nDedicated myself to personalized styling expertise and product knowledge to help customers find the perfect outfit, boost their confidence and zoom in on their individuality.",
+    ].join(" "),
     skills: [
       "Customer Service",
-      "Sales",
       "Product Knowledge",
       "Teamwork",
       "Communication",
+      "Quick Learner",
     ],
     achievements: [
-      "EXAMPLE:Exceeded sales targets by 20% in the first quarter:EXAMPLE",
+      "Constantly exceeded sales targets, for example, selling 86k in 1 day.",
     ],
   },
 ];

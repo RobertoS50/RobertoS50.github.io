@@ -3,6 +3,8 @@ import styles from "@/scss/components/jobList.module.scss";
 
 // TODO 15/16: Adjust HTML tags and styles for jobList
 // TODO 16/16: Address user being yanked when list is disappeared
+// TODO 17/18: Remove retail jobList as Roberto doesn't want it
+// TODO 18/18: Add images to these type of lists (including the education list)
 
 /**
  * @file JobList.tsx
