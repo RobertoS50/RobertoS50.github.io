@@ -21,9 +21,6 @@ export default function WorkExperience() {
         Sales<span>{salesActive === true ? "▼" : "▶"}</span>
       </button>
       {salesActive === true && <JobList jobListData={salesJobs} />}
-      <button className={styles.retailButton}>
-        Retail<span>▶</span>
-      </button>
     </div>
   );
 }
