@@ -48,16 +48,3 @@ export default function WorkExperience() {
     </div>
   );
 }
-/*
-// Helper function to format dates
-function formatDate(dateStr: string): string {
-  if (dateStr === 'Present') return 'Present';
-  if (dateStr.includes('-')) {
-    const [year, month] = dateStr.split('-');
-    return new Date(`${year}-${month}-01`).toLocaleDateString('en-US', { year: 'numeric', month: 'long' });
-  }
-  return dateStr; // Just year
-}
-
-export default WorkExperience;
-*/

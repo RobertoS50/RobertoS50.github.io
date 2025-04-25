@@ -1,9 +1,9 @@
+import formatDate from "@/util/formatDate";
 import { JobInterface } from "@/interface/jobInterface";
 import styles from "@/scss/components/jobList.module.scss";
 
 // TODO 16/19: Address user being yanked when list is disappeared
 // TODO 18/19: Add images to these type of lists (including the education list)
-// TODO 19/19: Create function to handle reformatting of dates
 
 /**
  * @file JobList.tsx
@@ -22,6 +22,8 @@ interface Props {
 }
 
 export default function JobList(p: Props) {
+  const userLocale = navigator.language || "en-US";
+
   return (
     <div className={styles.jobList}>
       {p.jobListData.map((job: JobInterface) => (
@@ -30,7 +32,8 @@ export default function JobList(p: Props) {
           <h3>{job.position}</h3>
           <div className={styles.jobSubHeading}>
             <span>
-              {job.startDate} - {job.endDate}
+              {formatDate(job.startDate, userLocale)} -{" "}
+              {formatDate(job.endDate, userLocale)}
             </span>
             <span>{job.location}</span>
           </div>
