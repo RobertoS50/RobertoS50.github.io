@@ -21,14 +21,30 @@ export default function WorkExperience() {
 
   return (
     <div className={styles.workExpSection}>
-      <button className={styles.marketingButton} onClick={handleMarketingClick}>
-        Marketing<span>{marketingActive === true ? "▼" : "▶"}</span>
-      </button>
-      {marketingActive === true && <JobList jobListData={marketingJobs} />}
-      <button className={styles.salesButton} onClick={handleSalesClick}>
-        Sales<span>{salesActive === true ? "▼" : "▶"}</span>
-      </button>
-      {salesActive === true && <JobList jobListData={salesJobs} />}
+      <div className={styles.listWrapper}>
+        <button
+          className={styles.listButton}
+          id={styles.marketingButton}
+          onClick={handleMarketingClick}
+        >
+          <span className={styles.buttonText}>
+            Marketing<span>{marketingActive === true ? "▼" : "▶"}</span>
+          </span>
+        </button>
+        {marketingActive === true && <JobList jobListData={marketingJobs} />}
+      </div>
+      <div className={styles.listWrapper}>
+        <button
+          className={styles.listButton}
+          id={styles.salesButton}
+          onClick={handleSalesClick}
+        >
+          <span className={styles.buttonText}>
+            Sales<span>{salesActive === true ? "▼" : "▶"}</span>
+          </span>
+        </button>
+        {salesActive === true && <JobList jobListData={salesJobs} />}
+      </div>
     </div>
   );
 }
