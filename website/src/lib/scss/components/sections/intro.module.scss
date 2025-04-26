@@ -9,6 +9,7 @@
 */
 
 .introSection {
+  padding: 0.5%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -18,6 +19,8 @@
 
   h2 {
     text-align: left;
+    font-size: globals.$sub-h2-font-size;
+    color: globals.$sub-h2-rgb;
   }
 
   .bio {

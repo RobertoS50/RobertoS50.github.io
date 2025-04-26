@@ -10,8 +10,6 @@
  * 
 */
 
-// TODO 20/20: Remove at least div CSS selectors and replace with class selectors, if not all of them.
-
 .page {
   position: relative;
   min-height: 100svh;
@@ -79,14 +77,7 @@
       padding: 0.5%;
 
       div {
-        padding: 0.5%;
-
-        article {
-          h2 {
-            font-size: globals.$sub-h2-font-size;
-            color: globals.$sub-h2-rgb;
-          }
-        }
+        border: 1px solid red;
       }
     }
 

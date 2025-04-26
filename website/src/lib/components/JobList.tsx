@@ -27,7 +27,7 @@ export default function JobList(p: Props) {
   return (
     <div className={styles.jobList}>
       {p.jobListData.map((job: JobInterface) => (
-        <div key={job.id} className={styles.job}>
+        <article key={job.id} className={styles.job}>
           <h2>{job.company}</h2>
           <h3>{job.position}</h3>
           <div className={styles.jobSubHeading}>
@@ -54,7 +54,7 @@ export default function JobList(p: Props) {
               <li key={"achievement-" + index}>{achievement}</li>
             ))}
           </ul>
-        </div>
+        </article>
       ))}
     </div>
   );

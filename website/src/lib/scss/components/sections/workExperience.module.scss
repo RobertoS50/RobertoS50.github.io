@@ -18,6 +18,8 @@
 */
 
 .workExpSection {
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -30,7 +32,6 @@
     row-gap: 0.5rem;
     justify-content: space-between;
     align-items: center;
-    width: 100svw;
 
     .listButton {
       height: 35px;
