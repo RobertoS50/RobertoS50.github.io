@@ -7,6 +7,7 @@ import styles from "@/scss/pages/home.module.scss";
 
 // TODO #4/8: Add easy navigation like a button to get to certain parts of website
 // TODO #9/9: Design components they can be hidden and loaded in seamlessly. (This website can grow a lot if it stays one page)
+// TODO 22/22: Move headings into the related sections instead of having them separated for more intuitive styling
 
 export default function Home() {
   return (
