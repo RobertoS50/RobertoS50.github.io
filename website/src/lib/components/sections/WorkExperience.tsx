@@ -11,12 +11,10 @@ export default function WorkExperience() {
 
   function handleSalesClick(): void {
     setSalesActive(!salesActive);
-    console.log("Sales button clicked!");
   }
 
   function handleMarketingClick(): void {
     setMarketingActive(!marketingActive);
-    console.log("Marketing button clicked!");
   }
 
   return (
