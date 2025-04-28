@@ -13,13 +13,11 @@
 
 @keyframes slide-in-out {
   0% {
-    transform-origin: top;
-    transform: scaleY(0);
+    max-height: 0;
   }
 
   100% {
-    transform-origin: top;
-    transform: scaleY(1);
+    max-height: 1000000px;
   }
 }
 
@@ -40,7 +38,10 @@
   row-gap: 1rem;
   justify-content: space-between;
   align-items: left;
-  animation: 0.5s ease-in-out slide-in-out;
+  animation: 0.5s ease-in-out forwards slide-in-out;
+  max-height: 0;
+  overflow: hidden;
+  border: 1px solid red;
 
   .job {
     opacity: 0;
