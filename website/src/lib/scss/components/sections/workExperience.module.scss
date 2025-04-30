@@ -62,13 +62,39 @@
         align-items: center;
       }
     }
-  }
 
-  #marketingButton {
-    background-color: rgb(19, 81, 151);
-  }
+    #marketingButton {
+      background-color: rgb(19, 81, 151);
 
-  #salesButton {
-    background-color: rgb(63, 162, 63);
+      &[aria-expanded="true"] {
+        ~ .expander {
+          grid-template-rows: 1fr;
+
+          visibility: visible;
+        }
+      }
+    }
+
+    #salesButton {
+      background-color: rgb(63, 162, 63);
+
+      &[aria-expanded="true"] {
+        ~ .expander {
+          grid-template-rows: 1fr;
+
+          visibility: visible;
+        }
+      }
+    }
+
+    .expander {
+      display: grid;
+      grid-template-rows: 0fr;
+      overflow: hidden;
+      min-height: 0;
+      visibility: hidden;
+      transition: grid-template-rows 0.8s ease-in-out,
+        visibility 0.8s ease-in-out;
+    }
   }
 }
