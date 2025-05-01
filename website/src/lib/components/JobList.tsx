@@ -2,7 +2,6 @@ import formatDate from "@/util/formatDate";
 import { JobInterface } from "@/interface/jobInterface";
 import styles from "@/scss/components/jobList.module.scss";
 
-// TODO 16/19: Address user being yanked when list is disappeared
 // TODO 18/19: Add images to these type of lists (including the education list)
 
 /**
