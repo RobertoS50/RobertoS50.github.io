@@ -11,12 +11,31 @@ export default function WorkExperience() {
   const [salesActive, setSalesActive] = useState<boolean>(false);
   const [marketingActive, setMarketingActive] = useState<boolean>(false);
 
-  function handleSalesClick(): void {
-    setSalesActive(!salesActive);
-  }
+  /**
+   * @Function
+   *  handle****Click
+   * @Description
+   *  Toggles the visibility of the job list and scrolls to top of the work experience section if all other lists are closed
+   **/
 
   function handleMarketingClick(): void {
     setMarketingActive(!marketingActive);
+
+    if (marketingActive === true && salesActive === false) {
+      document
+        .getElementById(styles.workExperience)
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+  }
+
+  function handleSalesClick(): void {
+    setSalesActive(!salesActive);
+
+    if (salesActive === true && marketingActive === false) {
+      document
+        .getElementById(styles.workExperience)
+        ?.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
   }
 
   return (

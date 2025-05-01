@@ -38,7 +38,7 @@ export default function Home() {
             <Background />
           </div>
           <div className={styles.sectionContainer}>
-            <h4>Work experience</h4>
+            <h4 id={styles.workExperience}>Work experience</h4>
             <WorkExperience />
           </div>
           <section>

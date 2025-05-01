@@ -3,19 +3,31 @@
 /**
  * Work Experience section styles
  *
- *  Have drop down menus for work history that pertains to a specific industry.
- *  Once expanded it lists relevant work experience.
+ * - Have drop down menus for work history that pertains to a specific industry.
+ *   Once expanded it lists relevant work experience.
  *  
  *  To see those styles or components check out:
  *
- *  @components/JobList.tsx
- *  @jobList.module.scss
+ *    @components/JobList.tsx
+ *    @jobList.module.scss
  * 
- *  On click the button text changes and increases the height of the button.
- *  To avoid the button text from visually moving, the button height is set to a fixed value.
- *  Which is dependant on the screen view size.
+ * - On click the button text changes and increases the height of the button.
+ *   To avoid the button text from visually moving, the button height is set to a fixed value.
+ *   Which is dependant on the screen view size.
+ *
+ * - Using ARIA attributes, the grid area animates and calculates height of job list.
  *
 */
+
+@mixin ariaExpanded {
+  &[aria-expanded="true"] {
+    ~ .expander {
+      grid-template-rows: 1fr;
+
+      visibility: visible;
+    }
+  }
+}
 
 .workExpSection {
   margin-top: 0.5%;
@@ -65,26 +77,12 @@
 
     #marketingButton {
       background-color: rgb(19, 81, 151);
-
-      &[aria-expanded="true"] {
-        ~ .expander {
-          grid-template-rows: 1fr;
-
-          visibility: visible;
-        }
-      }
+      @include ariaExpanded;
     }
 
     #salesButton {
       background-color: rgb(63, 162, 63);
-
-      &[aria-expanded="true"] {
-        ~ .expander {
-          grid-template-rows: 1fr;
-
-          visibility: visible;
-        }
-      }
+      @include ariaExpanded;
     }
 
     .expander {
