@@ -1,23 +1,33 @@
+// TODO 21/21: Think about using mixins for repeated styles (Heading and flex styles are good candidates)
+
 // Viewport sizes
 $mobile-end-width: 809px;
 $ipad-start-width: 810px;
 $ipad-end-width: 1023px;
 $desktop-start-width: 1024px;
+$desktop-end-width: 2159px;
+$large-desktop-start-width: 2160px;
 
 // Colors
 $backgroundColor: linear-gradient(to bottom, #111, #333);
 $contentBackgroundColor: rgb(246, 246, 246);
 $text-rgb: rgb(0, 0, 0);
-$sub-h2-rgb: rgb(71, 70, 70);
+$sub-h2-rgb: rgb(54, 53, 53);
+$sub-h3-rgb: rgb(94, 93, 93);
 
-// Font sizes
+// Font
+$heading-font: var(--font-montserrat);
+$text-font: var(--font-open-sans);
 $phone-font-size: 80%;
 $non-phone-font-size: 110%;
 
 // Header font sizes
 $main-h1-font-size: 200%;
-$main-h2-font-size: 150%;
-$sub-h2-font-size: 130%;
+$main-h2-font-size: 170%;
+$sub-h2-font-size: 150%;
+$sub-h3-font-size: 135%;
+$sub-h4-font-size: 125%;
+$sub-h5-font-size: 115%;
 
 // Button styles
 $link-button-border-rgb: rgb(0, 95, 162);
@@ -25,7 +35,8 @@ $link-fill-rgb: rgb(0, 64, 110);
 $button-radius: 15px;
 
 // Shadows
-$shadow-straight-bottom: 0px 1px 15px 0px rgba(66, 68, 90, 0.63);
+$shadow-straight-bottom: 0px 1px 5px 0px rgba(66, 68, 90, 0.63);
+$shadow-non-phone-straight-bottom: 0px 1px 15px 0px rgba(66, 68, 90, 0.63);
 
 /*
  * Button styles
@@ -38,6 +49,7 @@ $shadow-straight-bottom: 0px 1px 15px 0px rgba(66, 68, 90, 0.63);
  * - Sets background color, text color, and font weight back to their defaults so hover will work correctly
  *
 */
+
 @mixin button {
   display: inline-block;
   padding: 0.5rem;

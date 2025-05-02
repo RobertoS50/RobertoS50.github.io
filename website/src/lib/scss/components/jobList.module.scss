@@ -1,0 +1,68 @@
+@use "@/scss/globals.scss";
+
+/**
+ * JobList component styles
+ *
+ *  One container holding a list of jobs and its descriptions.
+ *
+ *  Mobile view: 1 column
+ *  Desktop view: Rows of 2 columns
+ *  Large desktop view: Rows of 3 columns
+ *
+*/
+
+.jobList {
+  width: 90svw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: space-between;
+  align-items: left;
+  overflow: hidden;
+
+  .job {
+    h2 {
+      font-size: globals.$sub-h3-font-size;
+    }
+
+    h3 {
+      font-size: globals.$sub-h4-font-size;
+      color: globals.$sub-h2-rgb;
+    }
+
+    p {
+      white-space: pre-wrap;
+    }
+
+    ul {
+      margin-left: 1rem;
+    }
+
+    .jobSubHeading {
+      display: flex;
+      justify-content: space-between;
+      font-family: globals.$heading-font;
+      font-size: globals.$sub-h5-font-size;
+      font-weight: bold;
+      color: globals.$sub-h3-rgb;
+    }
+  }
+}
+
+@media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
+  .jobList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+    gap: 2rem;
+    align-items: start;
+  }
+}
+
+@media (min-width: globals.$large-desktop-start-width) {
+  .jobList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+    gap: 2rem;
+    align-items: start;
+  }
+}

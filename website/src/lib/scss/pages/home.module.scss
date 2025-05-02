@@ -1,7 +1,5 @@
 @use "@/scss/globals.scss";
 
-// TODO 11/11: Add shadow to header so it's obviously cutting off the content underneath it
-
 /**
  * Home page styles
  *
@@ -65,23 +63,36 @@
       background-color: globals.$contentBackgroundColor;
       box-shadow: globals.$shadow-straight-bottom;
       text-align: center;
+
+      @media screen and (min-width: globals.$ipad-start-width) {
+        box-shadow: globals.$shadow-non-phone-straight-bottom;
+      }
     }
 
     .main {
+      padding: 0.5%;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-items: center;
-      padding: 0.5%;
+      row-gap: 1rem;
 
-      div {
-        padding: 0.5%;
+      .sectionContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        scroll-margin-top: 5em;
 
-        article {
-          h2 {
-            font-size: globals.$sub-h2-font-size;
-            color: globals.$sub-h2-rgb;
-          }
+        @media (min-width: globals.$ipad-start-width) and (max-width: globals.$ipad-end-width) {
+          scroll-margin-top: 5.5em;
+        }
+
+        @media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
+          scroll-margin-top: 6.5em;
+        }
+
+        @media (min-width: globals.$large-desktop-start-width) {
+          scroll-margin-top: 7em;
         }
       }
     }
