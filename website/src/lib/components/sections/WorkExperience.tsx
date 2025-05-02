@@ -20,20 +20,18 @@ export default function WorkExperience() {
 
   function handleMarketingClick(): void {
     setMarketingActive(!marketingActive);
-
     if (marketingActive === true && salesActive === false) {
       document
-        .getElementById(styles.workExperience)
+        .getElementById("workExperience")
         ?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
 
   function handleSalesClick(): void {
     setSalesActive(!salesActive);
-
     if (salesActive === true && marketingActive === false) {
       document
-        .getElementById(styles.workExperience)
+        .getElementById("workExperience")
         ?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
   }
