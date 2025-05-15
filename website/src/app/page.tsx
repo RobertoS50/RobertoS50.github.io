@@ -1,5 +1,3 @@
-import Image from "next/image";
-import ProfilePic from "@/public/RobertoS-4.jpg";
 import Intro from "@/components/sections/Intro";
 import Background from "@/components/sections/Background";
 import WorkExperience from "@/components/sections/WorkExperience";
@@ -12,14 +10,25 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <div className={styles.parallaxContainer}>
-        <Image
-          src={ProfilePic}
-          alt="A picture of myself - Roberto Soto"
-          className={styles.parallaxImage}
-          sizes="100svw"
-          fill
-          priority
-        />
+        <picture>
+          <source
+            srcSet="/RobertoS-4-tablet-scaled.jpg"
+            media="(max-width: 1279px)"
+          />
+          <source
+            srcSet="/RobertoS-4-small-scaled.jpg"
+            media="(max-width: 3839px)"
+          />
+          <source
+            srcSet="/RobertoS-4-4K-scaled.jpg"
+            media="(min-width: 3840px)"
+          />
+          <img
+            src="/RobertoS-4-tablet-scaled.jpg"
+            alt="Self portrait of Roberto Soto looking at the camera"
+            className={styles.parallaxImage}
+          />
+        </picture>
       </div>
       <div className={styles.contentOverlay}>
         <header className={styles.header}>
