@@ -6,6 +6,8 @@ export const marketingJobs: JobInterface[] = [
     company: "Chicago Automobile Trade Association",
     position: "Internship",
     location: "Oakbrook Terrace, IL",
+    logo: "/Logos/chicagoAutoTradeShowLogo.webp",
+    logoAlt: "Chicago Automobile Trade Association logo",
     startDate: "2025-01-01",
     endDate: "2025-03-01",
     description: [
@@ -31,6 +33,8 @@ export const marketingJobs: JobInterface[] = [
     company: "Shadez Auto Cosmetics",
     position: "Social Media Director",
     location: "Remote",
+    logo: "/Logos/shadezCosmeticsLogo.webp",
+    logoAlt: "Shadez Cosmetics logo",
     startDate: "2020-07-01",
     endDate: "2021-06-01",
     description: [

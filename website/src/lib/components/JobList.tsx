@@ -27,8 +27,15 @@ export default function JobList(p: Props) {
     <div className={styles.jobList}>
       {p.jobListData.map((job: JobInterface) => (
         <article key={job.id} className={styles.job}>
-          <h2>{job.company}</h2>
-          <h3>{job.position}</h3>
+          <div className={styles.jobMainHeading}>
+            <div className={styles.jobLogo}>
+              <img src={job.logo} alt={job.logoAlt} />
+            </div>
+            <div className={styles.jobTitle}>
+              <h2>{job.company}</h2>
+              <h3>{job.position}</h3>
+            </div>
+          </div>
           <div className={styles.jobSubHeading}>
             <span>
               {formatDate(job.startDate, userLocale)} -{" "}

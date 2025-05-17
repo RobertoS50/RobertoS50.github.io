@@ -38,6 +38,30 @@
       margin-left: 1rem;
     }
 
+    .jobMainHeading {
+      display: flex;
+      height: 100px;
+      flex-direction: row;
+      column-gap: 5px;
+
+      .jobLogo {
+        height: 100%;
+        flex-basis: 100px;
+        flex-shrink: 0;
+
+        img {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+          object-position: top center;
+        }
+      }
+
+      .jobTitle {
+        flex-grow: 1;
+      }
+    }
+
     .jobSubHeading {
       display: flex;
       justify-content: space-between;
