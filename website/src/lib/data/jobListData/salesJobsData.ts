@@ -12,7 +12,6 @@ export const salesJobs: JobInterface[] = [
     endDate: "Present",
     description: [
       "Assisted customers with their purchases and provided exceptional customer service.",
-      "front of house",
     ].join(" "),
     skills: [
       "Customer Service",
@@ -73,7 +72,7 @@ export const salesJobs: JobInterface[] = [
       "Quick Learner",
     ],
     achievements: [
-      "Constantly exceeded sales targets, for example, selling 86k in 1 day.",
+      "Constantly exceeded sales targets, for example, selling $86,000 worth of product in 1 day.",
     ],
   },
 ];

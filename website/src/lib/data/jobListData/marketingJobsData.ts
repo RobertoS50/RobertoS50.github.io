@@ -12,9 +12,9 @@ export const marketingJobs: JobInterface[] = [
     endDate: "2025-03-01",
     description: [
       "Analyzed Twitter numbers to fill in Excel sheets for reports later shown to stakeholders.",
-      "\n- This data was useful to retain auto manufacturers/brands for future events.",
+      "This data was useful to retain auto manufacturers/brands for future events.",
       "\n\nInterviewed people at the show.",
-      "\n\nWorked on and created videos for the auto shows.",
+      "\n\nWorked on and created videos for the auto shows. (TikTok)",
     ].join(" "),
     skills: [
       "Product Knowledge",

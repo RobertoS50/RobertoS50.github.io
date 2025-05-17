@@ -49,7 +49,7 @@ export default function JobList(p: Props) {
           <br />
           <ul>
             {job.skills.map((skill: string, index: number) => (
-              <li key={"skill-" + index}>{skill}</li>
+              <li key={job.id + "-skill-" + index}>{skill}</li>
             ))}
           </ul>
           <br />
@@ -57,7 +57,7 @@ export default function JobList(p: Props) {
           <br />
           <ul>
             {job.achievements.map((achievement: string, index: number) => (
-              <li key={"achievement-" + index}>{achievement}</li>
+              <li key={job.id + "-achievement-" + index}>{achievement}</li>
             ))}
           </ul>
         </article>
