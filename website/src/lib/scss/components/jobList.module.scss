@@ -2,16 +2,16 @@
 
 /**
  * JobList component styles
- *
+ ****************************
  *  One container holding a list of jobs and its descriptions.
  *
  *  Mobile view: 1 column
  *  Desktop view: Rows of 2 columns
  *  Large desktop view: Rows of 3 columns
  *
+ *  Increase the size of the job logo container based on viewport size to allow for larger logos
+ *
 */
-
-// TODO 25/25: Shift size of jobLogocontainer based on viewport size through media queries
 
 .jobList {
   width: 90svw;
@@ -83,6 +83,17 @@
     grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
     gap: 2rem;
     align-items: start;
+
+    .job {
+      .jobMainHeading {
+        min-height: 100px;
+
+        .jobLogoContainer {
+          height: 100px;
+          flex-basis: 100px;
+        }
+      }
+    }
   }
 }
 
@@ -92,5 +103,16 @@
     grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
     gap: 2rem;
     align-items: start;
+
+    .job {
+      .jobMainHeading {
+        min-height: 200px;
+
+        .jobLogoContainer {
+          height: 200px;
+          flex-basis: 200px;
+        }
+      }
+    }
   }
 }

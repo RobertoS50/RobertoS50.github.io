@@ -11,7 +11,7 @@ export const marketingJobs: JobInterface[] = [
       "/logos/chicagoAutoTradeShow/chicagoAutoTradeShowLogo-small.webp",
       "/logos/chicagoAutoTradeShow/chicagoAutoTradeShowLogo-4K.webp",
     ],
-    logoAlt: "Chicago Automobile Trade Association logo",
+    logoAlt: "Chicago Auto Trade Assoc. logo",
     startDate: "2025-01-01",
     endDate: "2025-03-01",
     description: [
