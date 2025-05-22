@@ -1,12 +1,18 @@
 import { JobInterface } from "@/interface/jobInterface";
 
+// TODO 27/27: Make alt text sizes smaller
+
 export const salesJobs: JobInterface[] = [
   {
     id: "salesJob-3",
     company: "Coach",
     position: "Sales Associate",
     location: "Schaumburg, IL",
-    logo: "/Logos/coachLogo.webp",
+    logos: [
+      "/logos/coach/coachLogo-mobile.webp",
+      "/logos/coach/coachLogo-small.webp",
+      "/logos/coach/coachLogo-4K.webp",
+    ],
     logoAlt: "Coach logo",
     startDate: "2024-01-01",
     endDate: "Present",
@@ -30,7 +36,11 @@ export const salesJobs: JobInterface[] = [
     company: "Coach",
     position: "Sales Support Associate",
     location: "Schaumburg, IL",
-    logo: "/Logos/coachLogo.webp",
+    logos: [
+      "/logos/coach/coachLogo-mobile.webp",
+      "/logos/coach/coachLogo-small.webp",
+      "/logos/coach/coachLogo-4K.webp",
+    ],
     logoAlt: "Coach logo",
     startDate: "2023-11-01",
     endDate: "2024-01-01",
@@ -56,7 +66,11 @@ export const salesJobs: JobInterface[] = [
     company: "EXPRESS",
     position: "Sales Associate",
     location: "Bloomingdale, IL",
-    logo: "/Logos/expressLogo.webp",
+    logos: [
+      "/logos/expressLogo-small.webp",
+      "/logos/expressLogo-small.webp",
+      "/logos/expressLogo-small.webp",
+    ],
     logoAlt: "Express logo",
     startDate: "2019-01-01",
     endDate: "2019-08-01",

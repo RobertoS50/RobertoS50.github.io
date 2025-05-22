@@ -11,6 +11,8 @@
  *
 */
 
+// TODO 25/25: Shift size of jobLogocontainer based on viewport size through media queries
+
 .jobList {
   width: 90svw;
   display: flex;
@@ -40,16 +42,16 @@
 
     .jobMainHeading {
       display: flex;
-      height: 100px;
+      min-height: 50px;
       flex-direction: row;
       column-gap: 5px;
 
-      .jobLogo {
-        height: 100%;
-        flex-basis: 100px;
+      .jobLogoContainer {
+        height: 50px;
+        flex-basis: 50px;
         flex-shrink: 0;
 
-        img {
+        .jobLogoImage {
           height: 100%;
           width: 100%;
           object-fit: contain;
@@ -64,6 +66,8 @@
 
     .jobSubHeading {
       display: flex;
+      margin-top: 1%;
+      margin-bottom: 1%;
       justify-content: space-between;
       font-family: globals.$heading-font;
       font-size: globals.$sub-h5-font-size;
