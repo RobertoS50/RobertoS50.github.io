@@ -28,7 +28,7 @@ export default function JobList(p: Props) {
       {p.jobListData.map((job: JobInterface) => (
         <article key={job.id} className={styles.job}>
           <div className={styles.jobMainHeading}>
-            <div className={styles.jobLogoContainer}>
+            <div className={styles.jobImgContainer}>
               <picture>
                 <source srcSet={job.logos[0]} media="(max-width: 1279px)" />
                 <source srcSet={job.logos[1]} media="(max-width: 3839px)" />
@@ -36,7 +36,7 @@ export default function JobList(p: Props) {
                 <img
                   src={job.logos[0]}
                   alt={job.logoAlt}
-                  className={styles.jobLogoImage}
+                  className={styles.jobImg}
                 />
               </picture>
             </div>

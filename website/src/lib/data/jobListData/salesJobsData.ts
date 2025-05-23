@@ -1,7 +1,5 @@
 import { JobInterface } from "@/interface/jobInterface";
 
-// TODO 27/27: Make alt text sizes smaller
-
 export const salesJobs: JobInterface[] = [
   {
     id: "salesJob-3",
@@ -67,9 +65,9 @@ export const salesJobs: JobInterface[] = [
     position: "Sales Associate",
     location: "Bloomingdale, IL",
     logos: [
-      "/logos/expressLogo-small.webp",
-      "/logos/expressLogo-small.webp",
-      "/logos/expressLogo-small.webp",
+      "/logos/expressLogo.svg",
+      "/logos/expressLogo.svg",
+      "/logos/expressLogo.svg",
     ],
     logoAlt: "Express logo",
     startDate: "2019-01-01",

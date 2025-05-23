@@ -41,21 +41,21 @@
     }
 
     .jobMainHeading {
-      display: flex;
       min-height: 50px;
+      display: flex;
       flex-direction: row;
       column-gap: 5px;
 
-      .jobLogoContainer {
+      .jobImgContainer {
         height: 50px;
         flex-basis: 50px;
         flex-shrink: 0;
 
-        .jobLogoImage {
+        .jobImg {
           height: 100%;
           width: 100%;
           object-fit: contain;
-          object-position: top center;
+          object-position: center center;
         }
       }
 
@@ -88,7 +88,7 @@
       .jobMainHeading {
         min-height: 100px;
 
-        .jobLogoContainer {
+        .jobImgContainer {
           height: 100px;
           flex-basis: 100px;
         }
@@ -108,7 +108,7 @@
       .jobMainHeading {
         min-height: 200px;
 
-        .jobLogoContainer {
+        .jobImgContainer {
           height: 200px;
           flex-basis: 200px;
         }

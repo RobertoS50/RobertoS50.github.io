@@ -5,8 +5,9 @@ import styles from "@/scss/pages/home.module.scss";
 
 // TODO #4/8: Add easy navigation like a button to get to certain parts of website
 // TODO #9/9: Design components they can be hidden and loaded in seamlessly. (This website can grow a lot if it stays one page)
-// TODO #26/26: Look to rework mobile styles to accomadate smaller pixel widths (320px, currently shows cracks starting at 350px) marketing bar in particular
+// TODO #26/26: Look to rework mobile styles to accommodate smaller pixel widths (320px, currently shows cracks starting at 350px) marketing bar in particular
 // TODO #28/28: Look into reworking px to em for more responsive styles
+// TODO #29: Resize Roberto's portrait image as it is much larger than its container in all screen sizes
 
 export default function Home() {
   return (
