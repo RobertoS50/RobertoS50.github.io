@@ -51,7 +51,7 @@ $shadow-non-phone-straight-bottom: 0px 1px 15px 0px rgba(66, 68, 90, 0.63);
 */
 
 @mixin button {
-  display: inline-block;
+  //display: inline-block;
   padding: 0.5rem;
   border: 2px solid $link-button-border-rgb;
   border-radius: $button-radius;

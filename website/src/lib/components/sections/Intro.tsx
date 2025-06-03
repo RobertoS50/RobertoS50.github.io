@@ -23,9 +23,41 @@ export default function Intro() {
       <article className={styles.contactInfo}>
         <h2>Contact</h2>
         <address>
-          <a href="https://www.linkedin.com/in/roberto-soto12/">LinkedIn</a>
+          <a href="https://www.linkedin.com/in/roberto-soto12/">
+            <div className={styles.linkImgContainer}>
+              <picture>
+                <source
+                  srcSet="/logos/linkedIn/linkedIn-mobile.webp"
+                  media="(max-width: 1279px)"
+                />
+                <source
+                  srcSet="/logos/linkedIn/linkedIn-small.webp"
+                  media="(max-width: 3839px)"
+                />
+                <source
+                  srcSet="/logos/linkedIn/linkedIn-4K.webp"
+                  media="(min-width: 3840px)"
+                />
+                <img
+                  srcSet="/logos/linkedIn/linkedIn-mobile.webp"
+                  alt="LinkedIn logo"
+                  className={styles.linkImg}
+                />
+              </picture>
+            </div>
+            <div className={styles.linkText}>LinkedIn</div>
+          </a>
           <br />
-          <a href="mailto:sotor2588@gmail.com">Email - sotor2588@gmail.com</a>
+          <a href="mailto:sotor2588@gmail.com">
+            <div className={styles.linkImgContainer}>
+              <img
+                src="/logos/GmailLogo.svg"
+                alt="Gmail logo"
+                className={styles.linkImg}
+              />
+            </div>
+            <div className={styles.linkText}>Email - sotor2588@gmail.com</div>
+          </a>
         </address>
       </article>
     </div>

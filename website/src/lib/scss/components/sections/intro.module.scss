@@ -8,6 +8,8 @@
  * 
 */
 
+// TODO 30: Must further change contact area SCSS
+
 .introSection {
   padding: 0.5%;
   display: flex;
@@ -30,13 +32,33 @@
     order: 2;
 
     a {
-      margin-bottom: 0.5rem;
-      @include globals.button;
+      display: flex;
+      flex-direction: column;
+
+      .linkImgContainer {
+        width: 50px;
+        flex-basis: 50px;
+        flex-shrink: 0;
+        align-self: center;
+
+        .linkImg {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+          object-position: center center;
+        }
+      }
+
+      .linkText {
+        @include globals.button;
+      }
     }
 
     @media (hover: hover) and (pointer: fine) {
       a {
-        @include globals.buttonHover;
+        .linkText {
+          @include globals.buttonHover;
+        }
       }
     }
   }
@@ -60,6 +82,32 @@
     .contactInfo {
       text-align: center;
       flex-basis: 25%;
+    }
+  }
+}
+
+@media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
+  .introSection {
+    .contactInfo {
+      a {
+        .linkImgContainer {
+          width: 100px;
+          flex-basis: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: globals.$large-desktop-start-width) {
+  .introSection {
+    .contactInfo {
+      a {
+        .linkImgContainer {
+          width: 200px;
+          flex-basis: 200px;
+        }
+      }
     }
   }
 }
