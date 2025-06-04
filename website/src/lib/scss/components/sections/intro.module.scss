@@ -6,9 +6,11 @@
  *  Smaller than desktop viewports have a column layout
  *  Desktop viewports have a row layout
  * 
+ *  Different viewports have different image sizes
+ * 
 */
 
-// TODO 30: Must further change contact area SCSS
+// TODO 31: Change implementation of mixin buttonHover so it activates on hover of link (a)
 
 .introSection {
   padding: 0.5%;
@@ -31,33 +33,41 @@
   .contactInfo {
     order: 2;
 
-    a {
+    address {
       display: flex;
       flex-direction: column;
+      justify-content: space-around;
+      row-gap: 0.5rem;
 
-      .linkImgContainer {
-        width: 50px;
-        flex-basis: 50px;
-        flex-shrink: 0;
-        align-self: center;
-
-        .linkImg {
-          height: 100%;
-          width: 100%;
-          object-fit: contain;
-          object-position: center center;
-        }
-      }
-
-      .linkText {
-        @include globals.button;
-      }
-    }
-
-    @media (hover: hover) and (pointer: fine) {
       a {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5%;
+
+        .linkImgContainer {
+          width: 50px;
+          flex-basis: 50px;
+          flex-shrink: 0;
+          align-self: center;
+
+          .linkImg {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: center center;
+          }
+        }
+
         .linkText {
-          @include globals.buttonHover;
+          @include globals.button;
+          width: fit-content;
+          align-self: center;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+          .linkText {
+            @include globals.buttonHover;
+          }
         }
       }
     }
@@ -89,10 +99,12 @@
 @media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
   .introSection {
     .contactInfo {
-      a {
-        .linkImgContainer {
-          width: 100px;
-          flex-basis: 100px;
+      address {
+        a {
+          .linkImgContainer {
+            width: 100px;
+            flex-basis: 100px;
+          }
         }
       }
     }
@@ -102,10 +114,12 @@
 @media (min-width: globals.$large-desktop-start-width) {
   .introSection {
     .contactInfo {
-      a {
-        .linkImgContainer {
-          width: 200px;
-          flex-basis: 200px;
+      address {
+        a {
+          .linkImgContainer {
+            width: 200px;
+            flex-basis: 200px;
+          }
         }
       }
     }

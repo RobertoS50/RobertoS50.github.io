@@ -24,27 +24,25 @@ export default function Intro() {
         <h2>Contact</h2>
         <address>
           <a href="https://www.linkedin.com/in/roberto-soto12/">
-            <div className={styles.linkImgContainer}>
-              <picture>
-                <source
-                  srcSet="/logos/linkedIn/linkedIn-mobile.webp"
-                  media="(max-width: 1279px)"
-                />
-                <source
-                  srcSet="/logos/linkedIn/linkedIn-small.webp"
-                  media="(max-width: 3839px)"
-                />
-                <source
-                  srcSet="/logos/linkedIn/linkedIn-4K.webp"
-                  media="(min-width: 3840px)"
-                />
-                <img
-                  srcSet="/logos/linkedIn/linkedIn-mobile.webp"
-                  alt="LinkedIn logo"
-                  className={styles.linkImg}
-                />
-              </picture>
-            </div>
+            <picture className={styles.linkImgContainer}>
+              <source
+                srcSet="/logos/linkedIn/linkedIn-mobile.webp"
+                media="(max-width: 1279px)"
+              />
+              <source
+                srcSet="/logos/linkedIn/linkedIn-small.webp"
+                media="(max-width: 3839px)"
+              />
+              <source
+                srcSet="/logos/linkedIn/linkedIn-4K.webp"
+                media="(min-width: 3840px)"
+              />
+              <img
+                srcSet="/logos/linkedIn/linkedIn-mobile.webp"
+                alt="LinkedIn logo"
+                className={styles.linkImg}
+              />
+            </picture>
             <div className={styles.linkText}>LinkedIn</div>
           </a>
           <br />
