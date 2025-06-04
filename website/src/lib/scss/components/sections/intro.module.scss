@@ -10,8 +10,6 @@
  * 
 */
 
-// TODO 31: Change implementation of mixin buttonHover so it activates on hover of link (a)
-
 .introSection {
   padding: 0.5%;
   display: flex;
@@ -30,16 +28,17 @@
     order: 1;
   }
 
-  .contactInfo {
+  .contact {
     order: 2;
 
-    address {
+    .contactLinkList {
       display: flex;
       flex-direction: column;
-      justify-content: space-around;
       row-gap: 0.5rem;
+      align-items: center;
 
-      a {
+      .contactLink {
+        width: fit-content;
         display: flex;
         flex-direction: column;
         row-gap: 1.5%;
@@ -89,7 +88,7 @@
       flex-shrink: 3;
     }
 
-    .contactInfo {
+    .contact {
       text-align: center;
       flex-basis: 25%;
     }
@@ -98,9 +97,9 @@
 
 @media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
   .introSection {
-    .contactInfo {
-      address {
-        a {
+    .contact {
+      .contactLinkList {
+        .contactLink {
           .linkImgContainer {
             width: 100px;
             flex-basis: 100px;
@@ -113,9 +112,9 @@
 
 @media (min-width: globals.$large-desktop-start-width) {
   .introSection {
-    .contactInfo {
-      address {
-        a {
+    .contact {
+      .contactListLink {
+        .contactLink {
           .linkImgContainer {
             width: 200px;
             flex-basis: 200px;

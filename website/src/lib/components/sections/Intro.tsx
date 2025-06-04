@@ -20,10 +20,13 @@ export default function Intro() {
           as well as acting as a hobby.
         </p>
       </article>
-      <article className={styles.contactInfo}>
+      <article className={styles.contact}>
         <h2>Contact</h2>
-        <address>
-          <a href="https://www.linkedin.com/in/roberto-soto12/">
+        <address className={styles.contactLinkList}>
+          <a
+            href="https://www.linkedin.com/in/roberto-soto12/"
+            className={styles.contactLink}
+          >
             <picture className={styles.linkImgContainer}>
               <source
                 srcSet="/logos/linkedIn/linkedIn-mobile.webp"
@@ -46,7 +49,7 @@ export default function Intro() {
             <div className={styles.linkText}>LinkedIn</div>
           </a>
           <br />
-          <a href="mailto:sotor2588@gmail.com">
+          <a href="mailto:sotor2588@gmail.com" className={styles.contactLink}>
             <div className={styles.linkImgContainer}>
               <img
                 src="/logos/GmailLogo.svg"
