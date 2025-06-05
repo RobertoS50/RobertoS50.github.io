@@ -3,10 +3,10 @@
 // Viewport sizes
 $mobile-end-width: 809px;
 $ipad-start-width: 810px;
-$ipad-end-width: 1023px;
-$desktop-start-width: 1024px;
-$desktop-end-width: 2159px;
-$large-desktop-start-width: 2160px;
+$ipad-end-width: 1279px;
+$desktop-start-width: 1280px;
+$desktop-end-width: 3839px;
+$large-desktop-start-width: 3840px;
 
 // Colors
 $backgroundColor: linear-gradient(to bottom, #111, #333);
@@ -51,7 +51,7 @@ $shadow-non-phone-straight-bottom: 0px 1px 15px 0px rgba(66, 68, 90, 0.63);
 */
 
 @mixin button {
-  display: inline-block;
+  //display: inline-block;
   padding: 0.5rem;
   border: 2px solid $link-button-border-rgb;
   border-radius: $button-radius;
@@ -64,12 +64,11 @@ $shadow-non-phone-straight-bottom: 0px 1px 15px 0px rgba(66, 68, 90, 0.63);
 
 @mixin buttonHover {
   background-color: inherit;
-  font-weight: inherit;
+  font-weight: normal;
   color: inherit;
 
   &:hover {
     background-color: $link-fill-rgb;
-    font-weight: bold;
     color: white;
     transition: ease-in-out 100ms;
   }

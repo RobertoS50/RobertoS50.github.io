@@ -6,13 +6,19 @@ export const marketingJobs: JobInterface[] = [
     company: "Chicago Automobile Trade Association",
     position: "Internship",
     location: "Oakbrook Terrace, IL",
+    logos: [
+      "/logos/chicagoAutoTradeShow/chicagoAutoTradeShowLogo-mobile.webp",
+      "/logos/chicagoAutoTradeShow/chicagoAutoTradeShowLogo-small.webp",
+      "/logos/chicagoAutoTradeShow/chicagoAutoTradeShowLogo-4K.webp",
+    ],
+    logoAlt: "Chicago Auto Trade Assoc. logo",
     startDate: "2025-01-01",
     endDate: "2025-03-01",
     description: [
       "Analyzed Twitter numbers to fill in Excel sheets for reports later shown to stakeholders.",
-      "\n- This data was useful to retain auto manufacturers/brands for future events.",
+      "This data was useful to retain auto manufacturers/brands for future events.",
       "\n\nInterviewed people at the show.",
-      "\n\nWorked on and created videos for the auto shows.",
+      "\n\nWorked on and created videos for the auto shows. (TikTok)",
     ].join(" "),
     skills: [
       "Product Knowledge",
@@ -31,6 +37,12 @@ export const marketingJobs: JobInterface[] = [
     company: "Shadez Auto Cosmetics",
     position: "Social Media Director",
     location: "Remote",
+    logos: [
+      "/logos/shadez/shadezCosmeticsLogo-mobile.webp",
+      "/logos/shadez/shadezCosmeticsLogo-small.webp",
+      "/logos/shadez/shadezCosmeticsLogo-4K.webp",
+    ],
+    logoAlt: "Shadez Cosmetics logo",
     startDate: "2020-07-01",
     endDate: "2021-06-01",
     description: [

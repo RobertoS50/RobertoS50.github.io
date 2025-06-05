@@ -6,6 +6,8 @@
  *  Smaller than desktop viewports have a column layout
  *  Desktop viewports have a row layout
  * 
+ *  Different viewports have different image sizes
+ * 
 */
 
 .introSection {
@@ -26,17 +28,46 @@
     order: 1;
   }
 
-  .contactInfo {
+  .contact {
     order: 2;
 
-    a {
-      margin-bottom: 0.5rem;
-      @include globals.button;
-    }
+    .contactLinkList {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      align-items: center;
 
-    @media (hover: hover) and (pointer: fine) {
-      a {
-        @include globals.buttonHover;
+      .contactLink {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5%;
+
+        .linkImgContainer {
+          width: 50px;
+          flex-basis: 50px;
+          flex-shrink: 0;
+          align-self: center;
+
+          .linkImg {
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: center center;
+          }
+        }
+
+        .linkText {
+          @include globals.button;
+          width: fit-content;
+          align-self: center;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+          .linkText {
+            @include globals.buttonHover;
+          }
+        }
       }
     }
   }
@@ -57,9 +88,39 @@
       flex-shrink: 3;
     }
 
-    .contactInfo {
+    .contact {
       text-align: center;
       flex-basis: 25%;
+    }
+  }
+}
+
+@media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
+  .introSection {
+    .contact {
+      .contactLinkList {
+        .contactLink {
+          .linkImgContainer {
+            width: 100px;
+            flex-basis: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: globals.$large-desktop-start-width) {
+  .introSection {
+    .contact {
+      .contactLinkList {
+        .contactLink {
+          .linkImgContainer {
+            width: 200px;
+            flex-basis: 200px;
+          }
+        }
+      }
     }
   }
 }

@@ -2,7 +2,7 @@
 
 /**
  * Background section styles
- *
+ ****************************
  *  Smaller than desktop viewports have a column layout
  *  Desktop viewports have a row layout
  * 
@@ -32,6 +32,30 @@
   .education {
     order: 2;
     text-align: center;
+
+    .eduTitle {
+      display: flex;
+      flex-direction: row;
+      column-gap: 5px;
+
+      .eduImgContainer {
+        height: 50px;
+        flex-basis: 50px;
+        flex-shrink: 0;
+        align-self: center;
+
+        .eduImg {
+          height: 100%;
+          width: 100%;
+          object-fit: contain;
+          object-position: center center;
+        }
+      }
+
+      .eduContent {
+        flex-grow: 1;
+      }
+    }
   }
 }
 
@@ -51,6 +75,32 @@
 
     .education {
       flex-basis: 35%;
+    }
+  }
+}
+
+@media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
+  .backgroundSection {
+    .education {
+      .eduTitle {
+        .eduImgContainer {
+          height: 100px;
+          flex-basis: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: globals.$large-desktop-start-width) {
+  .backgroundSection {
+    .education {
+      .eduTitle {
+        .eduImgContainer {
+          height: 200px;
+          flex-basis: 200px;
+        }
+      }
     }
   }
 }

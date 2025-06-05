@@ -6,11 +6,16 @@ export const salesJobs: JobInterface[] = [
     company: "Coach",
     position: "Sales Associate",
     location: "Schaumburg, IL",
+    logos: [
+      "/logos/coach/coachLogo-mobile.webp",
+      "/logos/coach/coachLogo-small.webp",
+      "/logos/coach/coachLogo-4K.webp",
+    ],
+    logoAlt: "Coach logo",
     startDate: "2024-01-01",
     endDate: "Present",
     description: [
       "Assisted customers with their purchases and provided exceptional customer service.",
-      "front of house",
     ].join(" "),
     skills: [
       "Customer Service",
@@ -29,6 +34,12 @@ export const salesJobs: JobInterface[] = [
     company: "Coach",
     position: "Sales Support Associate",
     location: "Schaumburg, IL",
+    logos: [
+      "/logos/coach/coachLogo-mobile.webp",
+      "/logos/coach/coachLogo-small.webp",
+      "/logos/coach/coachLogo-4K.webp",
+    ],
+    logoAlt: "Coach logo",
     startDate: "2023-11-01",
     endDate: "2024-01-01",
     description: [
@@ -53,6 +64,12 @@ export const salesJobs: JobInterface[] = [
     company: "EXPRESS",
     position: "Sales Associate",
     location: "Bloomingdale, IL",
+    logos: [
+      "/logos/expressLogo.svg",
+      "/logos/expressLogo.svg",
+      "/logos/expressLogo.svg",
+    ],
+    logoAlt: "Express logo",
     startDate: "2019-01-01",
     endDate: "2019-08-01",
     description: [
@@ -67,7 +84,7 @@ export const salesJobs: JobInterface[] = [
       "Quick Learner",
     ],
     achievements: [
-      "Constantly exceeded sales targets, for example, selling 86k in 1 day.",
+      "Constantly exceeded sales targets, for example, selling $86,000 worth of product in 1 day.",
     ],
   },
 ];

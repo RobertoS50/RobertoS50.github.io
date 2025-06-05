@@ -2,8 +2,6 @@ import formatDate from "@/util/formatDate";
 import { JobInterface } from "@/interface/jobInterface";
 import styles from "@/scss/components/jobList.module.scss";
 
-// TODO 18/19: Add images to these type of lists (including the education list)
-
 /**
  * @file JobList.tsx
  *
@@ -27,8 +25,24 @@ export default function JobList(p: Props) {
     <div className={styles.jobList}>
       {p.jobListData.map((job: JobInterface) => (
         <article key={job.id} className={styles.job}>
-          <h2>{job.company}</h2>
-          <h3>{job.position}</h3>
+          <div className={styles.jobMainHeading}>
+            <div className={styles.jobImgContainer}>
+              <picture>
+                <source srcSet={job.logos[0]} media="(max-width: 1279px)" />
+                <source srcSet={job.logos[1]} media="(max-width: 3839px)" />
+                <source srcSet={job.logos[2]} media="(min-width: 3840px)" />
+                <img
+                  src={job.logos[0]}
+                  alt={job.logoAlt}
+                  className={styles.jobImg}
+                />
+              </picture>
+            </div>
+            <div className={styles.jobTitle}>
+              <h2>{job.company}</h2>
+              <h3>{job.position}</h3>
+            </div>
+          </div>
           <div className={styles.jobSubHeading}>
             <span>
               {formatDate(job.startDate, userLocale)} -{" "}
@@ -42,7 +56,7 @@ export default function JobList(p: Props) {
           <br />
           <ul>
             {job.skills.map((skill: string, index: number) => (
-              <li key={"skill-" + index}>{skill}</li>
+              <li key={job.id + "-skill-" + index}>{skill}</li>
             ))}
           </ul>
           <br />
@@ -50,7 +64,7 @@ export default function JobList(p: Props) {
           <br />
           <ul>
             {job.achievements.map((achievement: string, index: number) => (
-              <li key={"achievement-" + index}>{achievement}</li>
+              <li key={job.id + "-achievement-" + index}>{achievement}</li>
             ))}
           </ul>
         </article>

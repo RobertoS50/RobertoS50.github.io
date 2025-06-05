@@ -1,5 +1,3 @@
-import Image from "next/image";
-import ProfilePic from "@/public/RobertoS-4.jpg";
 import Intro from "@/components/sections/Intro";
 import Background from "@/components/sections/Background";
 import WorkExperience from "@/components/sections/WorkExperience";
@@ -7,19 +5,33 @@ import styles from "@/scss/pages/home.module.scss";
 
 // TODO #4/8: Add easy navigation like a button to get to certain parts of website
 // TODO #9/9: Design components they can be hidden and loaded in seamlessly. (This website can grow a lot if it stays one page)
+// TODO #26/26: Look to rework mobile styles to accommodate smaller pixel widths (320px, currently shows cracks starting at 350px) marketing bar in particular
+// TODO #28/28: Look into reworking px to em for more responsive styles
+// TODO #29: Resize Roberto's portrait image as it is much larger than its container in all screen sizes
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <div className={styles.parallaxContainer}>
-        <Image
-          src={ProfilePic}
-          alt="A picture of myself - Roberto Soto"
-          className={styles.parallaxImage}
-          sizes="100svw"
-          fill
-          priority
-        />
+        <picture>
+          <source
+            srcSet="/RobertoS-4-tablet-scaled.jpg"
+            media="(max-width: 1279px)"
+          />
+          <source
+            srcSet="/RobertoS-4-small-scaled.jpg"
+            media="(max-width: 3839px)"
+          />
+          <source
+            srcSet="/RobertoS-4-4K-scaled.jpg"
+            media="(min-width: 3840px)"
+          />
+          <img
+            src="/RobertoS-4-tablet-scaled.jpg"
+            alt="Self portrait of Roberto Soto looking at the camera"
+            className={styles.parallaxImage}
+          />
+        </picture>
       </div>
       <div className={styles.contentOverlay}>
         <header className={styles.header}>
