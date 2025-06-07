@@ -1,6 +1,7 @@
 import Intro from "@/components/sections/Intro";
 import Background from "@/components/sections/Background";
 import WorkExperience from "@/components/sections/WorkExperience";
+import Hobbies from "@/components/sections/Hobbies";
 import styles from "@/scss/pages/home.module.scss";
 
 // TODO #4/8: Add easy navigation like a button to get to certain parts of website
@@ -53,11 +54,11 @@ export default function Home() {
             <h4>Work experience</h4>
             <WorkExperience />
           </div>
-          <section>
-            <article>
-              <h5>More room</h5>
-            </article>
-          </section>
+
+          <div className={styles.sectionContainer}>
+            <h4>My interests</h4>
+            <Hobbies />
+          </div>
         </main>
         <footer className={styles.footer}>
           Website coded by{" "}
