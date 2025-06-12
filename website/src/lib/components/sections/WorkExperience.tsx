@@ -6,10 +6,12 @@ import { marketingJobs } from "@/data/jobListData/marketingJobsData";
 import styles from "@/scss/components/sections/workExperience.module.scss";
 
 //TODO 23/23: Check if you can use a screen reader to better implement ARIA attributes
+//TODO 32: Look into turning buttons into components to reduce code duplication
 
 export default function WorkExperience() {
   const [salesActive, setSalesActive] = useState<boolean>(false);
   const [marketingActive, setMarketingActive] = useState<boolean>(false);
+  const [designActive, setDesignActive] = useState<boolean>(false);
 
   /**
    * @Function
@@ -38,6 +40,10 @@ export default function WorkExperience() {
         ?.scrollIntoView({ behavior: "smooth", block: "start" });
     }
     */
+  }
+
+  function handleDesignClick(): void {
+    setDesignActive(!designActive);
   }
 
   return (
@@ -86,6 +92,32 @@ export default function WorkExperience() {
           aria-hidden={!salesActive}
         >
           <JobList jobListData={salesJobs} />
+        </div>
+      </div>
+      <div className={styles.listWrapper}>
+        <button
+          className={styles.listButton}
+          id={styles.designButton}
+          onClick={handleDesignClick}
+          aria-haspopup="true"
+          aria-expanded={designActive}
+          aria-controls={styles.designList}
+        >
+          <span className={styles.buttonText}>
+            Toggle list of sample graphic design work{""}
+            <span>{designActive === true ? "▼" : "▶"}</span>
+          </span>
+        </button>
+        <div
+          className={styles.expander}
+          id={styles.designList}
+          aria-labelledby={styles.designButton}
+          aria-hidden={!designActive}
+        >
+          <div className={styles.sampleList}>
+            <img src="/sampleDesigns/SampleDesign_allAboutMe.png"></img>
+            Sample of graphic design work will go here.
+          </div>
         </div>
       </div>
     </div>
