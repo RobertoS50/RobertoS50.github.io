@@ -6,8 +6,8 @@ import styles from "@/scss/components/jobList.module.scss";
  * @file JobList.tsx
  *
  * @what
- * A jobList lays out details of given jobs.
- * This makes up the template for a jobCard.
+ * A jobList lays out details of given jobs for a specific topic/industry.
+ * This makes up the template for a JobList.
  *
  * @param jobListData - Fills in the details of the template
  *

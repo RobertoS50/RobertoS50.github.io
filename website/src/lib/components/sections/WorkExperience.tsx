@@ -7,6 +7,7 @@ import styles from "@/scss/components/sections/workExperience.module.scss";
 
 //TODO 23/23: Check if you can use a screen reader to better implement ARIA attributes
 //TODO 32: Look into turning buttons into components to reduce code duplication
+//TODO 33: Have buttons for lists sticky so users always have access to close it out
 
 export default function WorkExperience() {
   const [salesActive, setSalesActive] = useState<boolean>(false);
@@ -105,7 +106,7 @@ export default function WorkExperience() {
         >
           <span className={styles.buttonText}>
             Toggle list of sample graphic design work{""}
-            <span>{designActive === true ? "▼" : "▶"}</span>
+            <span>{designActive === true ? "ᐁ" : "ᐅ"}</span>
           </span>
         </button>
         <div
@@ -115,8 +116,19 @@ export default function WorkExperience() {
           aria-hidden={!designActive}
         >
           <div className={styles.sampleList}>
-            <img src="/sampleDesigns/SampleDesign_allAboutMe.png"></img>
-            Sample of graphic design work will go here.
+            <div className={styles.sample}>
+              <div className={styles.sampleHeading}>Purpose</div>
+              <div className={styles.sampleSubHeading}>date</div>
+              <div className={styles.sampleImgContainer}>
+                <img
+                  src="/sampleDesigns/SampleDesign_allAboutMe.png"
+                  alt="Design for coach's profile"
+                  className={styles.sampleImg}
+                />
+              </div>
+              {""}
+              Special points for the design
+            </div>
           </div>
         </div>
       </div>

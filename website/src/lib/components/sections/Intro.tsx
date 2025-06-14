@@ -41,7 +41,7 @@ export default function Intro() {
                 media="(min-width: 3840px)"
               />
               <img
-                srcSet="/logos/linkedIn/linkedIn-mobile.webp"
+                src="/logos/linkedIn/linkedIn-mobile.webp"
                 alt="LinkedIn logo"
                 className={styles.linkImg}
               />
