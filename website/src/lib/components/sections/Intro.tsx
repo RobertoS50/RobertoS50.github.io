@@ -21,7 +21,7 @@ export default function Intro() {
         </p>
       </article>
       <article className={styles.contact}>
-        <h2>Contact</h2>
+        <h2>Contact Me</h2>
         <address className={styles.contactLinkList}>
           <a
             href="https://www.linkedin.com/in/roberto-soto12/"

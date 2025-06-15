@@ -13,42 +13,25 @@
  *
 */
 
+$mobile-logo-size: 50px;
+$smallDesktop-logo-size: 100px;
+$largeDesktop-logo-size: 200px;
+
 .jobList {
-  width: 90svw;
-  display: flex;
-  flex-direction: column;
-  row-gap: 1rem;
-  justify-content: space-between;
-  align-items: left;
-  overflow: hidden;
+  @include globals.templateList;
 
   .job {
-    h2 {
-      font-size: globals.$sub-h3-font-size;
-    }
-
-    h3 {
-      font-size: globals.$sub-h4-font-size;
-      color: globals.$sub-h2-rgb;
-    }
-
-    p {
-      white-space: pre-wrap;
-    }
-
-    ul {
-      margin-left: 1rem;
-    }
+    @include globals.templateListItem;
 
     .jobMainHeading {
-      min-height: 50px;
+      min-height: $mobile-logo-size;
       display: flex;
       flex-direction: row;
-      column-gap: 5px;
+      column-gap: 2%;
 
       .jobImgContainer {
-        height: 50px;
-        flex-basis: 50px;
+        height: $mobile-logo-size;
+        flex-basis: $mobile-logo-size;
         flex-shrink: 0;
 
         .jobImg {
@@ -69,28 +52,21 @@
       margin-top: 1%;
       margin-bottom: 1%;
       justify-content: space-between;
-      font-family: globals.$heading-font;
-      font-size: globals.$sub-h5-font-size;
-      font-weight: bold;
-      color: globals.$sub-h3-rgb;
     }
   }
 }
 
 @media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
   .jobList {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
-    gap: 2rem;
-    align-items: start;
+    @include globals.smallDesktopTemplateList;
 
     .job {
       .jobMainHeading {
-        min-height: 100px;
+        min-height: $smallDesktop-logo-size;
 
         .jobImgContainer {
-          height: 100px;
-          flex-basis: 100px;
+          height: $smallDesktop-logo-size;
+          flex-basis: $smallDesktop-logo-size;
         }
       }
     }
@@ -99,18 +75,15 @@
 
 @media (min-width: globals.$large-desktop-start-width) {
   .jobList {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
-    gap: 2rem;
-    align-items: start;
+    @include globals.largeDesktopTemplateList;
 
     .job {
       .jobMainHeading {
-        min-height: 200px;
+        min-height: $largeDesktop-logo-size;
 
         .jobImgContainer {
-          height: 200px;
-          flex-basis: 200px;
+          height: $largeDesktop-logo-size;
+          flex-basis: $largeDesktop-logo-size;
         }
       }
     }
