@@ -19,6 +19,10 @@
  *
 */
 
+$mobile-sampleImg-width: 475px;
+$smallDesktop-sampleImg-width: 700px;
+$largeDesktop-sampleImg-width: 1000px;
+
 @mixin ariaExpanded {
   &[aria-expanded="true"] {
     ~ .expander {
@@ -86,46 +90,67 @@
         visibility 0.8s ease-in-out;
 
       .sampleList {
-        width: 90svw;
-        display: flex;
-        flex-direction: column;
-        row-gap: 1rem;
-        justify-content: space-between;
-        align-items: left;
-        overflow: hidden;
-        background-color: black;
+        @include globals.templateList;
 
         .sample {
-          h2 {
-            font-size: globals.$sub-h3-font-size;
-          }
+          @include globals.templateListItem;
 
-          h3 {
-            font-size: globals.$sub-h4-font-size;
-            color: globals.$sub-h2-rgb;
+          .sampleSubHeading {
+            margin-top: 1%;
+            margin-bottom: 1%;
+            display: flex;
+            justify-content: space-between;
           }
-
-          p {
-            white-space: pre-wrap;
-          }
-
-          ul {
-            margin-left: 1rem;
-          }
-
-          background-color: red;
 
           .sampleImgContainer {
             width: 75%;
+            //width: $mobile-sampleImg-width;
+            //height: 300px;
             margin: 0 auto;
-            background-color: yellow;
+            background-color: red;
 
             .sampleImg {
               height: 100%;
               width: 100%;
               object-fit: contain;
               object-position: center center;
-              background-color: green;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
+  .workExpSection {
+    .listWrapper {
+      .expander {
+        .sampleList {
+          @include globals.smallDesktopTemplateList;
+          .sample {
+            .sampleImgContainer {
+              width: 70%;
+              //height: 600px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: globals.$large-desktop-start-width) {
+  .workExpSection {
+    .listWrapper {
+      .expander {
+        .sampleList {
+          @include globals.largeDesktopTemplateList;
+
+          .sample {
+            .sampleImgContainer {
+              width: 60%;
+              //height: 1200px;
             }
           }
         }

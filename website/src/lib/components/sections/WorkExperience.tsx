@@ -117,8 +117,74 @@ export default function WorkExperience() {
         >
           <div className={styles.sampleList}>
             <div className={styles.sample}>
-              <div className={styles.sampleHeading}>Purpose</div>
-              <div className={styles.sampleSubHeading}>date</div>
+              <h3 className={styles.sampleHeading}>
+                Design for Coach™ profile
+              </h3>
+              <h4 className={styles.sampleSubHeading}>
+                <span>Jan 2020</span>
+                <span>-</span>
+                <span>Dec 2025</span>
+              </h4>
+              <div className={styles.sampleImgContainer}>
+                <picture>
+                  <source
+                    srcSet="/sampleDesigns/allAboutMe-tablet-scaled.jpg"
+                    media="(max-width: 1279px)"
+                  />
+                  <source
+                    srcSet="/sampleDesigns/allAboutMe-small-scaled.jpg"
+                    media="(max-width: 3839px)"
+                  />
+                  <source
+                    srcSet="/sampleDesigns/allAboutMe-4K-scaled.jpg"
+                    media="(min-width: 3840px)"
+                  />
+                  <img
+                    src="/sampleDesigns/allAboutMe-tablet-scaled.jpg"
+                    alt="Test"
+                    className={styles.sampleImg}
+                  />
+                </picture>
+              </div>
+              <p>
+                Filled with pastel colors for a clear and inviting look. The
+                idea behind this design is to create an visually interesting
+                profile that also directs the viewer&apos;s eye to the
+                highlighted information.
+              </p>
+            </div>
+
+            <div className={styles.sample}>
+              <h3 className={styles.sampleHeading}>Purpose</h3>
+              <h4 className={styles.sampleSubHeading}>date</h4>
+              <div className={styles.sampleImgContainer}>
+                <picture>
+                  <source
+                    srcSet="/sampleDesigns/allAboutMe-tablet-scaled.jpg"
+                    media="(max-width: 1279px)"
+                  />
+                  <source
+                    srcSet="/sampleDesigns/allAboutMe-small-scaled.jpg"
+                    media="(max-width: 3839px)"
+                  />
+                  <source
+                    srcSet="/sampleDesigns/allAboutMe-4K-scaled.jpg"
+                    media="(min-width: 3840px)"
+                  />
+                  <img
+                    src="/sampleDesigns/allAboutMe-tablet-scaled.jpg"
+                    alt="Test"
+                    className={styles.sampleImg}
+                  />
+                </picture>
+              </div>
+              {""}
+              Special points for the design
+            </div>
+
+            <div className={styles.sample}>
+              <h3 className={styles.sampleHeading}>Purpose</h3>
+              <h4 className={styles.sampleSubHeading}>date</h4>
               <div className={styles.sampleImgContainer}>
                 <img
                   src="/sampleDesigns/SampleDesign_allAboutMe.png"
