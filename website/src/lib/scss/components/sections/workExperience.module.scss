@@ -19,10 +19,6 @@
  *
 */
 
-$mobile-sampleImg-width: 475px;
-$smallDesktop-sampleImg-width: 700px;
-$largeDesktop-sampleImg-width: 1000px;
-
 @mixin ariaExpanded {
   &[aria-expanded="true"] {
     ~ .expander {
@@ -103,9 +99,7 @@ $largeDesktop-sampleImg-width: 1000px;
           }
 
           .sampleImgContainer {
-            width: 75%;
-            //width: $mobile-sampleImg-width;
-            //height: 300px;
+            width: 60%;
             margin: 0 auto;
             background-color: red;
 
@@ -122,18 +116,28 @@ $largeDesktop-sampleImg-width: 1000px;
   }
 }
 
-@media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
+@media (min-width: globals.$ipad-start-width) and (max-width: globals.$ipad-end-width) {
+  .workExpSection {
+    .listWrapper {
+      .expander {
+        .sampleList {
+          .sample {
+            .sampleImgContainer {
+              width: 75%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: globals.$ipad-start-width) and (max-width: globals.$desktop-end-width) {
   .workExpSection {
     .listWrapper {
       .expander {
         .sampleList {
           @include globals.smallDesktopTemplateList;
-          .sample {
-            .sampleImgContainer {
-              width: 70%;
-              //height: 600px;
-            }
-          }
         }
       }
     }
@@ -146,13 +150,6 @@ $largeDesktop-sampleImg-width: 1000px;
       .expander {
         .sampleList {
           @include globals.largeDesktopTemplateList;
-
-          .sample {
-            .sampleImgContainer {
-              width: 60%;
-              //height: 1200px;
-            }
-          }
         }
       }
     }
