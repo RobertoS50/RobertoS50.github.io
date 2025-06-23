@@ -48,7 +48,7 @@ export default function Home() {
             <h3>Background</h3>
             <Background />
           </div>
-          <div className={styles.sectionContainer} id="workExperience">
+          <div className={styles.sectionContainer}>
             <h4>Work experience</h4>
             <WorkExperience />
           </div>
