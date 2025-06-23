@@ -1,8 +1,10 @@
 "use client";
 import { useState } from "react";
 import JobList from "@/components/JobList";
+import SampleList from "@/components/SampleList";
 import { salesJobs } from "@/data/jobListData/salesJobsData";
 import { marketingJobs } from "@/data/jobListData/marketingJobsData";
+import { sampleDesigns } from "@/data/sampleDesignData";
 import styles from "@/scss/components/sections/workExperience.module.scss";
 
 //TODO 23/23: Check if you can use a screen reader to better implement ARIA attributes
@@ -60,7 +62,7 @@ export default function WorkExperience() {
         >
           <span className={styles.buttonText}>
             Toggle list of marketing jobs{""}
-            <span>{marketingActive === true ? "▼" : "▶"}</span>
+            <span>{marketingActive === true ? "ᐁ" : "ᐅ"}</span>
           </span>
         </button>
         <div
@@ -83,7 +85,7 @@ export default function WorkExperience() {
         >
           <span className={styles.buttonText}>
             Toggle list of sales jobs{""}
-            <span>{salesActive === true ? "▼" : "▶"}</span>
+            <span>{salesActive === true ? "ᐁ" : "ᐅ"}</span>
           </span>
         </button>
         <div
@@ -115,87 +117,7 @@ export default function WorkExperience() {
           aria-labelledby={styles.designButton}
           aria-hidden={!designActive}
         >
-          <div className={styles.sampleList}>
-            <div className={styles.sample}>
-              <h3 className={styles.sampleHeading}>
-                Design for Coach™ profile
-              </h3>
-              <h4 className={styles.sampleSubHeading}>
-                <span>Jan 2020</span>
-                <span>-</span>
-                <span>Dec 2025</span>
-              </h4>
-              <div className={styles.sampleImgContainer}>
-                <picture>
-                  <source
-                    srcSet="/sampleDesigns/allAboutMe-tablet-scaled.jpg"
-                    media="(max-width: 1279px)"
-                  />
-                  <source
-                    srcSet="/sampleDesigns/allAboutMe-small-scaled.jpg"
-                    media="(max-width: 3839px)"
-                  />
-                  <source
-                    srcSet="/sampleDesigns/allAboutMe-4K-scaled.jpg"
-                    media="(min-width: 3840px)"
-                  />
-                  <img
-                    src="/sampleDesigns/allAboutMe-tablet-scaled.jpg"
-                    alt="Test"
-                    className={styles.sampleImg}
-                  />
-                </picture>
-              </div>
-              <p>
-                Filled with pastel colors for a clear and inviting look. The
-                idea behind this design is to create an visually interesting
-                profile that also directs the viewer&apos;s eye to the
-                highlighted information.
-              </p>
-            </div>
-
-            <div className={styles.sample}>
-              <h3 className={styles.sampleHeading}>Purpose</h3>
-              <h4 className={styles.sampleSubHeading}>date</h4>
-              <div className={styles.sampleImgContainer}>
-                <picture>
-                  <source
-                    srcSet="/sampleDesigns/allAboutMe-tablet-scaled.jpg"
-                    media="(max-width: 1279px)"
-                  />
-                  <source
-                    srcSet="/sampleDesigns/allAboutMe-small-scaled.jpg"
-                    media="(max-width: 3839px)"
-                  />
-                  <source
-                    srcSet="/sampleDesigns/allAboutMe-4K-scaled.jpg"
-                    media="(min-width: 3840px)"
-                  />
-                  <img
-                    src="/sampleDesigns/allAboutMe-tablet-scaled.jpg"
-                    alt="Test"
-                    className={styles.sampleImg}
-                  />
-                </picture>
-              </div>
-              {""}
-              Special points for the design
-            </div>
-
-            <div className={styles.sample}>
-              <h3 className={styles.sampleHeading}>Purpose</h3>
-              <h4 className={styles.sampleSubHeading}>date</h4>
-              <div className={styles.sampleImgContainer}>
-                <img
-                  src="/sampleDesigns/SampleDesign_allAboutMe.png"
-                  alt="Design for coach's profile"
-                  className={styles.sampleImg}
-                />
-              </div>
-              {""}
-              Special points for the design
-            </div>
-          </div>
+          <SampleList sampleListData={sampleDesigns} />
         </div>
       </div>
     </div>

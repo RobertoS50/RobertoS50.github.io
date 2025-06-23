@@ -1,5 +1,5 @@
 /*
-  Contains information for jobs used in JobList.tsx
+  Used in JobList.tsx
   
   Date in ISO format: YYYY-MM-DDTHH:mm:ss.sssZ
   
@@ -9,7 +9,6 @@
     - logos[2] = 4K and above sizes
 */
 
-// TODO 25/25: Look at turning description into a list
 export interface JobInterface {
   id: string;
   company: string;

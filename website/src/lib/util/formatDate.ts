@@ -17,7 +17,10 @@
  * @related
  * Implemented in:
  * - JobList.tsx
+ * - SampleList.tsx
  */
+
+//TODO 34: Add tests for this function
 
 function formatDate(dateStr: string, userLocale: string): string {
   if (dateStr === "Present") return dateStr;
