@@ -6,7 +6,6 @@ import styles from "@/scss/pages/home.module.scss";
 
 // TODO #9/9: Design components they can be hidden and loaded in seamlessly. (This website can grow a lot if it stays one page)
 // TODO #28/28: Look into reworking px to em for more responsive styles
-// TODO #29: Resize Roberto's portrait image as it is much larger than its container in all screen sizes
 
 export default function Home() {
   return (
