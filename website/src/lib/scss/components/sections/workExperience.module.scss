@@ -3,29 +3,18 @@
 /**
  * workExperience section styles
  **********************************
- * - Have drop down menus for work history that pertains to a specific industry.
- *   Once expanded it lists relevant work experience.
+ *  Displays content in a flex column layout with a gap between items.
  *  
- *  To see those styles or components check out:
+ *  To see those components and related styles check out:
  *
+ *    @components/ExpanderButton.tsx
+ *    @expanderButton.module.scss
  *    @components/JobList.tsx
  *    @jobList.module.scss
  *    @components/SampleList.tsx
  *    @sampleList.module.scss
  * 
- * - Using ARIA attributes, the grid area animates and calculates height of the content.
- *
 */
-
-@mixin ariaExpanded {
-  &[aria-expanded="true"] {
-    ~ .expander {
-      grid-template-rows: 1fr;
-
-      visibility: visible;
-    }
-  }
-}
 
 .workExpSection {
   margin-top: 0.5%;
@@ -34,54 +23,4 @@
   flex-direction: column;
   row-gap: 0.5rem;
   justify-content: space-between;
-
-  .listWrapper {
-    display: flex;
-    flex-direction: column;
-    row-gap: 0.5rem;
-    justify-content: space-between;
-    align-items: center;
-
-    .listButton {
-      height: fit-content;
-      width: 90svw;
-      padding: 1%;
-      border: 1px solid black;
-      font-family: globals.$heading-font;
-      font-size: globals.$sub-h2-font-size;
-      font-weight: bold;
-      color: white;
-
-      .buttonText {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-    }
-
-    #marketingButton {
-      background-color: rgb(19, 81, 151);
-      @include ariaExpanded;
-    }
-
-    #salesButton {
-      background-color: rgb(63, 162, 63);
-      @include ariaExpanded;
-    }
-
-    #designButton {
-      background-color: rgb(78, 63, 162);
-      @include ariaExpanded;
-    }
-
-    .expander {
-      display: grid;
-      grid-template-rows: 0fr;
-      overflow: hidden;
-      min-height: 0;
-      visibility: hidden;
-      transition: grid-template-rows 0.8s ease-in-out,
-        visibility 0.8s ease-in-out;
-    }
-  }
 }
