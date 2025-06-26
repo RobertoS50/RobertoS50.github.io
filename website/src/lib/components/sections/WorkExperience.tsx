@@ -13,18 +13,21 @@ export default function WorkExperience() {
   return (
     <div className={styles.workExpSection}>
       <ExpanderButton
+        id="marketing"
         color="rgb(19, 81, 151)"
         buttonText="Toggle list of marketing Jobs"
       >
         <JobList jobListData={marketingJobs} />
       </ExpanderButton>
       <ExpanderButton
+        id="sales"
         color="rgb(63, 162, 63)"
         buttonText="Toggle list of sales Jobs"
       >
         <JobList jobListData={salesJobs} />
       </ExpanderButton>
       <ExpanderButton
+        id="sampleDesigns"
         color="rgb(78, 63, 162)"
         buttonText="Toggle list of sample graphic design work"
       >

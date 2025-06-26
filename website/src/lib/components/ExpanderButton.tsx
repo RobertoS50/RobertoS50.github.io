@@ -17,6 +17,7 @@ import styles from "@/scss/components/expanderButton.module.scss";
  */
 
 interface Props {
+  readonly id: string;
   readonly color: string;
   readonly buttonText: string;
   readonly children: React.ReactNode;
@@ -29,13 +30,17 @@ export default function ExpanderButton(p: Props) {
     setExpanded(!expanded);
   }
 
+  const buttonID = `${p.id}Button`;
+  const expanderID = `${p.id}Expander`;
+
   return (
     <div className={styles.listWrapper}>
       <button
         className={styles.listButton}
+        id={buttonID}
         aria-haspopup="true"
         aria-expanded={expanded}
-        aria-controls={styles.expander}
+        aria-controls={expanderID}
         onClick={onClick}
         style={{ backgroundColor: p.color }}
       >
@@ -46,7 +51,8 @@ export default function ExpanderButton(p: Props) {
       </button>
       <div
         className={styles.expander}
-        aria-labelledby={styles.listButton}
+        id={expanderID}
+        aria-labelledby={buttonID}
         aria-hidden={!expanded}
       >
         {p.children}
