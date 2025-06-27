@@ -1,18 +1,23 @@
 import styles from "@/scss/components/sections/hobbies.module.scss";
 
+//TODO 36: Add conveyor belt with movies that Roberts has had a role in
+
 export default function Hobbies() {
   return (
     <div className={styles.hobbiesSection}>
       <article className={styles.hobbies}>
         <h2>Hobbies</h2>
         <p>
-          List any skills you&apos;ve exerted throughout your career that are
-          related to marketing. If applicable, list technology/apps that you
-          used while utilizing these skills:
+          I&apos;m very social but can also enjoy my own company. Here&apos;s a
+          couple of my interests:
         </p>
         <ul>
-          <li>Graphic design using software like Canva</li>
-          <li>etc.</li>
+          <li>Acting</li>
+          <li>Performing stand-up</li>
+          <li>Going to concerts</li>
+          <li>Finding new hole in the walls to eat at</li>
+          <li>Reading</li>
+          <li>Journaling</li>
         </ul>
       </article>
       <article className={styles.acting}>

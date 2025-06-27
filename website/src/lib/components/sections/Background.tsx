@@ -6,13 +6,15 @@ export default function Background() {
       <article className={styles.skills}>
         <h2>Skills</h2>
         <p>
-          List any skills you&apos;ve exerted throughout your career that are
-          related to marketing. If applicable, list technology/apps that you
-          used while utilizing these skills:
+          My background in retail and my education in marketing have given me a
+          wide range of skills. I&apos;ll list a few highlights:
         </p>
         <ul>
           <li>Graphic design using software like Canva</li>
-          <li>etc.</li>
+          <li>Salesman</li>
+          <li>Team player</li>
+          <li>Quick learner</li>
+          <li>Bilingual in Spanish</li>
         </ul>
       </article>
       <article className={styles.education}>
