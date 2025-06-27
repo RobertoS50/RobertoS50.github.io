@@ -27,6 +27,7 @@ function formatDate(dateStr: string, userLocale: string): string {
   else {
     const [year, month, day] = dateStr.split("-");
     return new Date(`${year}-${month}-${day}`).toLocaleDateString(userLocale, {
+      timeZone: "UTC",
       year: "numeric",
       month: "short",
     });
