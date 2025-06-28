@@ -6,6 +6,9 @@ import styles from "@/scss/pages/home.module.scss";
 
 // TODO #9/9: Design components they can be hidden and loaded in seamlessly. (This website can grow a lot if it stays one page)
 // TODO #28/28: Look into reworking px to em for more responsive styles
+// TODO #37: Add animation when the user enters the page and even when the user scrolls down the page.
+// * (Entry) contentOverlay scrolls up. (Scroll down) content fades in
+// * On scroll, have parallax image fade or have the contentOverlay a shadow box at the top of the overlay.
 
 export default function Home() {
   return (
