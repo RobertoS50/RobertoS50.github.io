@@ -4,11 +4,11 @@ import WorkExperience from "@/components/sections/WorkExperience";
 import Hobbies from "@/components/sections/Hobbies";
 import styles from "@/scss/pages/home.module.scss";
 
-// TODO #4/8: Add easy navigation like a button to get to certain parts of website
 // TODO #9/9: Design components they can be hidden and loaded in seamlessly. (This website can grow a lot if it stays one page)
-// TODO #26/26: Look to rework mobile styles to accommodate smaller pixel widths (320px, currently shows cracks starting at 350px) marketing bar in particular
 // TODO #28/28: Look into reworking px to em for more responsive styles
-// TODO #29: Resize Roberto's portrait image as it is much larger than its container in all screen sizes
+// TODO #37: Add animation when the user enters the page and even when the user scrolls down the page.
+// * (Entry) contentOverlay scrolls up. (Scroll down) content fades in
+// * On scroll, have parallax image fade or have the contentOverlay a shadow box at the top of the overlay.
 
 export default function Home() {
   return (
@@ -50,7 +50,7 @@ export default function Home() {
             <h3>Background</h3>
             <Background />
           </div>
-          <div className={styles.sectionContainer} id="workExperience">
+          <div className={styles.sectionContainer}>
             <h4>Work experience</h4>
             <WorkExperience />
           </div>

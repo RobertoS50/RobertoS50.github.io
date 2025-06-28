@@ -51,7 +51,6 @@ $shadow-non-phone-straight-bottom: 0px 1px 15px 0px rgba(66, 68, 90, 0.63);
 */
 
 @mixin button {
-  //display: inline-block;
   padding: 0.5rem;
   border: 2px solid $link-button-border-rgb;
   border-radius: $button-radius;
@@ -84,4 +83,73 @@ $shadow-non-phone-straight-bottom: 0px 1px 15px 0px rgba(66, 68, 90, 0.63);
 @mixin credits {
   font-size: 75%;
   font-style: italic;
+}
+
+/*
+ * templateList styles
+ * - Related styles are used for the lists in workExperience section
+ *
+ * templateList:
+ * - Mobile view showcasing a columns where items are stacked vertically
+ *
+ * smallDesktopTemplateList:
+ * - Small desktop view showcasing grid layout with 2 columns
+ *
+ * largeDesktopTemplateList:
+ * - Large desktop view showcasing grid layout with 3 columns
+ *
+ * templateListItem:
+ * - Several global selectors for general styles
+ * - Styles for headings, paragraphs, and lists
+ *
+*/
+
+@mixin templateList {
+  width: 90svw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: space-between;
+  align-items: left;
+  overflow: hidden;
+}
+
+@mixin smallDesktopTemplateList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+@mixin largeDesktopTemplateList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+@mixin templateListItem {
+  h2 {
+    font-size: $sub-h3-font-size;
+  }
+
+  h3 {
+    font-size: $sub-h4-font-size;
+    color: $sub-h2-rgb;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: $sub-h5-font-size;
+    color: $sub-h3-rgb;
+  }
+
+  p {
+    white-space: pre-wrap;
+  }
+
+  ul {
+    margin-left: 1rem;
+  }
 }

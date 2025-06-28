@@ -1,0 +1,56 @@
+@use "@/scss/globals.scss";
+
+/**
+ * expanderButton section styles
+ **********************************
+ * Hides content until the button is clicked.
+ *
+ * * Using ARIA attributes, the content area smoothly animates.
+ * * Fro this to work, the content within the expander must be a container that calculates it's own height (flex or grid).
+ *
+*/
+
+@mixin ariaExpanded {
+  &[aria-expanded="true"] {
+    ~ .expander {
+      grid-template-rows: 1fr;
+
+      visibility: visible;
+    }
+  }
+}
+
+.listWrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  justify-content: space-between;
+  align-items: center;
+
+  .listButton {
+    height: fit-content;
+    width: 90svw;
+    padding: 1%;
+    border: 1px solid black;
+    font-family: globals.$heading-font;
+    font-size: globals.$sub-h2-font-size;
+    font-weight: bold;
+    color: white;
+    @include ariaExpanded;
+
+    .buttonText {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .expander {
+    display: grid;
+    grid-template-rows: 0fr;
+    overflow: hidden;
+    min-height: 0;
+    visibility: hidden;
+    transition: grid-template-rows 0.8s ease-in-out, visibility 0.8s ease-in-out;
+  }
+}
