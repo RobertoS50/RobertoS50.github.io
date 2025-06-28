@@ -12,6 +12,7 @@ import styles from "@/scss/components/jobList.module.scss";
  * @param jobListData - Fills in the details of the template
  *
  * @related salesJobs.ts, marketingJobs.ts, retailJobs.ts, JobInterface.ts
+ * @related This file is used in the WorkExperience section. workExperience.tsx
  */
 
 interface Props {

@@ -11,7 +11,8 @@ import styles from "@/scss/components/sampleList.module.scss";
  *
  * @param sampleListData - Fills in the details of the template
  *
- * @related sampleDesignData.ts, JobInterface.ts
+ * @related sampleDesignData.ts, sampleDesignInterface.ts
+ * @related This file is used in the WorkExperience section. workExperience.tsx
  */
 
 interface Props {
