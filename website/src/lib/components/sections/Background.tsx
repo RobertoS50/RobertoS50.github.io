@@ -38,6 +38,7 @@ export default function Background() {
                 src="/logos/AU/auroraUniversityLogo-mobile.webp"
                 alt="AU logo"
                 className={styles.eduImg}
+                loading="lazy"
               />
             </picture>
           </div>

@@ -43,6 +43,7 @@ export default function SampleList(p: Props) {
                 src={sample.samples[0]}
                 alt={sample.sampleAlt}
                 className={styles.sampleImg}
+                loading="lazy"
               />
             </picture>
           </div>

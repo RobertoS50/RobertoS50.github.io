@@ -35,6 +35,7 @@ export default function JobList(p: Props) {
                 src={job.logos[0]}
                 alt={job.logoAlt}
                 className={styles.jobImg}
+                loading="lazy"
               />
             </picture>
             <div className={styles.jobTitle}>
