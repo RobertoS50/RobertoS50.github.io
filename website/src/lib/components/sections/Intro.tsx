@@ -45,6 +45,7 @@ export default function Intro() {
                 alt="LinkedIn logo"
                 className={styles.linkImg}
                 loading="lazy"
+                decoding="async"
               />
             </picture>
             <div className={styles.linkText}>LinkedIn</div>

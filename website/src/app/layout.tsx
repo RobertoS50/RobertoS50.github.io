@@ -5,11 +5,15 @@ import "@/scss/layout/root.scss";
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
+  weight: ["400", "700"],
+  style: ["normal", "italic"],
 });
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
+  weight: ["700"],
+  style: ["normal"],
 });
 
 export const metadata: Metadata = {

@@ -42,8 +42,11 @@ export default function SampleList(p: Props) {
               <img
                 src={sample.samples[0]}
                 alt={sample.sampleAlt}
+                width={sample.sampleWidth}
+                height={sample.sampleHeight}
                 className={styles.sampleImg}
                 loading="lazy"
+                decoding="async"
               />
             </picture>
           </div>

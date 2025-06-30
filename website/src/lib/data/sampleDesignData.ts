@@ -11,6 +11,8 @@ export const sampleDesigns: SampleDesignInterface[] = [
       "/sampleDesigns/allAboutMe-small-scaled.jpg",
       "/sampleDesigns/allAboutMe-4K-scaled.jpg",
     ],
+    sampleWidth: 475,
+    sampleHeight: 633,
     sampleAlt: "Design made for Coach™ profile",
     description: [
       "Filled with pastel colors for a clear and inviting look.",

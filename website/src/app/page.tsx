@@ -31,6 +31,7 @@ export default function Home() {
             src="/RobertoS-4-tablet-scaled.jpg"
             alt="Self portrait of Roberto Soto looking at the camera"
             className={styles.parallaxImage}
+            decoding="async"
           />
         </picture>
       </div>

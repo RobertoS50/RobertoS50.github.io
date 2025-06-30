@@ -39,6 +39,7 @@ export default function Background() {
                 alt="AU logo"
                 className={styles.eduImg}
                 loading="lazy"
+                decoding="async"
               />
             </picture>
           </div>
