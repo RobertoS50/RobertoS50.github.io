@@ -2,18 +2,17 @@ import type { Metadata } from "next";
 import { Open_Sans, Montserrat } from "next/font/google";
 import "@/scss/layout/root.scss";
 
+//TODO 38: Defer assets, css, font, js
+//TODO 39: Delete unused js and css. (Critters?)
+
 const openSans = Open_Sans({
   variable: "--font-open-sans",
   subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
 });
 
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
-  weight: ["700"],
-  style: ["normal"],
 });
 
 export const metadata: Metadata = {
