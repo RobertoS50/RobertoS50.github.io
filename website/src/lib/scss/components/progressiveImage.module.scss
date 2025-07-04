@@ -1,0 +1,13 @@
+.progressiveImage {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.topCenter {
+  object-position: top center;
+}
+
+.blur {
+  filter: blur(100px);
+}

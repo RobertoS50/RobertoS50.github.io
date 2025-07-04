@@ -3,17 +3,25 @@ import Background from "@/components/sections/Background";
 import WorkExperience from "@/components/sections/WorkExperience";
 import Hobbies from "@/components/sections/Hobbies";
 import styles from "@/scss/pages/home.module.scss";
+import ProgressiveImage from "@/components/ProgressiveImage";
 
 // TODO #9/9: Design components they can be hidden and loaded in seamlessly. (This website can grow a lot if it stays one page)
 // TODO #28/28: Look into reworking px to em for more responsive styles
 // TODO #37: Add animation when the user enters the page and even when the user scrolls down the page.
 // * (Entry) contentOverlay scrolls up. (Scroll down) content fades in
 // * On scroll, have parallax image fade or have the contentOverlay a shadow box at the top of the overlay.
-
-export default function Home() {
-  return (
-    <div className={styles.page}>
-      <div className={styles.parallaxContainer}>
+/*
+        <img
+          src="/RobertoS-4-tablet-scaled.jpg"
+          srcSet="/RobertoS-4-tablet-scaled.jpg 1279w, /RobertoS-4-small-scaled.jpg 3839w, /RobertoS-4-4K-scaled.jpg 3840w"
+          sizes="(max-width: 1279px) 100vw, (max-width: 3839px) 100vw, 100vw"
+          alt="Self portrait of Roberto Soto looking at the camera"
+          className={styles.parallaxImage}
+          decoding="async"
+        />
+      </div>
+*/
+/*
         <picture>
           <source
             srcSet="/RobertoS-4-tablet-scaled.jpg"
@@ -32,8 +40,21 @@ export default function Home() {
             alt="Self portrait of Roberto Soto looking at the camera"
             className={styles.parallaxImage}
             decoding="async"
+            loading="lazy"
           />
         </picture>
+*/
+
+export default function Home() {
+  return (
+    <div className={styles.page}>
+      <div className={styles.parallaxContainer}>
+        <ProgressiveImage
+          src="/RobertoS-4-tablet-scaled.jpg"
+          placeholderSrc="/RobertoS-4-placeholder.jpg"
+          alt="Self portrait of Roberto Soto looking at the camera"
+          position="topCenter"
+        />
       </div>
       <div className={styles.contentOverlay}>
         <header className={styles.header}>
@@ -55,7 +76,6 @@ export default function Home() {
             <h4>Work experience</h4>
             <WorkExperience />
           </div>
-
           <div className={styles.sectionContainer}>
             <h4>My interests</h4>
             <Hobbies />
