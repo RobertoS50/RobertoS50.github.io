@@ -36,16 +36,27 @@ export default function ProgressiveImage(p: Props) {
   }, [p.src]);
 
   return (
-    <img
-      src={imgSrc}
-      alt={p.alt}
-      decoding="async"
-      loading="lazy"
-      className={`
+    <picture>
+      <source
+        srcSet="/RobertoS-4-tablet-scaled.jpg"
+        media="(max-width: 1279px)"
+      />
+      <source
+        srcSet="/RobertoS-4-small-scaled.jpg"
+        media="(max-width: 3839px)"
+      />
+      <source srcSet="/RobertoS-4-4K-scaled.jpg" media="(min-width: 3840px)" />
+      <img
+        src={imgSrc}
+        alt={p.alt}
+        decoding="async"
+        loading="lazy"
+        className={`
         ${styles.progressiveImage}
         ${styles[p.position]} 
-        ${imgSrc == p.placeholderSrc ? styles.blur : ""}
+        ${imgSrc == p.placeholderSrc ? styles.blur : styles.reveal}
         `}
-    />
+      />
+    </picture>
   );
 }

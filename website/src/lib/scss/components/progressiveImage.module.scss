@@ -8,6 +8,25 @@
   object-position: top center;
 }
 
+.centerCenter {
+  object-position: center center;
+}
+
 .blur {
   filter: blur(100px);
+}
+
+.reveal {
+  animation: reveal 1s ease-out;
+}
+
+@keyframes reveal {
+  0% {
+    transform: scale(1.05);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
