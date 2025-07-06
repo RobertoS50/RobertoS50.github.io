@@ -10,40 +10,6 @@ import ProgressiveImage from "@/components/ProgressiveImage";
 // TODO #37: Add animation when the user enters the page and even when the user scrolls down the page.
 // * (Entry) contentOverlay scrolls up. (Scroll down) content fades in
 // * On scroll, have parallax image fade or have the contentOverlay a shadow box at the top of the overlay.
-/*
-        <img
-          src="/RobertoS-4-tablet-scaled.jpg"
-          srcSet="/RobertoS-4-tablet-scaled.jpg 1279w, /RobertoS-4-small-scaled.jpg 3839w, /RobertoS-4-4K-scaled.jpg 3840w"
-          sizes="(max-width: 1279px) 100vw, (max-width: 3839px) 100vw, 100vw"
-          alt="Self portrait of Roberto Soto looking at the camera"
-          className={styles.parallaxImage}
-          decoding="async"
-        />
-      </div>
-*/
-/*
-        <picture>
-          <source
-            srcSet="/RobertoS-4-tablet-scaled.jpg"
-            media="(max-width: 1279px)"
-          />
-          <source
-            srcSet="/RobertoS-4-small-scaled.jpg"
-            media="(max-width: 3839px)"
-          />
-          <source
-            srcSet="/RobertoS-4-4K-scaled.jpg"
-            media="(min-width: 3840px)"
-          />
-          <img
-            src="/RobertoS-4-tablet-scaled.jpg"
-            alt="Self portrait of Roberto Soto looking at the camera"
-            className={styles.parallaxImage}
-            decoding="async"
-            loading="lazy"
-          />
-        </picture>
-*/
 
 export default function Home() {
   return (
