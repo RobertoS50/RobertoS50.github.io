@@ -2,6 +2,8 @@
 import { useEffect, useState } from "react";
 import styles from "@/scss/components/progressiveImage.module.scss";
 
+// TODO 43: Progressive image currently acts just like a regular picture element with only a slight speed improvement. Look to change further.
+
 /**
  * @file ProgressiveImage.tsx
  *
@@ -29,6 +31,7 @@ export default function ProgressiveImage(p: Props) {
 
   useEffect((): void => {
     const img = new Image();
+    img.fetchPriority = "high";
     img.src = p.src;
     img.onload = (): void => {
       setImgSrc(p.src);
@@ -49,8 +52,7 @@ export default function ProgressiveImage(p: Props) {
       <img
         src={imgSrc}
         alt={p.alt}
-        decoding="async"
-        loading="lazy"
+        fetchPriority="high"
         className={`
         ${styles.progressiveImage}
         ${styles[p.position]} 
