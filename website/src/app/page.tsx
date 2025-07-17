@@ -31,6 +31,8 @@ export default function Home() {
           position="topCenter"
           fetchP="high"
           loading="eager"
+          width={1000}
+          height={1500}
         />
       </div>
       <div className={styles.contentOverlay}>

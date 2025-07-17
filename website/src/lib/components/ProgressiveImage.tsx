@@ -26,6 +26,8 @@ interface Props {
   readonly position: string;
   readonly fetchP: "high" | "low";
   readonly loading: "eager" | "lazy";
+  readonly width: number;
+  readonly height: number;
 }
 
 export default function ProgressiveImage(p: Props) {
@@ -56,6 +58,8 @@ export default function ProgressiveImage(p: Props) {
         fetchPriority={p.fetchP}
         loading={p.loading}
         decoding="async"
+        width={p.width}
+        height={p.height}
         className={`
         ${styles.progressiveImage}
         ${styles[p.position]} 
