@@ -20,39 +20,42 @@ import styles from "@/scss/components/progressiveImage.module.scss";
  */
 
 interface Props {
-  readonly src: string;
+  readonly srcSet: string[];
   readonly placeholderSrc: string;
   readonly alt: string;
   readonly position: string;
+  readonly fetchP: "high" | "low";
+  readonly loading: "eager" | "lazy";
 }
 
 export default function ProgressiveImage(p: Props) {
   const [imgSrc, setImgSrc] = useState(p.placeholderSrc);
+  const [img2, setImg2] = useState(p.placeholderSrc);
+  const [img3, setImg3] = useState(p.placeholderSrc);
 
   useEffect((): void => {
     const img = new Image();
     img.fetchPriority = "high";
-    img.src = p.src;
+    img.decoding = "async";
+    img.src = p.srcSet[0];
     img.onload = (): void => {
-      setImgSrc(p.src);
+      setImgSrc(p.srcSet[0]);
+      setImg2(p.srcSet[1]);
+      setImg3(p.srcSet[2]);
     };
-  }, [p.src]);
+  }, [p.srcSet]);
 
   return (
     <picture>
-      <source
-        srcSet="/RobertoS-4-tablet-scaled.jpg"
-        media="(max-width: 1279px)"
-      />
-      <source
-        srcSet="/RobertoS-4-small-scaled.jpg"
-        media="(max-width: 3839px)"
-      />
-      <source srcSet="/RobertoS-4-4K-scaled.jpg" media="(min-width: 3840px)" />
+      <source srcSet={imgSrc} media="(max-width: 1279px)" />
+      <source srcSet={img2} media="(max-width: 3839px)" />
+      <source srcSet={img3} media="(min-width: 3840px)" />
       <img
         src={imgSrc}
         alt={p.alt}
-        fetchPriority="high"
+        fetchPriority={p.fetchP}
+        loading={p.loading}
+        decoding="async"
         className={`
         ${styles.progressiveImage}
         ${styles[p.position]} 
