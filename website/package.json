@@ -13,7 +13,7 @@
     "test:watchSilent": "jest --silent --watch"
   },
   "dependencies": {
-    "next": "15.2.3",
+    "next": "^15.4.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
