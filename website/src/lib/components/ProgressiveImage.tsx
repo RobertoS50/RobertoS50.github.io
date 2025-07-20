@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "@/scss/components/progressiveImage.module.scss";
 
-// TODO 43:!!FUTURE!! Progressive image currently acts just like a regular picture element with only a slight speed improvement. Look to change further.
+// TODO 43: !!FUTURE!! Progressive image currently acts just like a regular picture element with only a slight speed improvement. Look to change further.
 
 /**
  * @file ProgressiveImage.tsx
