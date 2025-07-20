@@ -14,6 +14,7 @@ import ProgressiveImage from "@/components/ProgressiveImage";
 // TODO 40: Reduce resource delay and element render delay
 // TODO 41: Stick to transform and opacity for animations (non-composite animations)
 // TODO 42: Look for the render blockers
+// TODO 44: html tree map and other SEO practices
 
 export default function Home() {
   return (
