@@ -21,9 +21,14 @@ html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 
-    // iPad and desktop viewports
-    @media (min-width: globals.$ipad-start-width) {
-      font-size: globals.$non-phone-font-size;
+    // iPad and small desktop viewports
+    @media (min-width: globals.$ipad-start-width) and (max-width: globals.$desktop-end-width) {
+      font-size: globals.$small-desk-font-size;
+    }
+
+    // Large desktop viewports
+    @media (min-width: globals.$large-desktop-start-width) {
+      font-size: globals.$large-desk-font-size;
     }
 
     h1 {

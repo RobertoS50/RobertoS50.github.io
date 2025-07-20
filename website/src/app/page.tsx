@@ -6,7 +6,6 @@ import styles from "@/scss/pages/home.module.scss";
 import ProgressiveImage from "@/components/ProgressiveImage";
 
 // TODO #9/9: !!FUTURE!! Design components to be loaded in dynamically. Intersection observer API (This website can grow a lot if it stays one page)
-// TODO #28/28: Look into reworking px to em for more responsive styles. Better scales for larger screens.
 // TODO #37: Add animation when the user enters the page and even when the user scrolls down the page.
 // * (Entry) contentOverlay scrolls up. (Scroll down) content fades in
 // * On scroll, have parallax image fade or have the contentOverlay a shadow box at the top of the overlay.

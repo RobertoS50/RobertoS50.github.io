@@ -18,16 +18,17 @@ $sub-h3-rgb: rgb(94, 93, 93);
 // Font
 $heading-font: var(--font-montserrat);
 $text-font: var(--font-open-sans);
-$phone-font-size: 80%;
-$non-phone-font-size: 110%;
+$phone-font-size: 0.8rem;
+$small-desk-font-size: 1.2rem;
+$large-desk-font-size: 2rem;
 
 // Header font sizes
-$main-h1-font-size: 200%;
-$main-h2-font-size: 170%;
-$sub-h2-font-size: 150%;
-$sub-h3-font-size: 135%;
-$sub-h4-font-size: 125%;
-$sub-h5-font-size: 115%;
+$main-h1-font-size: 2em;
+$main-h2-font-size: 1.7em;
+$sub-h2-font-size: 1.5em;
+$sub-h3-font-size: 1.35em;
+$sub-h4-font-size: 1.25em;
+$sub-h5-font-size: 1.15em;
 
 // Button styles
 $link-button-border-rgb: rgb(0, 95, 162);
