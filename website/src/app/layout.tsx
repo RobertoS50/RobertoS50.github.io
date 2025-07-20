@@ -3,7 +3,6 @@ import { Open_Sans, Montserrat } from "next/font/google";
 import "@/scss/layout/root.scss";
 
 //TODO 38: Defer assets, css, font, js
-//TODO 39: Delete unused js and css. (Critters?)
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",
