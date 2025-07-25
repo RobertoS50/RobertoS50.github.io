@@ -44,8 +44,9 @@ export default function Intro() {
                 src="/logos/linkedIn/linkedIn-mobile.webp"
                 alt="LinkedIn logo"
                 className={styles.linkImg}
-                loading="lazy"
+                loading="eager"
                 decoding="async"
+                fetchPriority="high"
               />
             </picture>
             <div className={styles.linkText}>LinkedIn</div>
@@ -57,7 +58,9 @@ export default function Intro() {
                 src="/logos/GmailLogo.svg"
                 alt="Gmail logo"
                 className={styles.linkImg}
-                loading="lazy"
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
               />
             </div>
             <div className={styles.linkText}>Email - sotor2588@gmail.com</div>
