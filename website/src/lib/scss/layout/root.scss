@@ -50,6 +50,11 @@ html {
     color: globals.$link-fill-rgb;
     text-decoration: underline;
     font-weight: bold;
+    color: rgb(3, 168, 168);
+  }
+
+  a:active {
+    color: rgb(144, 82, 231);
   }
 
   // Enable hover only on non-touch devices
