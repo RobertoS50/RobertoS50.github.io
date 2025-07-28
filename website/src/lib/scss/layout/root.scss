@@ -18,8 +18,6 @@ html {
     color: globals.$text-rgb;
     font-family: globals.$text-font;
     font-size: globals.$phone-font-size;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 
     // iPad and small desktop viewports
     @media (min-width: globals.$ipad-start-width) and (max-width: globals.$desktop-end-width) {

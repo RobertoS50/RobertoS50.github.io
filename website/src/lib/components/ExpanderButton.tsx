@@ -9,6 +9,7 @@ import styles from "@/scss/components/expanderButton.module.scss";
  * This button expands or collapses a list of content when clicked.
  * Uses ARIA attributes for accessibility and to indicate the state of the button.
  *
+ * @param id
  * @param color
  * @param buttonText
  * @param children

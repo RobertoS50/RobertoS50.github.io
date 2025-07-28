@@ -13,7 +13,11 @@ import styles from "@/scss/components/progressiveImage.module.scss";
  * @param src - The high-resolution image source
  * @param placeholderSrc - The low-resolution placeholder image source
  * @param alt - The alt text for the image
- * @param position -
+ * @param position - The position of the image (e.g., "center", "left", "right")
+ * @param fetchP - fetch priority for the image, either "high" or "low"
+ * @param loading - loading strategy for the image, either "eager" or "lazy"
+ * @param width - width of the image in pixels
+ * @param height - height of the image in pixels
  *
  * @related progressiveImage.module.scss
  * @related Used for high detail images that need to load quickly without blocking the main content

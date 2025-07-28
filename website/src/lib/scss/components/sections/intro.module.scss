@@ -10,6 +10,13 @@
  * 
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: >0.3%,last 4 version,not dead
+*/
+
 .introSection {
   padding: 0.5%;
   display: flex;
@@ -38,6 +45,8 @@
       align-items: center;
 
       .contactLink {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
         width: fit-content;
         display: flex;
         flex-direction: column;
@@ -52,13 +61,17 @@
           .linkImg {
             height: 100%;
             width: 100%;
+            -o-object-fit: contain;
             object-fit: contain;
+            -o-object-position: center center;
             object-position: center center;
           }
         }
 
         .linkText {
           @include globals.button;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
           width: fit-content;
           align-self: center;
         }
@@ -77,6 +90,8 @@
   .introSection {
     flex-direction: row;
     flex-wrap: nowrap;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
     column-gap: 2rem;
 
     h2 {
