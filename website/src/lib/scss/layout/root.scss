@@ -45,14 +45,16 @@ html {
   }
 
   a {
-    color: globals.$link-fill-rgb;
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: bold;
-    color: rgb(3, 168, 168);
+  }
+
+  a:link {
+    color: globals.$link-rgb;
   }
 
   a:active {
-    color: rgb(144, 82, 231);
+    color: globals.$link-visited-rgb;
   }
 
   // Enable hover only on non-touch devices
@@ -60,6 +62,7 @@ html {
   @media (hover: hover) and (pointer: fine) {
     a {
       font-weight: inherit;
+      text-decoration: underline;
 
       &:hover {
         text-underline-offset: 4px;
