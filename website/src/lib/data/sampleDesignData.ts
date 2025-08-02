@@ -8,9 +8,9 @@ export const sampleDesigns: SampleDesignInterface[] = [
     startDate: "2025-02-01",
     endDate: "2025-03-01",
     samples: [
-      CDN + "sampleDesigns/allAboutMe-tablet-scaled.jpg",
-      CDN + "sampleDesigns/allAboutMe-small-scaled.jpg",
-      CDN + "sampleDesigns/allAboutMe-4K-scaled.jpg",
+      CDN + "/sampleDesigns/allAboutMe-tablet-scaled.jpg",
+      CDN + "/sampleDesigns/allAboutMe-small-scaled.jpg",
+      CDN + "/sampleDesigns/allAboutMe-4K-scaled.jpg",
     ],
     sampleWidth: 475,
     sampleHeight: 633,

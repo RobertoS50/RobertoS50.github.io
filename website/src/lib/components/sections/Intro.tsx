@@ -30,19 +30,19 @@ export default function Intro() {
           >
             <picture className={styles.linkImgContainer}>
               <source
-                srcSet={CDN + "logos/linkedIn/linkedIn-mobile.webp"}
+                srcSet={CDN + "/Logos/linkedIn/linkedIn-mobile.webp"}
                 media="(max-width: 1279px)"
               />
               <source
-                srcSet={CDN + "logos/linkedIn/linkedIn-small.webp"}
+                srcSet={CDN + "/Logos/linkedIn/linkedIn-small.webp"}
                 media="(max-width: 3839px)"
               />
               <source
-                srcSet={CDN + "logos/linkedIn/linkedIn-4K.webp"}
+                srcSet={CDN + "/Logos/linkedIn/linkedIn-4K.webp"}
                 media="(min-width: 3840px)"
               />
               <img
-                srcSet={CDN + "/logos/linkedIn/linkedIn-mobile.webp"}
+                srcSet={CDN + "/Logos/linkedIn/linkedIn-mobile.webp"}
                 alt="LinkedIn logo"
                 className={styles.linkImg}
                 loading="eager"
@@ -56,7 +56,7 @@ export default function Intro() {
           <a href="mailto:sotor2588@gmail.com" className={styles.contactLink}>
             <div className={styles.linkImgContainer}>
               <img
-                src={CDN + "logos/GmailLogo.svg"}
+                src={CDN + "/Logos/GmailLogo.svg"}
                 alt="Gmail logo"
                 className={styles.linkImg}
                 loading="eager"

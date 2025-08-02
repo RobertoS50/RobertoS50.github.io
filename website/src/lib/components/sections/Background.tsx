@@ -24,19 +24,19 @@ export default function Background() {
           <div className={styles.eduImgContainer}>
             <picture>
               <source
-                srcSet={CDN + "logos/AU/auroraUniversityLogo-mobile.webp"}
+                srcSet={CDN + "/Logos/AU/auroraUniversityLogo-mobile.webp"}
                 media="(max-width: 1279px)"
               />
               <source
-                srcSet={CDN + "logos/AU/auroraUniversityLogo-small.webp"}
+                srcSet={CDN + "/Logos/AU/auroraUniversityLogo-small.webp"}
                 media="(max-width: 3839px)"
               />
               <source
-                srcSet={CDN + "logos/AU/auroraUniversityLogo-4K.webp"}
+                srcSet={CDN + "/Logos/AU/auroraUniversityLogo-4K.webp"}
                 media="(min-width: 3840px)"
               />
               <img
-                srcSet={CDN + "logos/AU/auroraUniversityLogo-mobile.webp"}
+                srcSet={CDN + "/Logos/AU/auroraUniversityLogo-mobile.webp"}
                 alt="AU logo"
                 className={styles.eduImg}
                 loading="lazy"

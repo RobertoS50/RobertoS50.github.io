@@ -32,39 +32,40 @@ export default function RootLayout({
         <link
           rel="preload"
           as="image"
-          href={CDN + "RobertoS-4-tablet-scaled.jpg"}
+          href={CDN + "/RobertoS-4-tablet-scaled.jpg"}
           media="(max-width: 1279px)"
         />
         <link
           rel="preload"
           as="image"
-          href={CDN + "RobertoS-4-small-scaled.jpg"}
+          href={CDN + "/RobertoS-4-small-scaled.jpg"}
           media="(min-width: 1280px) and (max-width: 3839px)"
         />
         <link
           rel="preload"
           as="image"
-          href={CDN + "RobertoS-4-4K-scaled.jpg"}
+          href={CDN + "/RobertoS-4-4K-scaled.jpg"}
           media="(min-width: 3840px)"
         />
         <link
           rel="preload"
           as="image"
-          href={CDN + "logos/linkedIn/linkedIn-mobile.webp"}
+          href={CDN + "/Logos/linkedIn/linkedIn-mobile.webp"}
           media="(max-width: 1279px)"
         />
         <link
           rel="preload"
           as="image"
-          href={CDN + "logos/linkedIn/linkedIn-small.webp"}
+          href={CDN + "/Logos/linkedIn/linkedIn-small.webp"}
           media="(min-width: 1280px) and (max-width: 3839px)"
         />
         <link
           rel="preload"
           as="image"
-          href={CDN + "logos/linkedIn/linkedIn-4K.webp"}
+          href={CDN + "/Logos/linkedIn/linkedIn-4K.webp"}
           media="(min-width: 3840px)"
         />
+        <link rel="preload" as="image" href={CDN + "/Logos/GmailLogo.svg"} />
       </head>
       <body className={`${openSans.variable} ${montserrat.variable}`}>
         {children}
