@@ -7,10 +7,6 @@ import { CDN } from "@/util/globalConstants";
 import styles from "@/scss/pages/home.module.scss";
 
 // TODO #9/9: !!FUTURE!! Design components to be loaded in dynamically. Intersection observer API (This website can grow a lot if it stays one page)
-// TODO 39: Reduce main thread blocker
-// TODO 40: Reduce resource delay and element render delay
-// TODO 42: Look for the render blockers
-// TODO 44: html tree map and other SEO practices
 
 export default function Home() {
   return (
