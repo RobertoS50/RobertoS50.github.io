@@ -10,7 +10,7 @@ import styles from "@/scss/components/progressiveImage.module.scss";
  * @what
  * Loads a low-resolution placeholder image first, then replaces it with a high-resolution image.
  *
- * @param src - The high-resolution image source
+ * @param srcSet - Array of high-resolution image sources
  * @param placeholderSrc - The low-resolution placeholder image source
  * @param alt - The alt text for the image
  * @param position - The position of the image (e.g., "center", "left", "right")

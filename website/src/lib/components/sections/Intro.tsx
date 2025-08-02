@@ -42,7 +42,7 @@ export default function Intro() {
                 media="(min-width: 3840px)"
               />
               <img
-                srcSet={CDN + "/Logos/linkedIn/linkedIn-mobile.webp"}
+                src={CDN + "/Logos/linkedIn/linkedIn-mobile.webp"}
                 alt="LinkedIn logo"
                 className={styles.linkImg}
                 loading="eager"

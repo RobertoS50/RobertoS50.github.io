@@ -3,7 +3,7 @@ import { Open_Sans, Montserrat } from "next/font/google";
 import { CDN } from "@/util/globalConstants";
 import "@/scss/layout/root.scss";
 
-//TODO 38: Defer assets, css, font, js
+//TODO 38: !!FUTURE!! Defer assets, css, font, js
 
 const openSans = Open_Sans({
   variable: "--font-open-sans",

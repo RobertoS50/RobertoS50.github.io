@@ -36,7 +36,7 @@ export default function Background() {
                 media="(min-width: 3840px)"
               />
               <img
-                srcSet={CDN + "/Logos/AU/auroraUniversityLogo-mobile.webp"}
+                src={CDN + "/Logos/AU/auroraUniversityLogo-mobile.webp"}
                 alt="AU logo"
                 className={styles.eduImg}
                 loading="lazy"
