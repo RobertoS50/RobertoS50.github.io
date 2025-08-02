@@ -1,4 +1,5 @@
 import { JobInterface } from "@/interface/jobInterface";
+import { CDN } from "@/util/globalConstants";
 
 export const salesJobs: JobInterface[] = [
   {
@@ -7,9 +8,9 @@ export const salesJobs: JobInterface[] = [
     position: "Sales Associate",
     location: "Schaumburg, IL",
     logos: [
-      "/logos/coach/coachLogo-mobile.webp",
-      "/logos/coach/coachLogo-small.webp",
-      "/logos/coach/coachLogo-4K.webp",
+      CDN + "logos/coach/coachLogo-mobile.webp",
+      CDN + "logos/coach/coachLogo-small.webp",
+      CDN + "logos/coach/coachLogo-4K.webp",
     ],
     logoAlt: "Coach logo",
     startDate: "2024-01-01",
@@ -35,9 +36,9 @@ export const salesJobs: JobInterface[] = [
     position: "Sales Support Associate",
     location: "Schaumburg, IL",
     logos: [
-      "/logos/coach/coachLogo-mobile.webp",
-      "/logos/coach/coachLogo-small.webp",
-      "/logos/coach/coachLogo-4K.webp",
+      CDN + "logos/coach/coachLogo-mobile.webp",
+      CDN + "logos/coach/coachLogo-small.webp",
+      CDN + "logos/coach/coachLogo-4K.webp",
     ],
     logoAlt: "Coach logo",
     startDate: "2023-11-01",
@@ -65,9 +66,9 @@ export const salesJobs: JobInterface[] = [
     position: "Sales Associate",
     location: "Bloomingdale, IL",
     logos: [
-      "/logos/expressLogo.svg",
-      "/logos/expressLogo.svg",
-      "/logos/expressLogo.svg",
+      CDN + "logos/expressLogo.svg",
+      CDN + "logos/expressLogo.svg",
+      CDN + "logos/expressLogo.svg",
     ],
     logoAlt: "Express logo",
     startDate: "2019-01-01",

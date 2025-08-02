@@ -1,4 +1,5 @@
 import { JobInterface } from "@/interface/jobInterface";
+import { CDN } from "@/util/globalConstants";
 
 export const marketingJobs: JobInterface[] = [
   {
@@ -7,9 +8,9 @@ export const marketingJobs: JobInterface[] = [
     position: "Internship",
     location: "Oakbrook Terrace, IL",
     logos: [
-      "/logos/chicagoAutoTradeShow/chicagoAutoTradeShowLogo-mobile.webp",
-      "/logos/chicagoAutoTradeShow/chicagoAutoTradeShowLogo-small.webp",
-      "/logos/chicagoAutoTradeShow/chicagoAutoTradeShowLogo-4K.webp",
+      CDN + "logos/chicagoAutoTradeShow/chicagoAutoTradeShowLogo-mobile.webp",
+      CDN + "logos/chicagoAutoTradeShow/chicagoAutoTradeShowLogo-small.webp",
+      CDN + "logos/chicagoAutoTradeShow/chicagoAutoTradeShowLogo-4K.webp",
     ],
     logoAlt: "Chicago Auto Trade Assoc. logo",
     startDate: "2025-01-01",
@@ -38,9 +39,9 @@ export const marketingJobs: JobInterface[] = [
     position: "Social Media Director",
     location: "Remote",
     logos: [
-      "/logos/shadez/shadezCosmeticsLogo-mobile.webp",
-      "/logos/shadez/shadezCosmeticsLogo-small.webp",
-      "/logos/shadez/shadezCosmeticsLogo-4K.webp",
+      CDN + "logos/shadez/shadezCosmeticsLogo-mobile.webp",
+      CDN + "logos/shadez/shadezCosmeticsLogo-small.webp",
+      CDN + "logos/shadez/shadezCosmeticsLogo-4K.webp",
     ],
     logoAlt: "Shadez Cosmetics logo",
     startDate: "2020-07-01",

@@ -1,4 +1,5 @@
 import { SampleDesignInterface } from "@/interface/sampleDesignInterface";
+import { CDN } from "@/util/globalConstants";
 
 export const sampleDesigns: SampleDesignInterface[] = [
   {
@@ -7,9 +8,9 @@ export const sampleDesigns: SampleDesignInterface[] = [
     startDate: "2025-02-01",
     endDate: "2025-03-01",
     samples: [
-      "/sampleDesigns/allAboutMe-tablet-scaled.jpg",
-      "/sampleDesigns/allAboutMe-small-scaled.jpg",
-      "/sampleDesigns/allAboutMe-4K-scaled.jpg",
+      CDN + "sampleDesigns/allAboutMe-tablet-scaled.jpg",
+      CDN + "sampleDesigns/allAboutMe-small-scaled.jpg",
+      CDN + "sampleDesigns/allAboutMe-4K-scaled.jpg",
     ],
     sampleWidth: 475,
     sampleHeight: 633,
