@@ -18,12 +18,15 @@ html {
     color: globals.$text-rgb;
     font-family: globals.$text-font;
     font-size: globals.$phone-font-size;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 
-    // iPad and desktop viewports
-    @media (min-width: globals.$ipad-start-width) {
-      font-size: globals.$non-phone-font-size;
+    // iPad and small desktop viewports
+    @media (min-width: globals.$ipad-start-width) and (max-width: globals.$desktop-end-width) {
+      font-size: globals.$small-desk-font-size;
+    }
+
+    // Large desktop viewports
+    @media (min-width: globals.$large-desktop-start-width) {
+      font-size: globals.$large-desk-font-size;
     }
 
     h1 {
@@ -42,9 +45,16 @@ html {
   }
 
   a {
-    color: globals.$link-fill-rgb;
-    text-decoration: underline;
+    text-decoration: none;
     font-weight: bold;
+  }
+
+  a:link {
+    color: globals.$link-rgb;
+  }
+
+  a:active {
+    color: globals.$link-visited-rgb;
   }
 
   // Enable hover only on non-touch devices
@@ -52,6 +62,7 @@ html {
   @media (hover: hover) and (pointer: fine) {
     a {
       font-weight: inherit;
+      text-decoration: underline;
 
       &:hover {
         text-underline-offset: 4px;

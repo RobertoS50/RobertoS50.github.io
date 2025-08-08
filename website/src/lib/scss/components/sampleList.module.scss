@@ -12,6 +12,13 @@
  *  -Increase the size of the design container if it's a tablet view since it looks better
 */
 
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: >0.3%,last 4 version,not dead
+*/
+
 .sampleList {
   @include globals.templateList;
 
@@ -32,7 +39,10 @@
       .sampleImg {
         height: 100%;
         width: 100%;
+        aspect-ratio: attr(width) / attr(height);
+        -o-object-fit: contain;
         object-fit: contain;
+        -o-object-position: center center;
         object-position: center center;
       }
     }

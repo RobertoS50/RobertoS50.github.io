@@ -6,8 +6,8 @@ import { marketingJobs } from "@/data/jobListData/marketingJobsData";
 import { sampleDesigns } from "@/data/sampleDesignData";
 import styles from "@/scss/components/sections/workExperience.module.scss";
 
-//TODO 23/23: Check if you can use a screen reader to better implement ARIA attributes
-//TODO 33: Have buttons for lists sticky so users always have access to close it out
+//TODO 23/23: !!FUTURE!! Check if you can use a screen reader to better implement ARIA attributes
+//TODO 33: !!FUTURE!! Have buttons for lists sticky so users always have access to close it out
 
 export default function WorkExperience() {
   return (

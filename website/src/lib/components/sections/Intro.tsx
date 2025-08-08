@@ -1,3 +1,4 @@
+import { CDN } from "@/util/globalConstants";
 import styles from "@/scss/components/sections/intro.module.scss";
 
 export default function Intro() {
@@ -29,21 +30,24 @@ export default function Intro() {
           >
             <picture className={styles.linkImgContainer}>
               <source
-                srcSet="/logos/linkedIn/linkedIn-mobile.webp"
+                srcSet={CDN + "/Logos/linkedIn/linkedIn-mobile.webp"}
                 media="(max-width: 1279px)"
               />
               <source
-                srcSet="/logos/linkedIn/linkedIn-small.webp"
+                srcSet={CDN + "/Logos/linkedIn/linkedIn-small.webp"}
                 media="(max-width: 3839px)"
               />
               <source
-                srcSet="/logos/linkedIn/linkedIn-4K.webp"
+                srcSet={CDN + "/Logos/linkedIn/linkedIn-4K.webp"}
                 media="(min-width: 3840px)"
               />
               <img
-                src="/logos/linkedIn/linkedIn-mobile.webp"
+                src={CDN + "/Logos/linkedIn/linkedIn-mobile.webp"}
                 alt="LinkedIn logo"
                 className={styles.linkImg}
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
               />
             </picture>
             <div className={styles.linkText}>LinkedIn</div>
@@ -52,9 +56,12 @@ export default function Intro() {
           <a href="mailto:sotor2588@gmail.com" className={styles.contactLink}>
             <div className={styles.linkImgContainer}>
               <img
-                src="/logos/GmailLogo.svg"
+                src={CDN + "/Logos/GmailLogo.svg"}
                 alt="Gmail logo"
                 className={styles.linkImg}
+                loading="eager"
+                decoding="async"
+                fetchPriority="high"
               />
             </div>
             <div className={styles.linkText}>Email - sotor2588@gmail.com</div>

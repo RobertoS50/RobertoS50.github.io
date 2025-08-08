@@ -7,6 +7,9 @@
     - samples[0] = mobile and tablet
     - samples[1] = small desktop
     - samples[2] = 4K and above sizes
+    
+  width and height are used to set the aspect ratio of the image
+  - Measured in pixels, use the smallest dimensions for the entry
 */
 
 export interface SampleDesignInterface {
@@ -15,6 +18,8 @@ export interface SampleDesignInterface {
   startDate: string;
   endDate: string;
   samples: string[];
+  sampleWidth: number;
+  sampleHeight: number;
   sampleAlt: string;
   description: string;
 }

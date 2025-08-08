@@ -18,21 +18,26 @@ $sub-h3-rgb: rgb(94, 93, 93);
 // Font
 $heading-font: var(--font-montserrat);
 $text-font: var(--font-open-sans);
-$phone-font-size: 80%;
-$non-phone-font-size: 110%;
+$phone-font-size: 0.8rem;
+$small-desk-font-size: 1.2rem;
+$large-desk-font-size: 2rem;
 
 // Header font sizes
-$main-h1-font-size: 200%;
-$main-h2-font-size: 170%;
-$sub-h2-font-size: 150%;
-$sub-h3-font-size: 135%;
-$sub-h4-font-size: 125%;
-$sub-h5-font-size: 115%;
+$main-h1-font-size: 2em;
+$main-h2-font-size: 1.7em;
+$sub-h2-font-size: 1.5em;
+$sub-h3-font-size: 1.35em;
+$sub-h4-font-size: 1.25em;
+$sub-h5-font-size: 1.15em;
+
+// Link styles
+$link-rgb: rgb(3, 168, 168);
+$link-visited-rgb: rgb(174, 128, 238);
 
 // Button styles
 $link-button-border-rgb: rgb(0, 95, 162);
 $link-fill-rgb: rgb(0, 64, 110);
-$button-radius: 15px;
+$button-radius: 1em;
 
 // Shadows
 $shadow-straight-bottom: 0px 1px 5px 0px rgba(66, 68, 90, 0.63);
@@ -52,12 +57,11 @@ $shadow-non-phone-straight-bottom: 0px 1px 15px 0px rgba(66, 68, 90, 0.63);
 
 @mixin button {
   padding: 0.5rem;
-  border: 2px solid $link-button-border-rgb;
+  border: 0.125em solid $link-button-border-rgb;
   border-radius: $button-radius;
   background-color: $link-fill-rgb;
   font-weight: bold;
   text-align: center;
-  text-decoration: none;
   color: white;
 }
 
@@ -110,7 +114,6 @@ $shadow-non-phone-straight-bottom: 0px 1px 15px 0px rgba(66, 68, 90, 0.63);
   flex-direction: column;
   row-gap: 1rem;
   justify-content: space-between;
-  align-items: left;
   overflow: hidden;
 }
 
