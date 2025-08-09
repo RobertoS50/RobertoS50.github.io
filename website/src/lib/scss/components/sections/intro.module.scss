@@ -88,24 +88,21 @@
 
 @media (min-width: globals.$desktop-start-width) {
   .introSection {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    -webkit-column-gap: 2rem;
-    -moz-column-gap: 2rem;
-    column-gap: 2rem;
-
     h2 {
       text-align: center;
     }
 
     .bio {
-      text-align: left;
       flex-shrink: 3;
     }
 
     .contact {
       text-align: center;
       flex-basis: 25%;
+      .contactLinkList {
+        flex-direction: row;
+        justify-content: space-evenly;
+      }
     }
   }
 }

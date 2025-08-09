@@ -52,10 +52,7 @@ export default function Home() {
             <Hobbies />
           </div>
         </main>
-        <footer className={styles.footer}>
-          Website coded by{" "}
-          <a href="https://www.github.com/alexrojas431">Alexander Rojas</a>
-        </footer>
+        <footer className={styles.footer}></footer>
       </div>
     </div>
   );

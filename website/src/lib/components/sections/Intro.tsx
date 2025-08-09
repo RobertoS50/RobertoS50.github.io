@@ -12,9 +12,9 @@ export default function Intro() {
           Ambassador work since 2019.
           <br />
           <br />
-          Working for brands such as Gatorade, Coke, Insta Kart, and, most
-          recently for 2024, LollaPalooza and American Apparel. I&apos;ve also
-          managed a local company&apos;s social media handles as well.
+          Working for brands such as Gatorade, Coke, American Apparel, and most
+          recently for 2025, LollaPalooza and Airbnb. I&apos;ve also managed a
+          local company&apos;s social media handles as well.
           <br />
           <br />
           Besides focusing on my career I like to go to concerts in my free time
