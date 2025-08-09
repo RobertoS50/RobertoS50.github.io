@@ -30,12 +30,13 @@ jobs:
           static_site_generator: next
 
       - name: Build with Next.js
+        working-directory: website
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./out
+          path: website/out
 
   deploy:
     environment:

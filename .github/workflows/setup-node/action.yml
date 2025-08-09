@@ -3,32 +3,23 @@ description: "Setup Node.js - Cache dependencies - Install dependencies"
 runs:
   using: "composite"
   steps:
-    - name: Set package manager
-      id: set-package-manager
-      shell: "bash"
-      run: |
-        echo "manager=npm" >> $GITHUB_OUTPUT
-        echo "command=ci" >> $GITHUB_OUTPUT
-        echo "runner=npx --no-install" >> $GITHUB_OUTPUT
-        exit 0
-
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version: 24.5.0
-        cache: ${{ steps.detect-package-manager.outputs.manager }}
 
     - name: Cache dependencies
       id: cache_dependencies
       uses: actions/cache@v4
       with:
-        path: node_modules
-        key: node-modules-${{ hashFiles('package-lock.json') }}
+        path: website/node_modules
+        key: node-modules-${{ hashFiles('website/package-lock.json') }}
         # If source files changed but packages didn't, rebuild from a prior cache.
         restore-keys: |
-          ${{ runner.os }}-node-modules-${{ hashFiles('**/package-lock.json') }}-
+          ${{ runner.os }}-node-modules-${{ hashFiles('website/package-lock.json') }}-
 
     - name: Install dependencies
       shell: bash
+      working-directory: website
       if: steps.cache_dependencies.outputs.cache-hit != 'true'
       run: npm ci
