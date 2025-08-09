@@ -1,0 +1,119 @@
+@use "@/scss/globals.scss";
+
+/**
+ * Background section styles
+ ****************************
+ *  Smaller than desktop viewports have a column layout
+ *  Desktop viewports have a row layout
+ * 
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: >0.3%,last 4 version,not dead
+*/
+
+.backgroundSection {
+  padding: 0.5%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  justify-content: space-between;
+
+  h2 {
+    text-align: left;
+    font-size: globals.$sub-h2-font-size;
+    color: globals.$sub-h2-rgb;
+  }
+
+  .skills {
+    order: 1;
+
+    ul {
+      @include globals.noListPoint;
+    }
+  }
+
+  .education {
+    order: 2;
+    text-align: center;
+
+    .eduTitle {
+      display: flex;
+      flex-direction: row;
+      -webkit-column-gap: 5px;
+      -moz-column-gap: 5px;
+      column-gap: 5px;
+
+      .eduImgContainer {
+        height: 50px;
+        flex-basis: 50px;
+        flex-shrink: 0;
+        align-self: center;
+
+        .eduImg {
+          height: 100%;
+          width: 100%;
+          -o-object-fit: contain;
+          object-fit: contain;
+          -o-object-position: center center;
+          object-position: center center;
+        }
+      }
+
+      .eduContent {
+        flex-grow: 1;
+      }
+    }
+  }
+}
+
+@media (min-width: globals.$desktop-start-width) {
+  .backgroundSection {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+
+    h2 {
+      text-align: center;
+    }
+
+    .skills {
+      flex-shrink: 3;
+    }
+
+    .education {
+      flex-basis: 35%;
+    }
+  }
+}
+
+@media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
+  .backgroundSection {
+    .education {
+      .eduTitle {
+        .eduImgContainer {
+          height: 100px;
+          flex-basis: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: globals.$large-desktop-start-width) {
+  .backgroundSection {
+    .education {
+      .eduTitle {
+        .eduImgContainer {
+          height: 200px;
+          flex-basis: 200px;
+        }
+      }
+    }
+  }
+}

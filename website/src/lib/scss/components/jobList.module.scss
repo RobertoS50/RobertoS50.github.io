@@ -1,0 +1,101 @@
+@use "@/scss/globals.scss";
+
+/**
+ * JobList component styles
+ ****************************
+ *  One container holding a list of jobs and its descriptions.
+ *
+ *  Mobile view: 1 column
+ *  Desktop view: Rows of 2 columns
+ *  Large desktop view: Rows of 3 columns
+ *
+ *  -Increase the size of the job logo container based on viewport size to allow for larger logos
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: >0.3%,last 4 version,not dead
+*/
+
+$mobile-logo-size: 50px;
+$smallDesktop-logo-size: 100px;
+$largeDesktop-logo-size: 200px;
+
+.jobList {
+  @include globals.templateList;
+
+  .job {
+    @include globals.templateListItem;
+
+    .jobMainHeading {
+      min-height: $mobile-logo-size;
+      display: flex;
+      flex-direction: row;
+      -webkit-column-gap: 2%;
+      -moz-column-gap: 2%;
+      column-gap: 2%;
+
+      .jobImgContainer {
+        height: $mobile-logo-size;
+        flex-basis: $mobile-logo-size;
+        flex-shrink: 0;
+
+        .jobImg {
+          height: 100%;
+          width: 100%;
+          -o-object-fit: contain;
+          object-fit: contain;
+          -o-object-position: center center;
+          object-position: center center;
+        }
+      }
+
+      .jobTitle {
+        flex-grow: 1;
+      }
+    }
+
+    .jobSubHeading {
+      display: flex;
+      margin-top: 1%;
+      margin-bottom: 1%;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
+  .jobList {
+    @include globals.smallDesktopTemplateList;
+
+    .job {
+      .jobMainHeading {
+        min-height: $smallDesktop-logo-size;
+
+        .jobImgContainer {
+          height: $smallDesktop-logo-size;
+          flex-basis: $smallDesktop-logo-size;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: globals.$large-desktop-start-width) {
+  .jobList {
+    @include globals.largeDesktopTemplateList;
+
+    .job {
+      .jobMainHeading {
+        min-height: $largeDesktop-logo-size;
+
+        .jobImgContainer {
+          height: $largeDesktop-logo-size;
+          flex-basis: $largeDesktop-logo-size;
+        }
+      }
+    }
+  }
+}

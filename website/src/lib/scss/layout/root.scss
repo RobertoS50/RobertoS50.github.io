@@ -1,6 +1,6 @@
 @use "@/scss/globals.scss";
 
-// Mobile first design
+// Mobile first design: Size up items for desktop viewports
 
 * {
   box-sizing: border-box;
@@ -16,19 +16,22 @@ html {
     min-height: 100svh;
     background-color: globals.$backgroundColor;
     color: globals.$text-rgb;
-    font-family: var(--font-open-sans);
-    font-size: 75%;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    font-family: globals.$text-font;
+    font-size: globals.$phone-font-size;
 
-    // iPad and desktop viewports
-    @media (min-width: 809px) {
-      font-size: 100%;
+    // iPad and small desktop viewports
+    @media (min-width: globals.$ipad-start-width) and (max-width: globals.$desktop-end-width) {
+      font-size: globals.$small-desk-font-size;
+    }
+
+    // Large desktop viewports
+    @media (min-width: globals.$large-desktop-start-width) {
+      font-size: globals.$large-desk-font-size;
     }
 
     h1 {
-      font-family: var(--font-montserrat);
-      font-size: 2rem;
+      font-family: globals.$heading-font;
+      font-size: globals.$main-h1-font-size;
     }
 
     h2,
@@ -36,23 +39,35 @@ html {
     h4,
     h5,
     h6 {
-      font-family: var(--font-montserrat);
-      font-size: 1.8rem;
+      font-family: globals.$heading-font;
+      font-size: globals.$main-h2-font-size;
     }
   }
 
   a {
-    color: inherit;
     text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:link {
+    color: globals.$link-rgb;
+  }
+
+  a:active {
+    color: globals.$link-visited-rgb;
   }
 
   // Enable hover only on non-touch devices
 
   @media (hover: hover) and (pointer: fine) {
-    a:hover {
+    a {
+      font-weight: inherit;
       text-decoration: underline;
-      text-underline-offset: 4px;
-      font-weight: bold;
+
+      &:hover {
+        text-underline-offset: 4px;
+        font-weight: bold;
+      }
     }
   }
 }

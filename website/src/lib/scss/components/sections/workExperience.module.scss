@@ -1,0 +1,26 @@
+@use "@/scss/globals.scss";
+
+/**
+ * workExperience section styles
+ **********************************
+ *  Displays content in a flex column layout with a gap between items.
+ *  
+ *  To see those components and related styles check out:
+ *
+ *    @components/ExpanderButton.tsx
+ *    @expanderButton.module.scss
+ *    @components/JobList.tsx
+ *    @jobList.module.scss
+ *    @components/SampleList.tsx
+ *    @sampleList.module.scss
+ * 
+*/
+
+.workExpSection {
+  margin-top: 0.5%;
+  margin-bottom: 0.5%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  justify-content: space-between;
+}

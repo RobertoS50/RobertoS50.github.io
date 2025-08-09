@@ -1,58 +1,56 @@
-import Image from "next/image";
-import ProfilePic from "@/public/RobertoS-4.jpg";
+import Intro from "@/components/sections/Intro";
+import Background from "@/components/sections/Background";
+import WorkExperience from "@/components/sections/WorkExperience";
+import Hobbies from "@/components/sections/Hobbies";
+import ProgressiveImage from "@/components/ProgressiveImage";
+import { CDN } from "@/util/globalConstants";
 import styles from "@/scss/pages/home.module.scss";
 
-// TODO #4/8: Add easy navigation like a button to get to certain parts of website
-// TODO #9/9: Design components they can be hidden and loaded in seamlessly. (This website can grow a lot if it stays one page)
+// TODO #9/9: !!FUTURE!! Design components to be loaded in dynamically. Intersection observer API (This website can grow a lot if it stays one page)
 
 export default function Home() {
   return (
     <div className={styles.page}>
       <div className={styles.parallaxContainer}>
-        <Image
-          src={ProfilePic}
-          alt="A picture of myself - Roberto Soto"
-          className={styles.parallaxImage}
-          sizes="100svw"
-          fill
-          priority
+        <ProgressiveImage
+          srcSet={[
+            CDN + "/RobertoS-4-tablet-scaled.jpg",
+            CDN + "/RobertoS-4-small-scaled.jpg",
+            CDN + "/RobertoS-4-4K-scaled.jpg",
+          ]}
+          placeholderSrc="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEA8ADwAAD/4QAiRXhpZgAATU0AKgAAAAgAAQESAAMAAAABAAEAAAAAAAD/2wBDABALDA4MChAODQ4SERATGCgaGBYWGDEjJR0oOjM9PDkzODdASFxOQERXRTc4UG1RV19iZ2hnPk1xeXBkeFxlZ2P/2wBDARESEhgVGC8aGi9jQjhCY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2NjY2P/wAARCAAeABQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwCwtnDjPQisn7NqN7JKbK3Tyo2Kkv1JH4itm5u4bZN8zqi+/X8qg067trne8QDIc5zIVJOfSvMoXbbaO2VtjCjAljDsm1uhHuDiir00kc0rPEFCk9B2opt6iSM/WboyXZ3HKIAPzqhEXidvLldVbqFYgGonkee2Lvjcx5x7f/qph3qn3u1d8Y8sUjkk7tstNOgbAwcUVQhOVOeeaKsk/9k="
+          alt="Self portrait of Roberto Soto looking at the camera"
+          position="topCenter"
+          fetchP="high"
+          loading="eager"
+          width={1000}
+          height={1500}
         />
       </div>
       <div className={styles.contentOverlay}>
         <header className={styles.header}>
-          <h1>Roberto Soto</h1>
+          <hgroup>
+            <h1>Roberto Soto</h1>
+            <p>Portfolio</p>
+          </hgroup>
         </header>
         <main className={styles.main}>
-          <section>
-            <article>
-              <h2>Bio</h2>
-              <p>
-                Hi My name is Roberto Soto I am currently a rising senior at
-                Aurora University. My passion is in Marketing and I have done
-                Brand Ambassador work since 2019. Working for brands such as
-                Gatorade, Coke, Insta Kart, and, most recently for 2024,
-                LollaPalooza and American Apparel. I&apos;ve also managed a
-                local company&apos;s social media handles as well. Besides
-                focusing on my career I like to go to concerts in my free time
-                as well as acting as a hobby.
-              </p>
-            </article>
-          </section>
-          <section>
-            <article>
-              <h3>Background</h3>
-            </article>
-          </section>
-          <section>
-            <article>
-              <h4>Work experience</h4>
-            </article>
-          </section>
-          <section>
-            <article>
-              <h5>More room</h5>
-            </article>
-          </section>
+          <div className={styles.sectionContainer}>
+            <h2>About me</h2>
+            <Intro />
+          </div>
+          <div className={styles.sectionContainer}>
+            <h3>Background</h3>
+            <Background />
+          </div>
+          <div className={styles.sectionContainer}>
+            <h4>Work experience</h4>
+            <WorkExperience />
+          </div>
+          <div className={styles.sectionContainer}>
+            <h4>My interests</h4>
+            <Hobbies />
+          </div>
         </main>
         <footer className={styles.footer}>
           Website coded by{" "}

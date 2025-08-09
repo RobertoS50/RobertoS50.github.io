@@ -1,11 +1,158 @@
-// General variables
+// TODO 21/21: Think about using mixins for repeated styles (Heading and flex styles are good candidates)
+
+// Viewport sizes
+$mobile-end-width: 809px;
+$ipad-start-width: 810px;
+$ipad-end-width: 1279px;
+$desktop-start-width: 1280px;
+$desktop-end-width: 3839px;
+$large-desktop-start-width: 3840px;
+
+// Colors
 $backgroundColor: linear-gradient(to bottom, #111, #333);
 $contentBackgroundColor: rgb(246, 246, 246);
 $text-rgb: rgb(0, 0, 0);
+$sub-h2-rgb: rgb(54, 53, 53);
+$sub-h3-rgb: rgb(94, 93, 93);
 
-$border-radius: 12px;
+// Font
+$heading-font: var(--font-montserrat);
+$text-font: var(--font-open-sans);
+$phone-font-size: 0.8rem;
+$small-desk-font-size: 1.2rem;
+$large-desk-font-size: 2rem;
+
+// Header font sizes
+$main-h1-font-size: 2em;
+$main-h2-font-size: 1.7em;
+$sub-h2-font-size: 1.5em;
+$sub-h3-font-size: 1.35em;
+$sub-h4-font-size: 1.25em;
+$sub-h5-font-size: 1.15em;
+
+// Link styles
+$link-rgb: rgb(3, 168, 168);
+$link-visited-rgb: rgb(174, 128, 238);
+
+// Button styles
+$link-button-border-rgb: rgb(0, 95, 162);
+$link-fill-rgb: rgb(0, 64, 110);
+$button-radius: 1em;
+
+// Shadows
+$shadow-straight-bottom: 0px 1px 5px 0px rgba(66, 68, 90, 0.63);
+$shadow-non-phone-straight-bottom: 0px 1px 15px 0px rgba(66, 68, 90, 0.63);
+
+/*
+ * Button styles
+ *
+ * - Currently, colors are constant across the site but may be changed later
+ * - Text color and background color are set in the file the mixin is used
+ *
+ * buttonHover:
+ *  
+ * - Sets background color, text color, and font weight back to their defaults so hover will work correctly
+ *
+*/
+
+@mixin button {
+  padding: 0.5rem;
+  border: 0.125em solid $link-button-border-rgb;
+  border-radius: $button-radius;
+  background-color: $link-fill-rgb;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+@mixin buttonHover {
+  background-color: inherit;
+  font-weight: normal;
+  color: inherit;
+
+  &:hover {
+    background-color: $link-fill-rgb;
+    color: white;
+    transition: ease-in-out 100ms;
+  }
+}
+
+@mixin noListPoint {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  text-align: center;
+}
 
 @mixin credits {
   font-size: 75%;
   font-style: italic;
+}
+
+/*
+ * templateList styles
+ * - Related styles are used for the lists in workExperience section
+ *
+ * templateList:
+ * - Mobile view showcasing a columns where items are stacked vertically
+ *
+ * smallDesktopTemplateList:
+ * - Small desktop view showcasing grid layout with 2 columns
+ *
+ * largeDesktopTemplateList:
+ * - Large desktop view showcasing grid layout with 3 columns
+ *
+ * templateListItem:
+ * - Several global selectors for general styles
+ * - Styles for headings, paragraphs, and lists
+ *
+*/
+
+@mixin templateList {
+  width: 90svw;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+@mixin smallDesktopTemplateList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+@mixin largeDesktopTemplateList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  gap: 2rem;
+  align-items: start;
+}
+
+@mixin templateListItem {
+  h2 {
+    font-size: $sub-h3-font-size;
+  }
+
+  h3 {
+    font-size: $sub-h4-font-size;
+    color: $sub-h2-rgb;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: $sub-h5-font-size;
+    color: $sub-h3-rgb;
+  }
+
+  p {
+    white-space: pre-wrap;
+  }
+
+  ul {
+    margin-left: 1rem;
+  }
 }

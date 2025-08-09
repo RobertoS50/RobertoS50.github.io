@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /__tests__/
+Disallow: /test/
+Allow: /
+
+Sitemap: https://RobertoS50.github.io/sitemap.xml

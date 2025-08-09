@@ -1,0 +1,65 @@
+@use "@/scss/globals.scss";
+
+/**
+ * Hobbies section styles
+ ****************************
+ *  Smaller than desktop viewports have a column layout
+ *  Desktop viewports have a row layout
+ * 
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: >0.3%,last 4 version,not dead
+*/
+
+.hobbiesSection {
+  padding: 0.5%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  justify-content: space-between;
+
+  h2 {
+    text-align: left;
+    font-size: globals.$sub-h2-font-size;
+    color: globals.$sub-h2-rgb;
+  }
+
+  ul {
+    @include globals.noListPoint;
+  }
+
+  .hobbies {
+    order: 1;
+  }
+
+  .acting {
+    order: 2;
+    text-align: center;
+  }
+}
+
+@media (min-width: globals.$desktop-start-width) {
+  .hobbiesSection {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    -webkit-column-gap: 2rem;
+    -moz-column-gap: 2rem;
+    column-gap: 2rem;
+
+    h2 {
+      text-align: center;
+    }
+    .hobbies {
+      flex-shrink: 1;
+    }
+
+    .acting {
+      flex-basis: 50%;
+      flex-grow: 1;
+    }
+  }
+}
