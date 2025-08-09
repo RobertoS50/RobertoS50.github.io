@@ -2,6 +2,7 @@ name: setup-node
 description: "Setup Node.js - Cache dependencies - Install dependencies"
 runs:
   using: "composite"
+  shell: "bash"
   steps:
     - name: Set package manager
       id: set-package-manager
