@@ -12,11 +12,13 @@ runs:
       id: cache_dependencies
       uses: actions/cache@v4
       with:
-        path: website/node_modules
-        key: node-modules-${{ hashFiles('website/package-lock.json') }}
+        path: |
+          ~/.npm
+          website/.next/cache
+        key: nextjs-${{ hashFiles('website/package-lock.json') }}-${{ hashFiles('**/*.js', '**/*.jsx', '**/*.ts', '**/*.tsx', '**/*.css', '**/*.scss') }}
         # If source files changed but packages didn't, rebuild from a prior cache.
         restore-keys: |
-          ${{ runner.os }}-node-modules-${{ hashFiles('website/package-lock.json') }}-
+          nextjs-${{ hashFiles('website/package-lock.json') }}-
 
     - name: Install dependencies
       shell: bash
