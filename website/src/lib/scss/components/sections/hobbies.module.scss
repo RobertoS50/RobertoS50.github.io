@@ -39,6 +39,52 @@
   .acting {
     order: 2;
     text-align: center;
+
+    .contactLinkList {
+      display: flex;
+      flex-direction: column;
+      row-gap: 0.5rem;
+      align-items: center;
+
+      .contactLink {
+        width: -webkit-fit-content;
+        width: -moz-fit-content;
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        row-gap: 1.5%;
+
+        .linkImgContainer {
+          width: 50px;
+          flex-basis: 50px;
+          flex-shrink: 0;
+          align-self: center;
+
+          .linkImg {
+            height: 100%;
+            width: 100%;
+            -o-object-fit: contain;
+            object-fit: contain;
+            -o-object-position: center center;
+            object-position: center center;
+          }
+        }
+
+        .linkText {
+          @include globals.button;
+          width: -webkit-fit-content;
+          width: -moz-fit-content;
+          width: fit-content;
+          align-self: center;
+        }
+
+        @media (hover: hover) and (pointer: fine) {
+          .linkText {
+            @include globals.buttonHover;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -60,6 +106,36 @@
     .acting {
       flex-basis: 50%;
       flex-grow: 1;
+    }
+  }
+}
+
+@media (min-width: globals.$desktop-start-width) and (max-width: globals.$desktop-end-width) {
+  .hobbiesSection {
+    .acting {
+      .contactLinkList {
+        .contactLink {
+          .linkImgContainer {
+            width: 100px;
+            flex-basis: 100px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: globals.$large-desktop-start-width) {
+  .hobbiesSection {
+    .acting {
+      .contactLinkList {
+        .contactLink {
+          .linkImgContainer {
+            width: 200px;
+            flex-basis: 200px;
+          }
+        }
+      }
     }
   }
 }

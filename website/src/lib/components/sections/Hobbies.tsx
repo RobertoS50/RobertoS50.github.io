@@ -1,3 +1,4 @@
+import { CDN } from "@/util/globalConstants";
 import styles from "@/scss/components/sections/hobbies.module.scss";
 
 //TODO 36: !!FUTURE!! Add conveyor belt with movies that Roberts has had a role in
@@ -29,9 +30,37 @@ export default function Hobbies() {
           Breakdown Express.
         </p>
         <br />
-        <a href="https://resumes.breakdownexpress.com/robertosoto">
-          Acting portfolio
-        </a>
+        <address className={styles.contactLinkList}>
+          <a
+            href="https://resumes.breakdownexpress.com/robertosoto"
+            className={styles.contactLink}
+          >
+            <picture className={styles.linkImgContainer}>
+              <source
+                srcSet={
+                  CDN + "/Logos/actorsAccess/actorsAccessLogo-mobile.webp"
+                }
+                media="(max-width: 1279px)"
+              />
+              <source
+                srcSet={CDN + "/Logos/actorsAccess/actorsAccessLogo-small.webp"}
+                media="(max-width: 3839px)"
+              />
+              <source
+                srcSet={CDN + "/Logos/actorsAccess/actorsAccessLogo-4K.webp"}
+                media="(min-width: 3840px)"
+              />
+              <img
+                src={CDN + "/Logos/actorsAccess/actorsAccessLogo-mobile.webp"}
+                alt="actors Access logo"
+                className={styles.linkImg}
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+            <div className={styles.linkText}>Acting portfolio</div>
+          </a>
+        </address>
       </article>
     </div>
   );
