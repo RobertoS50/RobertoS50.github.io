@@ -30,7 +30,60 @@ export default function Hobbies() {
           Breakdown Express.
         </p>
         <br />
+
         <address className={styles.contactLinkList}>
+          <a
+            href={"/Portraits/redBkg-mobile.jpg"}
+            className={styles.contactLink}
+          >
+            <picture className={styles.linkImgContainer}>
+              <source
+                srcSet={"/Portraits/redBkg-mobile.jpg"}
+                media="(max-width: 1279px)"
+              />
+              <source
+                srcSet={"/Portraits/redBkg-small.jpg"}
+                media="(max-width: 3839px)"
+              />
+              <source
+                srcSet={"/Portraits/redBkg-4K.jpg"}
+                media="(min-width: 3840px)"
+              />
+              <img
+                src={"/Portraits/redBkg-mobile.jpg"}
+                alt="Roberto Soto headshot"
+                className={styles.linkImg}
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </a>
+          <a
+            href="https://www.imdb.com/name/nm11430942/?ref_=mv_close"
+            className={styles.contactLink}
+          >
+            <picture className={styles.linkImgContainer}>
+              <source
+                srcSet={"/Logos/IMDB/IMDBLogo-mobile.jpg"}
+                media="(max-width: 1279px)"
+              />
+              <source
+                srcSet={"/Logos/IMDB/IMDBLogo-small.jpg"}
+                media="(max-width: 3839px)"
+              />
+              <source
+                srcSet={"/Logos/IMDB/IMDBLogo-4K.jpg"}
+                media="(min-width: 3840px)"
+              />
+              <img
+                srcSet={"/Logos/IMDB/IMDBLogo-mobile.jpg"}
+                alt="IMDB logo"
+                className={styles.linkImg}
+                loading="lazy"
+                decoding="async"
+              />
+            </picture>
+          </a>
           <a
             href="https://resumes.breakdownexpress.com/robertosoto"
             className={styles.contactLink}
@@ -58,7 +111,6 @@ export default function Hobbies() {
                 decoding="async"
               />
             </picture>
-            <div className={styles.linkText}>Acting portfolio</div>
           </a>
         </address>
       </article>
