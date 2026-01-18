@@ -45,7 +45,7 @@ export default function Hobbies() {
               media="(min-width: 3840px)"
             />
             <img
-              src={"/Portraits/redBkg-mobile.jpg"}
+              src={CDN + "/Portraits/redBkg-mobile.jpg"}
               alt="Roberto Soto headshot"
               className={styles.img}
               loading="lazy"
