@@ -33,19 +33,19 @@ export default function Hobbies() {
         <div className={styles.actingGallery}>
           <picture className={styles.linkImgContainer}>
             <source
-              srcSet={"/Portraits/redBkg-mobile.jpg"}
+              srcSet={CDN + "/Portraits/redBkg-mobile.jpg"}
               media="(max-width: 1279px)"
             />
             <source
-              srcSet={"/Portraits/redBkg-small.jpg"}
+              srcSet={CDN + "/Portraits/redBkg-small.jpg"}
               media="(max-width: 3839px)"
             />
             <source
-              srcSet={"/Portraits/redBkg-4K.jpg"}
+              srcSet={CDN + "/Portraits/redBkg-4K.jpg"}
               media="(min-width: 3840px)"
             />
             <img
-              src={"/Portraits/redBkg-mobile.jpg"}
+              src={CDN + "/Portraits/redBkg-mobile.jpg"}
               alt="Roberto Soto headshot"
               className={styles.linkImg}
               loading="lazy"
@@ -59,19 +59,19 @@ export default function Hobbies() {
             >
               <picture className={styles.linkImgContainer}>
                 <source
-                  srcSet={"/Logos/IMDB/IMDBLogo-mobile.jpg"}
+                  srcSet={CDN + "/Logos/IMDB/IMDBLogo-mobile.jpg"}
                   media="(max-width: 1279px)"
                 />
                 <source
-                  srcSet={"/Logos/IMDB/IMDBLogo-small.jpg"}
+                  srcSet={CDN + "/Logos/IMDB/IMDBLogo-small.jpg"}
                   media="(max-width: 3839px)"
                 />
                 <source
-                  srcSet={"/Logos/IMDB/IMDBLogo-4K.jpg"}
+                  srcSet={CDN + "/Logos/IMDB/IMDBLogo-4K.jpg"}
                   media="(min-width: 3840px)"
                 />
                 <img
-                  srcSet={"/Logos/IMDB/IMDBLogo-mobile.jpg"}
+                  srcSet={CDN + "/Logos/IMDB/IMDBLogo-mobile.jpg"}
                   alt="IMDB logo"
                   className={styles.linkImg}
                   loading="lazy"
