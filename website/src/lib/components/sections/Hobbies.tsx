@@ -30,89 +30,87 @@ export default function Hobbies() {
           Breakdown Express.
         </p>
         <br />
-
-        <address className={styles.contactLinkList}>
-          <a
-            href={"/Portraits/redBkg-mobile.jpg"}
-            className={styles.contactLink}
-          >
-            <picture className={styles.linkImgContainer}>
-              <source
-                srcSet={"/Portraits/redBkg-mobile.jpg"}
-                media="(max-width: 1279px)"
-              />
-              <source
-                srcSet={"/Portraits/redBkg-small.jpg"}
-                media="(max-width: 3839px)"
-              />
-              <source
-                srcSet={"/Portraits/redBkg-4K.jpg"}
-                media="(min-width: 3840px)"
-              />
-              <img
-                src={"/Portraits/redBkg-mobile.jpg"}
-                alt="Roberto Soto headshot"
-                className={styles.linkImg}
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-          </a>
-          <a
-            href="https://www.imdb.com/name/nm11430942/?ref_=mv_close"
-            className={styles.contactLink}
-          >
-            <picture className={styles.linkImgContainer}>
-              <source
-                srcSet={"/Logos/IMDB/IMDBLogo-mobile.jpg"}
-                media="(max-width: 1279px)"
-              />
-              <source
-                srcSet={"/Logos/IMDB/IMDBLogo-small.jpg"}
-                media="(max-width: 3839px)"
-              />
-              <source
-                srcSet={"/Logos/IMDB/IMDBLogo-4K.jpg"}
-                media="(min-width: 3840px)"
-              />
-              <img
-                srcSet={"/Logos/IMDB/IMDBLogo-mobile.jpg"}
-                alt="IMDB logo"
-                className={styles.linkImg}
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-          </a>
-          <a
-            href="https://resumes.breakdownexpress.com/robertosoto"
-            className={styles.contactLink}
-          >
-            <picture className={styles.linkImgContainer}>
-              <source
-                srcSet={
-                  CDN + "/Logos/actorsAccess/actorsAccessLogo-mobile.webp"
-                }
-                media="(max-width: 1279px)"
-              />
-              <source
-                srcSet={CDN + "/Logos/actorsAccess/actorsAccessLogo-small.webp"}
-                media="(max-width: 3839px)"
-              />
-              <source
-                srcSet={CDN + "/Logos/actorsAccess/actorsAccessLogo-4K.webp"}
-                media="(min-width: 3840px)"
-              />
-              <img
-                src={CDN + "/Logos/actorsAccess/actorsAccessLogo-mobile.webp"}
-                alt="actors Access logo"
-                className={styles.linkImg}
-                loading="lazy"
-                decoding="async"
-              />
-            </picture>
-          </a>
-        </address>
+        <div className={styles.actingGallery}>
+          <picture className={styles.linkImgContainer}>
+            <source
+              srcSet={"/Portraits/redBkg-mobile.jpg"}
+              media="(max-width: 1279px)"
+            />
+            <source
+              srcSet={"/Portraits/redBkg-small.jpg"}
+              media="(max-width: 3839px)"
+            />
+            <source
+              srcSet={"/Portraits/redBkg-4K.jpg"}
+              media="(min-width: 3840px)"
+            />
+            <img
+              src={"/Portraits/redBkg-mobile.jpg"}
+              alt="Roberto Soto headshot"
+              className={styles.linkImg}
+              loading="lazy"
+              decoding="async"
+            />
+          </picture>
+          <address className={styles.contactLinkList}>
+            <a
+              href="https://www.imdb.com/name/nm11430942/?ref_=mv_close"
+              className={styles.contactLink}
+            >
+              <picture className={styles.linkImgContainer}>
+                <source
+                  srcSet={"/Logos/IMDB/IMDBLogo-mobile.jpg"}
+                  media="(max-width: 1279px)"
+                />
+                <source
+                  srcSet={"/Logos/IMDB/IMDBLogo-small.jpg"}
+                  media="(max-width: 3839px)"
+                />
+                <source
+                  srcSet={"/Logos/IMDB/IMDBLogo-4K.jpg"}
+                  media="(min-width: 3840px)"
+                />
+                <img
+                  srcSet={"/Logos/IMDB/IMDBLogo-mobile.jpg"}
+                  alt="IMDB logo"
+                  className={styles.linkImg}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </a>
+            <a
+              href="https://resumes.breakdownexpress.com/robertosoto"
+              className={styles.contactLink}
+            >
+              <picture className={styles.linkImgContainer}>
+                <source
+                  srcSet={
+                    CDN + "/Logos/actorsAccess/actorsAccessLogo-mobile.webp"
+                  }
+                  media="(max-width: 1279px)"
+                />
+                <source
+                  srcSet={
+                    CDN + "/Logos/actorsAccess/actorsAccessLogo-small.webp"
+                  }
+                  media="(max-width: 3839px)"
+                />
+                <source
+                  srcSet={CDN + "/Logos/actorsAccess/actorsAccessLogo-4K.webp"}
+                  media="(min-width: 3840px)"
+                />
+                <img
+                  src={CDN + "/Logos/actorsAccess/actorsAccessLogo-mobile.webp"}
+                  alt="actors Access logo"
+                  className={styles.linkImg}
+                  loading="lazy"
+                  decoding="async"
+                />
+              </picture>
+            </a>
+          </address>
+        </div>
       </article>
     </div>
   );
