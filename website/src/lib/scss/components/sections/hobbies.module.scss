@@ -47,6 +47,22 @@
       align-items: center;
       justify-content: space-evenly;
 
+      .imgContainer {
+        width: 20%;
+        height: 0 auto;
+        flex-shrink: 0;
+        align-self: center;
+
+        .img {
+          height: 100%;
+          width: 100%;
+          -o-object-fit: contain;
+          object-fit: contain;
+          -o-object-position: center center;
+          object-position: center center;
+        }
+      }
+
       .contactLinkList {
         display: flex;
         flex-direction: column;
