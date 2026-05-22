@@ -33,19 +33,19 @@ export default function Hobbies() {
         <div className={styles.actingGallery}>
           <picture className={styles.imgContainer}>
             <source
-              srcSet={CDN + "/Portraits/redBkg-mobile.jpg"}
+              srcSet={CDN + "/Portraits/redBkg-mobile-v1_1.jpg"}
               media="(max-width: 1279px)"
             />
             <source
-              srcSet={CDN + "/Portraits/redBkg-small.jpg"}
+              srcSet={CDN + "/Portraits/redBkg-small-v1_1.jpg"}
               media="(max-width: 3839px)"
             />
             <source
-              srcSet={CDN + "/Portraits/redBkg-4K.jpg"}
+              srcSet={CDN + "/Portraits/redBkg-4K-v1_1.jpg"}
               media="(min-width: 3840px)"
             />
             <img
-              src={CDN + "/Portraits/redBkg-mobile.jpg"}
+              src={CDN + "/Portraits/redBkg-mobile-v1_1.jpg"}
               alt="Roberto Soto headshot"
               className={styles.img}
               loading="lazy"
